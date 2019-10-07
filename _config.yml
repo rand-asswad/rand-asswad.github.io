@@ -33,6 +33,7 @@ linkedin_username:  asswadrand
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-font-awesome-sass
 
 # Exclude from processing.
 # The following items will not be processed, by default.
