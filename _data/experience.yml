@@ -1,0 +1,18 @@
+- company: INRIA Nancy Grand-Est (France)
+  title: Research Internship
+  begin_date: 2019/06
+  end_date: 2019/08
+
+- company: INSA Rouen Normandie (France)
+  title: Web Developer Internship
+  begin_date: 2017/07
+  end_date: 2017/09
+  description: >-
+    Established a Proof of Concept of a web version of the free software [**AMC**](https://www.auto-multiple-choice.net/) that creates and manages multiple choice questionnaires (QCM) as it is only available on UNIX systems.
+    Created a Django web application that communicates with AMC through bash.
+
+- company: Robert Bosch (Mondeville, France)
+  title: Execution Internship
+  begin_date: 2015/07
+  end_date: 2015/07
+  description: Worked on the valve production line, my first experience in the industrial world.
