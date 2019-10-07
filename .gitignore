@@ -7,3 +7,7 @@ _site/
 # Bundler folders
 .bundle/
 vendor/
+
+# Editors
+.vscode/
+.idea/
