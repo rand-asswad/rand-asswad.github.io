@@ -2,4 +2,16 @@
 layout: default
 ---
 
+{% assign sorted_sections = site.sections | sort: 'order' %}
 {{ content }}
+
+<!-- fullpage js initializer -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
+<script type="text/javascript">
+	var myFullpage = new fullpage('#fullpage', {
+		sectionsColor: [{% for section in sorted_sections %}'{{ section.bgcolor }}',{% endfor %}],
+		navigation: true,
+		navigationPosition: 'left',
+		navigationTooltips: [{% for section in sorted_sections %}'{{ section.name }}', {% endfor %}],
+	});
+</script>
