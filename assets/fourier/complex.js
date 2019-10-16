@@ -79,7 +79,15 @@ function prod(x, y) {
 }
 
 function divide(x, y) {
-    let z = new Complex(x.re, x.im);
-    z.div(y);
-    return z;
+    if (x instanceof Complex) {
+        let z = new Complex(x.re, x.im);
+        z.div(y);
+        return z;
+    }
+    if (y instanceof Complex) {
+        let z = new Complex(y.re, y.im);
+        z.inv();
+        return prod(x, z);
+    }
+    return x / y;
 }

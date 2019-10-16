@@ -17,6 +17,13 @@ defaults:
       path: "assets/img"
     values:
       image: true
+  - scope:
+      type: "sections"
+    values:
+      name: NewSection
+      order: 10
+      bgcolor: "#000"
+      active: false
 
 collections:
   - sections

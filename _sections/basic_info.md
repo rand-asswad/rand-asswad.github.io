@@ -2,6 +2,7 @@
 name: Basic Information
 order: 1
 bgcolor: "#4BBFC3"
+active: false
 ---
 
 # Contact
