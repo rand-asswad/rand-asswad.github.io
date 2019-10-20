@@ -29,5 +29,6 @@ end
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 # my gems
-gem "font-awesome-sass", "~> 5.11.2"
-gem "jekyll-font-awesome-sass"
+#gem "font-awesome-sass", "~> 5.11.2"
+#gem "jekyll-font-awesome-sass"
+#gem "jekyll-octicons"
