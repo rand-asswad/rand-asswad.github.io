@@ -1,7 +1,7 @@
 ---
 name: Introduction
 order: 1
-bgcolor: "#00004d"
+bgcolor: "#446688"
 active: true
 ---
 
@@ -25,15 +25,13 @@ active: true
             <a href="https://www.linkedin.com/in/{{ site.data.contact.linkedin }}" target="_blank" class="fa-btn">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="/assets/cv-fr.pdf" target="_blank" class="fa-btn">
-                <i class="far fa-file-pdf"></i>
-            </a>
+            <a href="/assets/cv-fr.pdf" target="_blank" class="fa-btn cv-btn">CV</a>
         </div>
     </div>
 </div>
 
 <script>
-    var p = sketchFourier("/assets/fourier/me.csv", "sketch-holder", 3);
+    var p = sketchFourier("/assets/me.csv", "sketch-holder", 3);
     p.bgColor = "{{ page.bgcolor }}";
     p.pathColor = "#FFF";
     p.cyclesColor = "#555";

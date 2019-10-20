@@ -5,15 +5,40 @@
     font-family: 'Cabin Sketch', cursive;
 }
 
+// Contact Icons
+$icon-color: #FFF;
+$icon-hover-color: #333; 
+
 // Font Awesome
-.fab, .far, .fas {
-    color: #FFF;
-    font-size: 60px;
-}
-.fab:hover, .far:hover, .fas:hover {
-    color: #333;
-}
 .fa-btn {
+    display: inline-block;
     padding: 10px;
     text-align: center;
+    background: transparent;
+    font-size: 60px;
+    color: $icon-color;
+}
+.fa-btn:hover {
+    color: $icon-hover-color;
+    text-decoration: none;
+}
+
+// CV button
+.cv-btn {
+    display: inline-block;
+    height: 58px;
+    width: 58px;
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    font-weight: bolder;
+    border: 5px solid $icon-color;
+    border-radius: 50%;
+    //text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    bottom: 12px;
+}
+.cv-btn:hover {
+    border: 5px solid $icon-hover-color;
 }
