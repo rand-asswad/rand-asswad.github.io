@@ -1,6 +1,6 @@
 ---
 name: Basic Information
-order: 1
+order: 2
 bgcolor: "#4BBFC3"
 active: false
 ---

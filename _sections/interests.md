@@ -1,6 +1,6 @@
 ---
 name: Interests
-order: 2
+order: 3
 bgcolor: "#555555"
 active: true
 ---

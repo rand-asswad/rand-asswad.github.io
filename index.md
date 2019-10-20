@@ -7,7 +7,7 @@ title: "Rand Asswad"
 <div id="fullpage">
     {% for section in sorted_sections %}
         {% if section.active %}
-            <div class="section" id="section{{ section.order }}" style="text-align: center;">
+            <div class="section container-fluid" id="section{{ section.order }}">
                 {{ section.content }}
             </div>
         {% endif %}
