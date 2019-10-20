@@ -1,0 +1,50 @@
+- category: Mathematics & CS Theory
+  color: "#446688"
+  side: left
+  list:
+  - Signal Processing
+  - Numerical Analysis
+  - Control Theory
+  - Functional Analysis
+  - Complex Analysis
+  - Statistics & Data Analysis
+  - Metaheuristics
+  - Combinatorics
+  - Automata Theory & Language Processing
+  - Advanced logic
+
+- category: Programming
+  color: "#FF8000"
+  side: right
+  list:
+  - C
+  - C++
+  - Java
+  - Python
+  - Bash
+  - Fortran
+  - Octave
+  - Prolog
+  - Javascript
+  - SQL
+
+- category: Frameworks & Libraries
+  color: "#9A16A9"
+  side: right
+  list:
+  - Numpy, Scipy & Matplotlib
+  - Django
+  - Jekyll
+  - Lex/Yacc
+  - Antlr
+  - Hadoop
+  - GNU Scientific Library (GSL)
+
+- category: OS, Software & Tools
+  color: "#CC0000"
+  side: left
+  list:
+  - GNU/Linux (Arch/Debian)
+  - Microsoft Windows
+  - LaTeX
+  - Git/SVN
