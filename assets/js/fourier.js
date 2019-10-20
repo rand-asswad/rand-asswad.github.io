@@ -1,4 +1,3 @@
-const TAU = 2 * Math.PI;
 
 function FourierCoefs(f, nb_coefs, sym = true) {
     const coefs = [];
