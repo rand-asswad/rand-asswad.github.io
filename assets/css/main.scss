@@ -1,0 +1,10 @@
+---
+# Main file calling bootstrap scss with custom values
+---
+
+$primary: #8d021f; // burgundy
+
+
+@import 'bootstrap/bootstrap';
+
+@import 'fonts';
