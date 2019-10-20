@@ -1,3 +1,4 @@
+const TAU = 2 * Math.PI;
 
 function FourierCoefs(f, nb_coefs, sym = true) {
     const coefs = [];
@@ -8,7 +9,7 @@ function FourierCoefs(f, nb_coefs, sym = true) {
         c = new Complex(0, 0);
         for (let k = 0; k < M; k++) {
             let phi = TAU * n * k / M;
-            c.add(prod(f[k], new Complex(cos(phi), -sin(phi))));
+            c.add(prod(f[k], new Complex(Math.cos(phi), -Math.sin(phi))));
         }
         c.div(M);
         if (!sym) c.multiply(2);
