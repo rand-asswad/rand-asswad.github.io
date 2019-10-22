@@ -1,0 +1,55 @@
+---
+title: qualifications
+order: "02"
+description: My education and professional experience.
+---
+
+<!--
+<div class="tabs-container">
+    <div class="nav tabs">
+        {% assign tab = 0 %}
+        {% for e in site.data.experience %}
+            {% assign tab = tab | plus: 1 %}
+            <a href="#tab{{ tab }}" class="tab">{{ e.company }}</a>
+        {% endfor %}
+        <span class="highlighter"></span>
+    </div>
+    <div class="tabs-content">
+        {% assign tab = 0 %}
+        {% for e in site.data.experience %}
+            {% assign tab = tab | plus: 1 %}
+            <div class="content" id="tab{{ tab }}">
+                <h1 class="tab-title">{{ e.title }}</h1>
+                <h2 class="tab-date">{{ e.date }}</h2>
+                <p class="tab-content">{{ e.description | markdownify }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<script src="/assets/js/tabs.js"></script>
+-->
+
+<div class="row align-items-center">
+    <div class="col-md-6">
+        <h1>Education</h1>
+        <ul>
+            {% for e in site.data.education %}
+            <li>
+                <b>{{ e.school }} - {{ e.degree }}</b> (<i>{{ e.begin_date }} - {{ e.end_date }}</i>)
+                <p>{{ e.description }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <h1>Experience</h1>
+        <ul>
+            {% for e in site.data.experience %}
+            <li>
+                <b>{{ e.company }} - {{ e.title }}</b> (<i>{{ e.begin_date }} - {{ e.end_date }}</i>)
+                <p>{{ e.description }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
