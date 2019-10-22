@@ -1,21 +1,11 @@
 <head>
     <meta charset="UTF-8">
     <link rel='icon' href='/assets/img/favicon.ico' type='image/x-icon'>
+    <title>{{ site.title | escape }}</title>
 
-    <title>
-        {% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}
-        {% else %}{{ site.title | escape }}{% endif %}
-    </title>
-
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="/assets/css/main.css">
-    
     <!-- Font Awesome 5 KIT -->
     <script src="https://kit.fontawesome.com/69abfcab1a.js" crossorigin="anonymous"></script>
 
-    <!-- Syntax highlighting using highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    
-    <!-- Full-page scrolling using fullpage.js -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>

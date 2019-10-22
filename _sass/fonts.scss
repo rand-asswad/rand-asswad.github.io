@@ -1,4 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+$font-mono: 'Roboto Slab', serif;
+
 // Cabin Sketch
 @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700&display=swap');
 .cabin-sketch {
@@ -6,8 +9,8 @@
 }
 
 // Contact Icons
-$icon-color: #FFF;
-$icon-hover-color: #333; 
+$icon-color: $theme-light;
+$icon-hover-color: $theme-bright; 
 
 // Font Awesome
 .fa-btn {

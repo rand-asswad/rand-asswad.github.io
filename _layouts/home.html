@@ -1,38 +1,12 @@
 ---
 layout: default
 ---
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
 <script src="/assets/js/math.js"></script>
 <script src="/assets/js/complex.js"></script>
 <script src="/assets/js/fourier.js"></script>
 <script src="/assets/js/epicycles.js"></script>
-<script src="/assets/js/svg.js"></script>
-<script src="/assets/js/chart.js"></script>
 
 {{ content }}
-
-<!-- parse sections properties -->
-{% assign sorted_sections = site.sections | sort: 'order' %}
-<script type="text/javascript">
-	var bgColors = [];
-	var pageNames = [];
-</script>
-{% for section in sorted_sections %}
-	<script type="text/javascript">
-		bgColors.push("{{ section.bgcolor }}");
-		pageNames.push("{{ section.name }}");
-	</script>
-{% endfor %}
-
-
-<!-- fullpage js initializer -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
-<script type="text/javascript">
-	var myFullpage = new fullpage('#fullpage', {
-		sectionsColor: bgColors,
-		navigation: true,
-		navigationPosition: 'left',
-		//navigationTooltips: pageNames,
-	});
-</script>

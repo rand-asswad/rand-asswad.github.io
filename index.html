@@ -1,0 +1,30 @@
+---
+layout: home
+---
+
+<body data-spy="scroll" data-target="#main-nav" data-offset="100">
+    <div class="container-fluid">
+
+        <nav id="main-nav">
+            <ul class="nav home-nav">
+                {% for section in site.sections %}
+                    <li>
+                        <a href="#section{{ section.order }}">
+                            <h1 class="section-id">{{ section.order }}</h1>
+                            <h2 class="section-title">{{ section.title }}</h2>
+                            {% if section.description %}
+                                <p class="section-body">{{ section.description }}</p>
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+        {% for section in site.sections %}
+            <section class="section" id="section{{ section.order }}">
+                {{ section.content }}
+            </section>
+        {% endfor %}
+    </div>
+</body>

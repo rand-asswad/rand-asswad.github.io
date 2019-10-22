@@ -4,9 +4,17 @@
 
 $primary: #8d021f; // burgundy
 
+@import 'colors';
+
+$nb-tabs: {{ site.data.experience.size }};
+@import 'tabs';
 
 @import 'bootstrap/bootstrap';
 
 @import 'fonts';
 
+@import 'nav';
+
 @import 'skills';
+
+@import 'general';
