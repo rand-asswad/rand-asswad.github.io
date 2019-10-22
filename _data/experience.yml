@@ -1,18 +1,24 @@
-- company: INRIA Nancy Grand-Est (France)
+- company: INRIA
+  company_w_location: INRIA Nancy Grand-Est
+  link: https://www.inria.fr/en/centre/nancy
   title: Research Internship
-  begin_date: 2019/06
-  end_date: 2019/08
-
-- company: INSA Rouen Normandie (France)
-  title: Web Developer Internship
-  begin_date: 2017/07
-  end_date: 2017/09
+  date: June - August 2019
   description: >-
     Established a Proof of Concept of a web version of the free software [**AMC**](https://www.auto-multiple-choice.net/) that creates and manages multiple choice questionnaires (QCM) as it is only available on UNIX systems.
     Created a Django web application that communicates with AMC through bash.
 
-- company: Robert Bosch (Mondeville, France)
+- company: INSA
+  company_w_location: INSA Rouen Normandie
+  link: https://www.insa-rouen.fr/en
+  title: Web Developer Internship
+  date: July - September 2017
+  description: >-
+    Established a Proof of Concept of a web version of the free software [**AMC**](https://www.auto-multiple-choice.net/) that creates and manages multiple choice questionnaires (QCM) as it is only available on UNIX systems.
+    Created a Django web application that communicates with AMC through bash.
+
+- company: BOSCH
+  company_w_location: Robert Bosch Mondeville 
+  link: https://www.bosch.fr/en/
   title: Execution Internship
-  begin_date: 2015/07
-  end_date: 2015/07
+  date: July 2015
   description: Worked on the valve production line, my first experience in the industrial world.

@@ -2,19 +2,20 @@
 # Main file calling bootstrap scss with custom values
 ---
 
-$primary: #8d021f; // burgundy
-
 @import 'colors';
 
-$nb-tabs: {{ site.data.experience.size }};
-@import 'tabs';
-
-@import 'bootstrap/bootstrap';
+//$nb-tabs: {{ site.data.experience.size }};
 
 @import 'fonts';
 
+@import 'bootstrap/bootstrap';
+
+@import 'containers';
+
+@import 'tabs';
+
 @import 'nav';
 
-@import 'skills';
+//@import 'skills';
 
 @import 'general';
