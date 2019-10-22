@@ -1,0 +1,34 @@
+
+// section padding
+$side-padding: 400px;
+$top-padding: 200px;
+$bottom-padding: $top-padding;
+
+// color
+$main-text-color: $theme-grey;
+$main-bg-color: $theme-darker;
+
+// font
+$main-font: "Roboto Slab", serif;
+$main-font-size: 20px;
+
+.container-fluid {
+    min-height: 100vh;
+    position: relative;
+    background: $main-bg-color;
+}
+
+section, .section {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: $top-padding;
+    padding-bottom: $bottom-padding;
+    padding-left: $side-padding;
+    padding-right: $side-padding;
+    
+    color: $main-text-color;
+    font-family: $main-font;
+    font-size: $main-font-size;
+}

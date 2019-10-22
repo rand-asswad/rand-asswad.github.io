@@ -2,11 +2,6 @@
 $nav-color: $theme-grey;
 $bg-color: $theme-darker;
 
-// section padding
-$side-padding: 400px;
-$top-padding: 200px;
-$bottom-padding: $top-padding;
-
 // nav font
 $nav-font: "Roboto Slab", serif;
 $nav-id-font-size: 24px;
@@ -36,36 +31,6 @@ $nav-li-transition: all 0.3 ease-out;
 $nav-id-transition: all 0.15s ease-out;
 $nav-title-transition: height 0.3s ease-out, opacity 0.2s ease-out;
 $nav-body-transition: $nav-title-transition;
-
-/* these should move to another file */
-.container-fluid, .wrapper {
-    min-height: 100vh;
-    position: relative;
-    background: $bg-color; // for testing
-}
-
-section, .section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding-top: $top-padding;
-    padding-bottom: $bottom-padding;
-    padding-left: $side-padding;
-    padding-right: $side-padding;
-    
-    color: $nav-color; // for testing
-    font-family: $nav-font;
-/*
-  $colors: #000000, #F64747, #22A7F0, #F9690E, #9B59B6, #03C9A9, #ffcc00;
-  @for $i from 1 through length($colors) {
-    &:nth-child(#{$i}) {
-      background: nth($colors, $i)
-    }
-  }
-  */
-}
 
 .home-nav {
     position: fixed;
