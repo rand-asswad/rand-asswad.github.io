@@ -48,7 +48,7 @@ function sketchSingle(fileName, div, scale, period) {
 
         p.setup = function() {
             parseData();
-            p.createCanvas(dim.width * 2, dim.height * 2);
+            p.createCanvas(dim.width * 1.5, dim.height * 1.5);
             p.frameRate(Math.round(f.length / period));
             coefs = FourierCoefs(f, f.length);
             coefs.sort((a, b) => b.r - a.r);
