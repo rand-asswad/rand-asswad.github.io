@@ -1,15 +1,16 @@
-- school: INSA Rouen Normandie (France)
-  degree: Mathematical Engineering (MEng)
-  begin_date: 2014/09
-  end_date: 2020/08
+- school: INSA Rouen Normandie
+  degree: Mathematical Engineering
+  date: September 2014 - present
+  link: https://www.insa-rouen.fr/en
   description: Five-years engineering program with focus on applied mathematics and computer science.
 
-- school: Université de Rouen (France)
-  degree: Theoretical and Applied Computer Science (MSc)
-  begin_date: 2019/09
-  end_date: 2020/08
+- school: Université de Rouen
+  degree: Theoretical and Applied Computer Science
+  date: September 2019 - present
+  link: http://rouenuniversity.univ-rouen.fr/
 
-- school: Little Village School (Damascus, Syria)
+- school: Little Village School
   degree: Syrian Scientific Baccalaureate
-  end_date: 2013/06
+  date: June 2013
+  link: https://www.littlevillageschool.com/
   description: Graduation grade 92.17%

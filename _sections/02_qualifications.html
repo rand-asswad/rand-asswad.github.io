@@ -4,23 +4,39 @@ order: "02"
 description: My education and professional experience.
 ---
 
-<div class="tabs-container">
-    <div class="tabs">
-        {% assign tab = 0 %}
-        {% for e in site.data.experience %}
-            {% assign tab = tab | plus: 1 %}
-            <a href="#tab{{ tab }}" class="tab">{{ e.company }}</a>
+<div class="qualif col-xl-10 offset-xl-1 col-lg-12 offset-lg-0">
+
+    <h1>Education</h1>
+    <div class="accordeon">
+        {% for e in site.data.education %}
+        <h1 class="accordeon-title">{{ e.degree }} <a href="{{ e.link }}" target="_blank">@ {{ e.school }}</a></h1>
+        <div class="accordeon-content">
+            <h2 class="accordeon-subtitle"{{ e.date }}></h2>
+            <p>{{ e.description }}</p>
+        </div>
         {% endfor %}
     </div>
-    <div class="tabs-content">
-        {% assign tab = 0 %}
-        {% for e in site.data.experience %}
-            {% assign tab = tab | plus: 1 %}
-            <div class="content" id="tab{{ tab }}">
-                <h1 class="tab-title">{{ e.title }} <a href="{{ e.link }}" target="_blank">@ {{ e.company_w_location }}</a></h1>
-                <h2 class="tab-subtitle">{{ e.date }}</h2>
-                <p class="tab-content">{{ e.description | markdownify }}</p>
-            </div>
-        {% endfor %}
+
+    <h1>Experience</h1>
+    <div class="tabs-container">
+        <div class="tabs">
+            {% assign tab = 0 %}
+            {% for e in site.data.experience %}
+                {% assign tab = tab | plus: 1 %}
+                <a href="#tab{{ tab }}" class="tab">{{ e.company }}</a>
+            {% endfor %}
+        </div>
+        <div class="tabs-content">
+            {% assign tab = 0 %}
+            {% for e in site.data.experience %}
+                {% assign tab = tab | plus: 1 %}
+                <div class="content" id="tab{{ tab }}">
+                    <h1 class="tab-title">{{ e.title }} <a href="{{ e.link }}" target="_blank">@ {{ e.company_w_location }}</a></h1>
+                    <h2 class="tab-subtitle">{{ e.date }}</h2>
+                    <p class="tab-content">{{ e.description | markdownify }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
+
 </div>

@@ -1,20 +1,18 @@
 ---
-# Main file calling bootstrap scss with custom values
 ---
 
 @import 'colors';
-
-//$nb-tabs: {{ site.data.experience.size }};
-
 @import 'fonts';
+
+@import 'sections/qualif';
 
 @import 'bootstrap/bootstrap';
 
 @import 'containers';
 
-@import 'tabs';
-
-@import 'nav';
+@import 'components/accordeon';
+@import 'components/tabs';
+@import 'components/nav';
 
 //@import 'skills';
 

@@ -24,6 +24,7 @@ $tab-content-subtitle-size: 18px;
 $tab-content-text-size: 20px;
 
 $tab-link-color: $theme-bright;
+$tab-content-title-color: $theme-grey;
 
 .tabs-container {
   width: 100%;
@@ -84,21 +85,21 @@ $tab-link-color: $theme-bright;
       position: absolute;
       width: 100;
       height: 100;
-      //display: none;
       visibility: hidden;
       opacity: 0;
       transition: opacity 0.5s ease-out;
 
       &.active {
         position: relative;
-        //display: block;
         visibility: visible;
         opacity: 1;
         transition: opacity 0.5s ease-in;
       }
 
       h1, .tab-title {
+        padding-left: 0;
         font-size: $tab-content-title-size;
+        color: $tab-content-title-color;
       }
       
       h2, h3, h4, h5, h6, .tab-subtitle {
