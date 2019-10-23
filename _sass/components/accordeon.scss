@@ -1,0 +1,77 @@
+$acc-title-padding-horz: $qualif-left-padding;
+$acc-title-padding-vert: 15px;
+$acc-content-padding-vert: 5px;
+
+$acc-border-width: 5px;
+$acc-border-color: $theme-grey;
+$acc-border-hover-color: $theme-bright;
+$acc-border-selected-color: $theme-grey;
+
+$acc-title-color: $theme-grey;
+$acc-title-hover-color: $theme-bright;
+$acc-title-selected-color: $theme-bright;
+
+$acc-title-size: 30px;
+$acc-subtitle-size: 18px;
+$acc-text-size: 20px;
+
+$acc-subtitle-color: $theme-bright;
+$acc-link-color: $theme-bright;
+
+$acc-title-highlight-hover: $theme-dark;
+
+.accordeon {
+    width: 100%;
+    min-height: 40vh;
+    padding: 0;
+    margin: auto;
+    
+    .accordeon-title, h1 {
+        padding: $acc-title-padding-vert $acc-title-padding-horz;
+        width: 100%;
+        margin: 0;
+        cursor: pointer;
+        border-left-style: solid;
+        border-left-width: $acc-border-width;
+        border-left-color: $acc-border-color;
+        text-align: left;
+        color: $acc-title-color;
+        font-size: $acc-title-size;
+        transition: background-color 0.1s ease-out;
+
+        &.active {
+            border-left-color: $acc-border-selected-color;
+            transition: background-color 0.1s ease-out;
+        }
+        
+        &:hover {
+            border-left-color: $acc-border-hover-color;
+            background-color: $acc-title-highlight-hover;
+            transition: background-color 0.2s ease-in;
+        }
+    }
+
+    .accordeon-content {
+        display: none;
+        padding: $acc-content-padding-vert $acc-title-padding-horz;
+        border-left-style: solid;
+        border-left-width: $acc-border-width;
+        border-left-color: $acc-border-color;
+        text-align: left;
+
+        h2, .accordeon-subtitle {
+            font-size: $acc-subtitle-size;
+            color: $acc-subtitle-color;
+            padding-top: 0;
+            padding-bottom: 0.2em;
+        }
+
+        p {
+            font-size: $acc-text-size;
+        }
+    } 
+    
+    a {
+        color: $acc-link-color;
+    }
+}
