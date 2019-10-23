@@ -73,5 +73,6 @@ $acc-title-highlight-hover: $theme-dark;
     
     a {
         color: $acc-link-color;
+        white-space: nowrap;
     }
 }

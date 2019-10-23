@@ -23,7 +23,7 @@ $.scrollify({
         $(".home-nav li").find("a[href=\"#" + href + "\"]").parent().addClass("active");
     },
     after:function() {},
-    afterResize:function() {},
+    afterResize:function() {location.reload();},
     afterRender:function() {}
 });
 

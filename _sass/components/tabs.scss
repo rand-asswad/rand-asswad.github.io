@@ -112,6 +112,7 @@ $tab-content-title-color: $theme-grey;
 
       a {
         color: $tab-link-color;
+        white-space: nowrap;
 
         &:hover {
           text-decoration: underline;
