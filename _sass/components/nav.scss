@@ -49,7 +49,7 @@ $nav-body-transition: $nav-title-transition;
     font-family: $nav-font;
     color: $nav-color;
     
-    li {
+    li, .nav-item {
         position: relative;
         transition: $nav-li-transition;
         margin-bottom: $nav-li-spacing;
@@ -66,7 +66,7 @@ $nav-body-transition: $nav-title-transition;
             top: 15px; // try 1em later
         }
 
-        a {
+        a, .nav-link {
             display: block;
             padding: 0;
             color: $nav-color;

@@ -8,7 +8,7 @@ layout: home
             <ul class="nav home-nav">
                 {% for section in site.sections %}
                     <li>
-                        <a href="#section{{ section.order }}">
+                        <a href="#{{ section.title | replace: " ", "_" }}">
                             <h1 class="section-id">{{ section.order }}</h1>
                             <h2 class="section-title">{{ section.title }}</h2>
                             {% if section.description %}
@@ -21,7 +21,7 @@ layout: home
         </nav>
 
         {% for section in site.sections %}
-            <section class="section" id="section{{ section.order }}">
+            <section class="section" data-section-name="{{ section.title | replace: " ", "_" }}">
                 {{ section.content }}
             </section>
         {% endfor %}
