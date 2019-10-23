@@ -1,7 +1,7 @@
 
 // section padding
-$side-padding: 400px;
-$top-padding: 200px;
+$side-padding: 380px;
+$top-padding: 10px;
 $bottom-padding: $top-padding;
 
 // color
@@ -19,6 +19,10 @@ $main-font-size: 20px;
 }
 
 section, .section {
+    // because bootstrap knows better
+    @extend .row;
+    @extend .align-items-center;
+
     min-height: 100vh;
     justify-content: center;
     align-items: center;
