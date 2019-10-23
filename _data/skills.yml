@@ -1,6 +1,4 @@
 - category: Mathematics & CS Theory
-  color: "#446688"
-  side: left
   list:
   - Signal Processing
   - Numerical Analysis
@@ -14,8 +12,6 @@
   - Advanced logic
 
 - category: Programming
-  color: "#FF8000"
-  side: right
   list:
   - C
   - C++
@@ -23,14 +19,12 @@
   - Python
   - Bash
   - Fortran
-  - Octave
+  - Matlab/Octave
   - Prolog
   - Javascript
   - SQL
 
 - category: Frameworks & Libraries
-  color: "#9A16A9"
-  side: right
   list:
   - Numpy, Scipy & Matplotlib
   - Django
@@ -41,8 +35,6 @@
   - GNU Scientific Library (GSL)
 
 - category: OS, Software & Tools
-  color: "#CC0000"
-  side: left
   list:
   - GNU/Linux (Arch/Debian)
   - Microsoft Windows
