@@ -6,3 +6,14 @@ $theme-dark: #464866;
 $theme-grey: #AAABB8;
 $theme-light: #29648A;
 $theme-bright: #2E9CCA;
+
+// bootstrap colors
+$primary: $theme-bright;
+$secondary: $theme-grey;
+$dark: $theme-dark;
+$light: $theme-light;
+
+$link-color: $theme-bright;
+$link-hover-color: $theme-light;
+
+$body-bg: $theme-darker;
