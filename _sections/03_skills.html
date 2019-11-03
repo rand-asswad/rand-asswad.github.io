@@ -3,15 +3,18 @@ title: skills
 order: "03"
 ---
 
-<div class="accordeon col-xl-10 offset-xl-1 col-lg-12 offset-lg-0">
-{% for skill in site.data.skills %}
-    <h1 class="accordeon-title">{{ skill.category }}</h1>
-    <div class="accordeon-content">
-        <ul class="list-inline">
-        {% for s in skill.list %}
-            <li class="list-inline-item">{{ s }}</li>
-        {% endfor %}
-        </ul>
+<div class="qualif col-xl-10 offset-xl-1 col-lg-12 offset-lg-0">
+    <h1>Skills</h1>
+    <div class="accordeon">
+    {% for skill in site.data.skills %}
+        <h1 class="accordeon-title">{{ skill.category }}</h1>
+        <div class="accordeon-content">
+            <ul class="list-inline">
+            {% for s in skill.list %}
+                <li class="list-inline-item">{{ s }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
     </div>
-{% endfor %}
 </div>
