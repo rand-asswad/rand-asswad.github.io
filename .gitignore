@@ -2,6 +2,7 @@
 /draft/
 head_old.html
 nav.html
+/**/*.backup.*
 
 # Jekyll metadata
 _site/
