@@ -1,0 +1,66 @@
+// colors
+$icons-color: $theme-grey;
+$icons-hover-color: $theme-bright;
+
+// dims
+$icon-size: 25px;
+$icon-hand-length: 70px;
+$icon-margin: 20px;
+
+ul#link-icons {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        font-size: $icon-size;
+        
+        a {
+            color: $icons-color;
+
+            &:hover {
+                color: $icons-hover-color;
+            }
+        }
+    }
+
+    &.horizontal {
+        top: $icon-margin;
+
+        li {
+            display: inline-block;
+            margin: 0 0.5em 0 0;
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: $icon-hand-length;
+            height: 1px;
+            background-color: $icons-color;
+            margin-bottom: 0.5em;
+        }
+    }
+
+    &.vertical {
+        right: $icon-margin;
+
+        li {
+            display: block;
+            margin: 0.3em 0 0 0;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            height: $icon-hand-length;
+            width: 1px;
+            background-color: $icons-color;
+            margin-left: 0.6em;
+        }
+    }
+}

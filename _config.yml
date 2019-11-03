@@ -1,11 +1,13 @@
 # site variables
 title: Rand Asswad
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: >- # appears on homepage and in google search results 
+  I'm a Masters student based in France, specializing in applied mathematics 
+  and theoretical computer science.
+
+  I am passionate about mathematics and math-adjacent domains,
+  and am interested in persuing a career in research.
+baseurl: ""
+url: ""
 
 # sass config
 sass:

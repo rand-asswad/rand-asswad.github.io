@@ -9,27 +9,19 @@ order: "00"
     <div class="p-2">
         <h1>Hi, I'm Rand!</h1>
     </div>
-    <div class="p-2">
-        <p>A few things about me.</p>
+    <div class="p-2" style="text-align: left;">
+        {{ site.description | markdownify | newline_to_br }}
     </div>
     <div class="p-2">
-        <a href="mailto:{{ site.data.contact.email }}" class="fa-btn">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://github.com/{{ site.data.contact.github }}" target="_blank" class="fa-btn">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/{{ site.data.contact.linkedin }}" target="_blank" class="fa-btn">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="/assets/cv-fr.pdf" target="_blank" class="fa-btn cv-btn">CV</a>
+        <!--a href="/assets/cv-en.pdf" target="_blank" class="cv-btn">my résumé</a-->
+        <a href="/assets/cv-fr.pdf" target="_blank" class="cv-btn">CV français</a>
     </div>
 </div>
 
 <script>
-    var p = sketchFourier("/assets/me.csv", "sketch-holder", 3);
-    p.bgColor = "#25274D";
-    p.pathColor = "#2E9CCA";
-    p.cyclesColor = "#AAABB8";
-    p.vectorsColor = "#29648A";
+    //var p = sketchFourier("/assets/me.csv", "sketch-holder", 3, 10);
+    //p.bgColor = "#25274D";
+    //p.pathColor = "#2E9CCA";
+    //p.cyclesColor = "#AAABB8";
+    //p.vectorsColor = "#29648A";
 </script>

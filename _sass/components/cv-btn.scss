@@ -1,0 +1,19 @@
+// colors
+$cv-btn-color: $theme-bright;
+$cv-btn-hover-color: $theme-dark;
+
+a.cv-btn {
+    text-decoration: none;
+    text-align: center;
+    background-color: transparent;
+    color: $cv-btn-color;
+    border: 1px solid $cv-btn-color;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 1em;
+    margin: 1em;
+
+    &:hover {
+        background-color: $cv-btn-hover-color;
+    }
+}

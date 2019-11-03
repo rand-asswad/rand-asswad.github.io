@@ -3,6 +3,9 @@ layout: home
 ---
 
 <body>
+    {% include links.html %}
+    <h1 id="site-title">{{ site.title }}</h1>
+    
     <nav>
         <ul id="main-nav">
             {% for section in site.sections %}
