@@ -1,26 +1,29 @@
 ---
-title: projects
+title: portfolio
 order: "04"
 ---
 
-<div id="projects" class="tabs-container col-xl-10 offset-xl-1 col-lg-12 offset-lg-0">
-    <div class="tabs">
-        {% for p in site.data.projects %}
-            <a href="#proj{% increment tabLink %}" class="tab">{{ p.title }}</a>
-        {% endfor %}
-    </div>
-    <div class="tabs-content">
-        {% for p in site.data.projects %}
-            <div class="content" id="proj{% increment tab %}">
-                <h1 class="tab-title">{{ p.long_title }}</h1>
-                <ul class="list-inline">
-                {% for tag in p.tags %}
-                  <li class="list-inline-item text-primary">{{ tag }}</li>
-                {% endfor %}
-                </ul>
-                <h2 class="tab-subtitle">{{ p.date }}</h2>
-                <p class="tab-content">{{ p.description | markdownify }}</p>
-            </div>
-        {% endfor %}
+<div class="qualif col-xl-10 offset-xl-1 col-lg-12 offset-lg-0">
+    <h1>Projects</h1>
+    <div id="projects" class="tabs-container">
+        <div class="tabs">
+            {% for p in site.data.projects %}
+                <a href="#proj{% increment tabLink %}" class="tab">{{ p.title }}</a>
+            {% endfor %}
+        </div>
+        <div class="tabs-content">
+            {% for p in site.data.projects %}
+                <div class="content" id="proj{% increment tab %}">
+                    <h1 class="tab-title">{{ p.long_title }}</h1>
+                    <ul class="list-inline">
+                    {% for tag in p.tags %}
+                    <li class="list-inline-item text-primary">{{ tag }}</li>
+                    {% endfor %}
+                    </ul>
+                    <h2 class="tab-subtitle">{{ p.date }}</h2>
+                    <p class="tab-content">{{ p.description | markdownify }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </div>

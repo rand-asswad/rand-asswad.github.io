@@ -19,7 +19,7 @@ layout: home
     <div id="fullpage" class="container-fluid">
         {% for section in site.sections %}
         <section class="section" data-anchor="{{ section.title | replace: " ", "_" }}">
-            {{ section.content }}
+            <div class="row align-items-center">{{ section.content }}</div>
         </section>
         {% endfor %}
     </div>
