@@ -12,7 +12,7 @@ order: "04"
     <div class="tabs-content">
         {% for p in site.data.projects %}
             <div class="content" id="proj{% increment tab %}">
-                <h1 class="tab-title">{% if p.long_title  %}{{ p.long_title }}{% else %}{{ p.title }}{% endif %}</h1>
+                <h1 class="tab-title">{{ p.long_title }}</h1>
                 <ul class="list-inline">
                 {% for tag in p.tags %}
                   <li class="list-inline-item text-primary">{{ tag }}</li>
