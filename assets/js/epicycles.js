@@ -12,6 +12,8 @@ function sketchSingle(fileName, div, scale, period) {
     let dt;
 
     var sketch = function(p) {
+        p.disableFriendlyErrors = true;
+
         p.bgColor = 0;
         p.pathColor = 255;
         p.cyclesColor = "#555";
@@ -71,6 +73,12 @@ function sketchSingle(fileName, div, scale, period) {
 
             p.time += dt;
             if (p.time >= period) time = 0;
+        }
+
+        p.start = function() {
+            p.time = 0;
+            path = [];
+            p.loop();
         }
     }
 
