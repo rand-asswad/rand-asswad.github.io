@@ -3,20 +3,16 @@ title: projects
 order: "04"
 ---
 
-<div class="tabs-container col-xl-10 offset-xl-1 col-lg-12 offset-lg-0">
+<div id="projects" class="tabs-container col-xl-10 offset-xl-1 col-lg-12 offset-lg-0">
     <div class="tabs">
-        {% assign tab = 0 %}
         {% for p in site.data.projects %}
-            {% assign tab = tab | plus: 1 %}
-            <a href="#proj{{ tab }}" class="tab">{{ p.title }}</a>
+            <a href="#proj{% increment tabLink %}" class="tab">{{ p.title }}</a>
         {% endfor %}
     </div>
     <div class="tabs-content">
-        {% assign tab = 0 %}
         {% for p in site.data.projects %}
-            {% assign tab = tab | plus: 1 %}
-            <div class="content" id="proj{{ tab }}">
-                <h1 class="tab-title">{% if p.long_title %}{{ p.long_title }}{% else %}{{ p.title }}{% endif %}</h1>
+            <div class="content" id="proj{% increment tab %}">
+                <h1 class="tab-title">{% if p.long_title  %}{{ p.long_title }}{% else %}{{ p.title }}{% endif %}</h1>
                 <ul class="list-inline">
                 {% for tag in p.tags %}
                   <li class="list-inline-item text-primary">{{ tag }}</li>

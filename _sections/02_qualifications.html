@@ -17,19 +17,15 @@ order: "02"
     </div>
 
     <h1>Experience</h1>
-    <div class="tabs-container">
+    <div id="experience" class="tabs-container">
         <div class="tabs">
-            {% assign tab = 0 %}
             {% for e in site.data.experience %}
-                {% assign tab = tab | plus: 1 %}
-                <a href="#tab{{ tab }}" class="tab">{{ e.company }}</a>
+                <a href="#tab{% increment tabLink %}" class="tab">{{ e.company }}</a>
             {% endfor %}
         </div>
         <div class="tabs-content">
-            {% assign tab = 0 %}
             {% for e in site.data.experience %}
-                {% assign tab = tab | plus: 1 %}
-                <div class="content" id="tab{{ tab }}">
+                <div class="content" id="tab{% increment tab %}">
                     <h1 class="tab-title">{{ e.title }} <a href="{{ e.link }}" target="_blank">@ {{ e.company_w_location }}</a></h1>
                     <h2 class="tab-subtitle">{{ e.date }}</h2>
                     <p class="tab-content">{{ e.description | markdownify }}</p>
