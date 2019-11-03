@@ -1,133 +1,65 @@
-// testing values
+// colors
 $nav-color: $theme-grey;
-$bg-color: $theme-darker;
+$nav-active-color: $theme-bright;
 
-// nav font
+// fonts
 $nav-font: "Roboto Slab", serif;
-$nav-id-font-size: 24px;
-$nav-active-id-font-size: 48px;
-$nav-title-font-size: 32px;
-$nav-body-font-size: 18px;
-$nav-title-font-weight: 300;
-$nav-body-font-weight: 150;
+$font-size: 25px;
+$font-active-size: 35px;
+$font-hover-size: 37px;
 
-// nav dimensions
-$nav-left-margin: 30px;
-$nav-bottom-margin: 100px;
-$nav-inner-margin: 0;
-$nav-li-spacing: 1em;
-$nav-item-hand: 20px;
-$nav-active-item-hand: 35px;
-$nav-border-width: 2px;
-$nav-active-width: 300px;
-$nav-active-height: 300px;
-$nav-active-left-space: 1em;
-$nav-active-title-height: 40px;
-$nav-active-body-height: 100px;
+// padding
+$hand-length: 30px;
+$hand-padding-right: 5px;
+$vertical-padding: 4px;
 
-// transition
-$nav-text-transition: all 0.15s ease-out;
-$nav-li-transition: all 0.3 ease-out;
-$nav-id-transition: all 0.15s ease-out;
-$nav-title-transition: height 0.3s ease-out, opacity 0.2s ease-out;
-$nav-body-transition: $nav-title-transition;
+#main-nav {
+	position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+	left: 0;
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-.home-nav {
-    position: fixed;
-    height: 100%;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-end;
-
-    padding: $nav-left-margin;
-    margin-left: $nav-left-margin;
-    margin-bottom: $nav-bottom-margin;
-    margin-top: $nav-inner-margin;
-    margin-right: $nav-inner-margin;
-
-    font-family: $nav-font;
-    color: $nav-color;
-    
-    li, .nav-item {
+	a {
+		font-family: $nav-font;
+		font-size: $font-size;
+		text-decoration: none;
+		color: $nav-color;
+		transition: all 0.3s ease;
+        display: block;
+        padding: $vertical-padding 0 $vertical-padding $hand-length+$hand-padding-right;
         position: relative;
-        transition: $nav-li-transition;
-        margin-bottom: $nav-li-spacing;
 
-        ::after{
-            display: block;
-            border-left: $nav-border-width solid $nav-color;
-            border-top: $nav-border-width solid $nav-color;
+		&:hover {
+			font-size: $font-hover-size;
+			color: $nav-active-color;
+		}
+    
+        &::before {
             content: "";
-            height: 1000px; // big enough value
-            width: $nav-item-hand;
-            position: absolute;
-            left: -$nav-left-margin;
-            top: 15px; // try 1em later
-        }
-
-        a, .nav-link {
             display: block;
-            padding: 0;
-            color: $nav-color;
-            transition: $nav-text-transition;
-            background-color: transparent;
-
-            :hover {
-                padding-left: 1em;
-            }
+            width: 0;
+            height: 1px;
+            background-color: $nav-active-color;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -1px;
+            transition: all 0.3s ease;
         }
-
-        h1, .section-id {
-            font-size: $nav-id-font-size;
-            transition: $nav-id-transition;
-        }
+    }
         
-        h2, .section-title {
-            font-size: $nav-title-font-size;
-            font-weight: $nav-title-font-weight;
-            width: $nav-active-width;
-            height: 0;
-            overflow: hidden;
-            opacity: 0; // transparent
-            transition: $nav-title-transition;
-        }
-        
-        p, .section-body {
-            font-size: $nav-body-font-size;
-            font-weight: $nav-body-font-weight;
-            width: $nav-active-width;
-            height: 0;
-            overflow: hidden;
-            opacity: 0; // transparent
-            transition: $nav-title-transition;
-        }
-
-        &.active {
-            pointer-events: none;
-            padding-left: $nav-active-left-space;
-
-            ::after {
-                width: $nav-active-item-hand;
-                height: $nav-active-height;
-                top: 35px;
-            }
-
-            h1, .section-id {
-                font-size: $nav-active-id-font-size;
-            }
-
-            h2, .section-title {
-                height: $nav-active-title-height;
-                opacity: 1;
-                overflow: visible;
-            }
-            
-            p, .section-body {
-                height: $nav-active-body-height;
-                opacity: 1;
-                overflow: visible;
-            }
+    a.active, .active > a {
+        font-size: $font-active-size;
+        color: $nav-active-color;
+        pointer-events: none;
+        cursor: default;
+    
+        &::before {
+            width: $hand-length;
         }
     }
 }

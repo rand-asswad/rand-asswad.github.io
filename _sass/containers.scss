@@ -1,6 +1,6 @@
 
 // section padding
-$side-padding: 380px;
+$side-padding: 250px;
 $top-padding: 10px;
 $bottom-padding: $top-padding;
 
@@ -12,25 +12,21 @@ $main-bg-color: $theme-darker;
 $main-font: "Roboto Slab", serif;
 $main-font-size: 20px;
 
-.container-fluid {
-    min-height: 100vh;
-    position: relative;
-    background: $main-bg-color;
-}
-
 section, .section {
     // because bootstrap knows best
     @extend .row;
-    @extend .align-items-center;
+//    @extend .align-items-center;
 
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    
-    padding-top: $top-padding;
-    padding-bottom: $bottom-padding;
+//    min-height: 100vh;
+//    justify-content: center;
+//    align-items: center;
+
+    margin: 0px;
     padding-left: $side-padding;
     padding-right: $side-padding;
+    padding-top: $top-padding;
+    padding-bottom: $bottom-padding;
+
     
     color: $main-text-color;
     font-family: $main-font;
