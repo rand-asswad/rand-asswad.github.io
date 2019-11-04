@@ -1,0 +1,53 @@
+// colors
+$card-text-color: $theme-grey;
+$card-title-color: $theme-grey;
+$card-bullet-color: $theme-bright;
+
+// text
+$card-text-size: 16px;
+$card-title-size: 22px;
+$card-bullet-size: $card-title-size;
+
+
+
+ul.card-container {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+
+    padding: 0;
+    margin: 0;
+
+    // two columns
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+
+    li {
+        position: relative;
+        padding-left: 2em;
+        display: list-item;
+            
+        color: $card-text-color;
+        font-size: $card-text-size;
+
+        h1, h2, h3, h4, h5, h6 {
+            color: $card-title-color;
+            font-size: $card-title-size;
+
+            padding: 0;
+            margin: 0;
+            padding-bottom: 0.5em;
+        }
+
+        &::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            top: -0.25em;
+
+            color: $card-bullet-color;
+            font-size: $card-title-size;
+        }
+    }
+}

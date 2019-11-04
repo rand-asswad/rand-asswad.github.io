@@ -3,9 +3,14 @@ title: about me
 order: "01"
 ---
 
-<p>
-Dis cubilia etiam magnis luctus potenti ante lacus velit! A molestie tempus ad nostra feugiat. Senectus quam habitant dis conubia mattis magnis placerat nec ultricies. Rutrum enim cursus class malesuada tristique varius sociosqu condimentum convallis sem pretium! Proin nibh volutpat nibh, nisi orci. Litora mattis senectus cubilia rutrum! Ultrices montes, potenti class? Eleifend placerat parturient varius id eros nibh turpis quisque rutrum sit, a libero. Torquent bibendum mus posuere diam blandit justo amet. Venenatis imperdiet erat elit facilisi viverra luctus primis rhoncus, varius luctus nisl conubia. Quis sodales ultrices convallis aliquam sapien justo tempus. Morbi vel.
-</p>
-<p>
-Nisi mollis scelerisque hac montes dignissim netus cubilia? Leo nam facilisi phasellus lacinia vehicula litora nascetur. Eget tempor sollicitudin mauris imperdiet. Ultricies sociis dis orci. Feugiat facilisi rhoncus ipsum rhoncus pharetra mattis. Sociosqu aptent venenatis vel habitasse felis class commodo sociosqu elit sem cursus. Donec habitasse nisi phasellus felis metus litora ornare hendrerit vitae congue ultricies. Proin phasellus nec himenaeos aliquet dui eleifend. Felis cubilia dis platea. Sodales platea malesuada pulvinar tortor in ligula nunc eget odio aptent curae; iaculis? Litora proin massa integer hendrerit purus libero commodo. Non, cras vitae montes ullamcorper. Litora, molestie est?
-</p>
+<div class="qualif col-xl-10 offset-xl-1 col-lg-12 offset-lg-0">
+    <h1>A few things about me</h1>
+    <ul class="card-container">
+    {% for c in site.data.about_me %}
+        <li>
+            <h1>{{ c.head }}</h1>
+            {{ c.body | markdownify }}
+        </li>
+    {% endfor %}
+    </ul>
+</div>
