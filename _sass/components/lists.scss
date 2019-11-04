@@ -10,7 +10,7 @@ $card-bullet-size: $card-title-size;
 
 
 
-ul.card-container {
+ul.grid-list {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, 50%);
