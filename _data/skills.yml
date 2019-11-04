@@ -1,42 +1,102 @@
-- category: Mathematics & CS Theory
+- category: Mathematics & Computer Science Theory
+  style: text
   list:
-  - Signal Processing
-  - Numerical Analysis
-  - Control Theory
-  - Functional Analysis
-  - Complex Analysis
-  - Statistics & Data Analysis
-  - Metaheuristics
-  - Combinatorics
-  - Automata Theory & Language Processing
-  - Advanced logic
+  - item: Signal Processing
+    more: analog and digital signals, continuous and discrete time, statistical signal processing, audio signal processing.
+  - item: Numerical Analysis
+    more: >-
+      linear systems, function interpolation and quadrature, least squares,
+      ODE and PDE numerical approximation (Runge-Kutta, finite difference, finite elements),
+      curve and surface spline approximation, mesh generation.
+  - item: Control Theory
+    more: linear and non-linear systems, optimal control.
+  - item: Functional Analysis
+    more: vector analysis, fourier analysis, generalized functions (distributions).
+  - item: Metaheuristics
+    more: >-
+      local search algorithms (Hill-Climbing, Simulated Annealing, Local Beam, Taboo),
+      evolutionary optimization, ant colony optimization.
+  - item: Probability, Statistics and Data Analysis
+    more: >-
+      basic probability, law of large numbers, estimation theory, Markov chains,
+      linear models (simple/multiple linear regression, ANOVA), multidimensional data analysis (PCA, CA, FA),
+      data mining (K-means clustering, SVM).
+  - item: Combinatorics
+    more: graph theory, matroid theory, computational complexity theory, combinatorial optimization.
+  - item: Automata Theory & Language Processing
+    more: automata, formal language theory, lexical and syntaxical analysis.
+  - item: Mathematical Logic
+    more: first-order logic, lambda calculus, constraint programming.
 
-- category: Programming
+- category: Machine Languages
+  style: nested
   list:
-  - C
-  - C++
-  - Java
-  - Python
-  - Bash
-  - Fortran
-  - Matlab/Octave
-  - Prolog
-  - Javascript
-  - SQL
+  - item: Basic
+    sublist:
+    - bash/shell
+    - Fortran
+    - Matlab/Octave
+    - Prolog
+    - Mathematica
+    - Javascript
+    - SQL
+    - PHP
+  - item: Experienced/Advanced
+    sublist:
+    - C
+    - C++
+    - Java
+    - Python
+  - item: Markup
+    sublist:
+    - LaTeX
+    - HTML
+    - Markdown
 
-- category: Frameworks & Libraries
+- category: Human Languages
+  style: text
   list:
-  - Numpy, Scipy & Matplotlib
-  - Django
-  - Jekyll
-  - Lex/Yacc
-  - Antlr
-  - Hadoop
-  - GNU Scientific Library (GSL)
+  - item: English
+    more: Proficient - C1/C2 level (estimated)
+  - item: French
+    more: Profecient - C1 level (TCF certificate)
+  - item: Arabic
+    more: Native
+  - item: German
+    more: Basic - A2 level (summer course in Germany)
 
-- category: OS, Software & Tools
+- category: Libraries, Frameworks, OS, and Tools
+  style: nested
   list:
-  - GNU/Linux (Arch/Debian)
-  - Microsoft Windows
-  - LaTeX
-  - Git/SVN
+  - item: Numerical
+    sublist:
+    - numpy
+    - scipy
+    - matplotlib
+    - sympy
+  - item: Web Development
+    sublist:
+    - Django
+    - Jekyll
+  - item: Lexer and Parser Genrators
+    sublist:
+    - Lex/Yacc
+    - GNU Flex/Bison
+    - Antlr4
+  - item: Java libraries
+    sublist:
+    - swing
+    - RMI
+  - item: Operating Systems
+    sublist:
+    - GNU/Linux (Arch and Debian-based distributions)
+    - Microsoft Windows
+  - item: Image Processing
+    sublist:
+    - Adobe Photoshop
+    - Adobe Illustrator
+    - GIMP
+  - item: Other
+    sublist:
+    - Git/SVN
+    - Apache Hadoop
