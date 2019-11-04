@@ -19,7 +19,7 @@ $acc-text-size: 20px;
 $acc-subtitle-color: $theme-bright;
 $acc-link-color: $theme-bright;
 
-$acc-title-highlight-hover: $theme-dark;
+$acc-highlight-hover: $theme-dark;
 
 .accordeon {
     width: 100%;
@@ -45,11 +45,6 @@ $acc-title-highlight-hover: $theme-dark;
             transition: background-color 0.1s ease-out;
         }
         
-        &:hover {
-            border-left-color: $acc-border-hover-color;
-            background-color: $acc-title-highlight-hover;
-            transition: background-color 0.2s ease-in;
-        }
     }
 
     .accordeon-content {
@@ -73,7 +68,15 @@ $acc-title-highlight-hover: $theme-dark;
         p {
             font-size: $acc-text-size;
         }
-    } 
+    }
+
+    .accordeon-item {
+        &:hover {
+            border-left-color: $acc-border-hover-color;
+            background-color: $acc-highlight-hover;
+            transition: background-color 0.2s ease-in;
+        }
+    }
     
     a {
         color: $acc-link-color;

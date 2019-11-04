@@ -7,13 +7,15 @@ order: "03"
     <h1>Skills</h1>
     <div class="accordeon">
     {% for skill in site.data.skills %}
-        <h1 class="accordeon-title">{{ skill.category }}</h1>
-        <div class="accordeon-content">
-            <ul class="list-inline">
-            {% for s in skill.list %}
-                <li class="list-inline-item">{{ s }}</li>
-            {% endfor %}
-            </ul>
+        <div class="accordeon-item">
+            <h1 class="accordeon-title">{{ skill.category }}</h1>
+            <div class="accordeon-content">
+                <ul class="list-inline">
+                {% for s in skill.list %}
+                    <li class="list-inline-item">{{ s }}</li>
+                {% endfor %}
+                </ul>
+            </div>
         </div>
     {% endfor %}
     </div>
