@@ -3,6 +3,7 @@
 head_old.html
 nav.html
 /**/*.backup.*
+assets/fonts/
 
 # Jekyll metadata
 _site/
