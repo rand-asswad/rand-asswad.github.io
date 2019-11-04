@@ -53,18 +53,6 @@
     - HTML
     - Markdown
 
-- category: Human Languages
-  style: text
-  list:
-  - item: English
-    more: Proficient - C1/C2 level (estimated)
-  - item: French
-    more: Profecient - C1 level (TCF certificate)
-  - item: Arabic
-    more: Native
-  - item: German
-    more: Basic - A2 level (summer course in Germany)
-
 - category: Libraries, Frameworks, OS, and Tools
   style: nested
   list:
@@ -85,8 +73,8 @@
     - Antlr4
   - item: Java libraries
     sublist:
-    - swing
-    - RMI
+    - Remote Method Invocation (RMI)
+    - AWT, Swing, Java FX
   - item: Operating Systems
     sublist:
     - GNU/Linux (Arch and Debian-based distributions)
@@ -100,3 +88,15 @@
     sublist:
     - Git/SVN
     - Apache Hadoop
+
+- category: Human Languages
+  style: text
+  list:
+  - item: English
+    more: Proficient - C1/C2 level (estimated)
+  - item: French
+    more: Profecient - C1 level (TCF certificate)
+  - item: Arabic
+    more: Native
+  - item: German
+    more: Basic - A2 level (summer course in Germany)

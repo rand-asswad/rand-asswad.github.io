@@ -16,12 +16,15 @@ order: "03"
                     {% endfor %}
                 {% elsif skill.style == "nested" %}
                     {% for s in skill.list %}
-                        <ul class="list-inline">
+                        <!--ul class="list-inline">
                             <strong class="text-primary">{{ s.item }}: </strong>
                             {% for li in s.sublist %}
                                 <li class="list-inline-item">{{ li }}</li>
                             {% endfor %}
-                        </ul>
+                        </ul-->
+                        <p><strong class="text-primary">{{ s.item }}:</strong>
+                            {% for li in s.sublist %}{{ li }}{% if forloop.last == false %}, {% else %}.{% endif%}{% endfor %}
+                        </p>
                     {% endfor %}
                 {% else %}
                     {{ skill.list | markdownify }}
