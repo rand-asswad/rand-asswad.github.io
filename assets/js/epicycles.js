@@ -1,5 +1,5 @@
 class FourierSketch {
-    constructor(dataSrc, div, scale=1, period=1) {
+    constructor(dataSrc, div, nb_coefs=null, period=1, skip=1) {
         this.canvas = new SVG(div);
         this.path = this.canvas.createElement("polyline", {id:"path"});
         this.vectors = this.canvas.createElement("g", {id:"vectors"});
@@ -7,9 +7,10 @@ class FourierSketch {
         this.cycle = [];
         this.vector = [];
 
-        this.preprocess(dataSrc, scale);
+        this.preprocess(dataSrc, skip);
         this.length = this._f.length;
-        this.coefs = FourierCoefs(this._f, this.length);
+        if (!nb_coefs) nb_coefs = this.length;
+        this.coefs = FourierCoefs(this._f, nb_coefs);
         this.coefs.sort((a, b) => b.r - a.r);
 
         this.initDrawing();
@@ -27,13 +28,13 @@ class FourierSketch {
         this.partialSeries();
     }
 
-    preprocess(data, scale) {
+    preprocess(data, skip) {
         this._f = [];
         let xlim = {min: Infinity, max: -Infinity};
         let ylim = {min: Infinity, max: -Infinity};
-        for (let i = 0; i < data.length; i++) {
-            const x = data[i].x * scale;
-            const y = data[i].y * scale;
+        for (let i = 0; i < data.length; i+=skip) {
+            const x = data[i].x;
+            const y = data[i].y;
             const c = new Complex(x, y);
             this._f.push(c);
             xlim.min = (x < xlim.min) ? x : xlim.min;
@@ -43,7 +44,7 @@ class FourierSketch {
         }
         let dim = {width: xlim.max - xlim.min, height: ylim.max - ylim.min};
         let center = {x: (xlim.min + xlim.max) / 2, y: (ylim.min + ylim.max) / 2};
-        for (let i = 0; i < data.length; i++) {
+        for (let i = 0; i < this._f.length; i++) {
             this._f[i].re -= center.x;
             this._f[i].im -= center.y;
         }
