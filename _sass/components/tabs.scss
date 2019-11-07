@@ -1,6 +1,6 @@
 
 $tab-btn-padding-vert: 15px;
-$tab-btn-padding-horz: $qualif-left-padding;
+$tab-btn-padding-horz: 15px;
 $tab-content-padding-left: 30px;
 
 $tab-btn-border-width: 5px;
@@ -8,6 +8,7 @@ $tab-btn-border-color: $theme-grey;
 $tab-btn-border-hover-color: $theme-grey;
 $tab-btn-border-selected-color: $theme-bright;
 
+$tab-btn-text-size: 20px;
 $tab-btn-text-color: $theme-grey;
 $tab-btn-text-hover-color: $theme-bright;
 $tab-btn-text-selected-color: $theme-bright;
@@ -22,6 +23,7 @@ $tab-btn-selected-color: transparent;
 $tab-content-title-size: 25px;
 $tab-content-subtitle-size: 18px;
 $tab-content-text-size: 20px;
+$tab-title-margin-bottom: .5rem;
 
 $tab-link-color: $theme-bright;
 $tab-content-title-color: $theme-grey;
@@ -51,6 +53,7 @@ $tab-content-title-color: $theme-grey;
       border-left-color: $tab-btn-border-color;
       text-align: left;
       color: $tab-btn-text-color;
+      font-size: $tab-btn-text-size;
       background-color: $tab-btn-color;
       transition: background-color 0.1s ease-out;
 
@@ -100,6 +103,7 @@ $tab-content-title-color: $theme-grey;
         padding-left: 0;
         font-size: $tab-content-title-size;
         color: $tab-content-title-color;
+        margin-bottom: $tab-title-margin-bottom;
       }
       
       h2, h3, h4, h5, h6, .tab-subtitle {

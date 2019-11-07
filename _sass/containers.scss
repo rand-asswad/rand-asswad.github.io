@@ -4,31 +4,11 @@ $side-padding: 250px;
 $top-padding: 10px;
 $bottom-padding: $top-padding;
 
-// color
-$main-text-color: $theme-grey;
-$main-bg-color: $theme-darker;
-
-// font
-$main-font: "Roboto Slab", serif;
-$main-font-size: 20px;
 
 section, .section {
-    // because bootstrap knows best
-//    @extend .row;
-//    @extend .align-items-center;
-
-//    min-height: 100vh;
-//    justify-content: center;
-//    align-items: center;
-
     margin: 0px;
     padding-left: $side-padding;
     padding-right: $side-padding;
     padding-top: $top-padding;
     padding-bottom: $bottom-padding;
-
-    
-    color: $main-text-color;
-    font-family: $main-font;
-    font-size: $main-font-size;
 }

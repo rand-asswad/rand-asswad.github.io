@@ -3,10 +3,8 @@
 
 @import 'colors';
 @import 'fonts';
-
-@import 'sections/qualif';
-
 @import 'bootstrap/bootstrap';
+@import 'general';
 
 @import 'containers';
 @import 'components/loader';
@@ -22,5 +20,3 @@
 @import 'components/slider';
 
 //@import 'skills';
-
-@import 'general';
