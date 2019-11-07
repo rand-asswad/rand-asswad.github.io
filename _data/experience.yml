@@ -1,24 +1,29 @@
 - company: INRIA
   company_w_location: INRIA Nancy Grand-Est
   link: https://www.inria.fr/en/centre/nancy
-  title: Research Internship
+  title: Research Intern
   date: June - August 2019
   description: >-
-    Established a Proof of Concept of a web version of the free software [**AMC**](https://www.auto-multiple-choice.net/) that creates and manages multiple choice questionnaires (QCM) as it is only available on UNIX systems.
-    Created a Django web application that communicates with AMC through bash.
+    I contributed to the [Mind the Gap!](http://www.sciencedirect.com/science/article/pii/S0010448518302215)
+    algorithm developped by [Pixel](https://pixel.inria.fr) team that proposes a robust pipeline
+    for generating hexahedral-dominant meshes from any global parametrization of a tetrahedral mesh.
+    
+    I proposed and implemented improvements to the pipeline that helped obtain better meshes with
+    less irregularities.
 
 - company: INSA
   company_w_location: INSA Rouen Normandie
   link: https://www.insa-rouen.fr/en
-  title: Web Developer Internship
+  title: Web Development Intern
   date: July - September 2017
   description: >-
-    Established a Proof of Concept of a web version of the free software [**AMC**](https://www.auto-multiple-choice.net/) that creates and manages multiple choice questionnaires (QCM) as it is only available on UNIX systems.
-    Created a Django web application that communicates with AMC through bash.
+    I established a Proof of Concept of a web client of the free software [AMC](https://www.auto-multiple-choice.net/)
+    that creates and manages multiple choice questionnaires (MCQ) as it is only available on UNIX systems.
+    I implemented a Django web application that communicates with AMC on the server side.
 
 - company: BOSCH
   company_w_location: Robert Bosch Mondeville 
   link: https://www.bosch.fr/en/
-  title: Execution Internship
+  title: Execution Intern
   date: July 2015
   description: Worked on the valve production line, my first experience in the industrial world.

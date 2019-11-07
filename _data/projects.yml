@@ -5,8 +5,8 @@
   description: >-
     I have suggested this project as my Master’s program semestrial project.
     The objective is to implement a library that converts audio files into a musical score.
-    The program implements onset and pitch detectionalgorithms,
-    and improves obtained results with machinelearning algorithms.
+    The program implements onset and pitch detection algorithms,
+    and improves obtained results with machine learning algorithms.
   tags:
     - music theory
     - signal processing
@@ -18,7 +18,12 @@
   date: May 2019
   link: https://github.com/rand-asswad/am2t 
   description: >-
-    I have suggested this project as my Master’s program semestrial project.
+    I implemented an *AsciiMath to LaTeX* interpretor using [ANTLR](https://www.antlr.org/).
+    This project was part of the course *lexical and syntaxical analysis* in my INSA Master's program.
+
+    AsciiMath is a markup language that represents a subset of mathematical expressions using
+    simple readable ASCII syntax unlike LaTeX or MathJax.
+    AsciiMath is to TeX Math what Markdown is to LaTeX.
   tags:
     - lexical and syntaxical analysis
     - parser
@@ -31,9 +36,27 @@
   long_title: NORIAS
   date: July - December 2017
   description: >-
-    The project aims to minimize the loss of produced energyby proposing a new decentralized storage solution.My role in NORIASis to maximize the efficiency of thestorage station by creating and managing a control systembased on ICT and IoT, coupled with mathematical analysisand big data algorithms.
+    The project aims to minimize the loss of produced energyby proposing a new decentralized storage solution.
+    My role in NORIAS is to maximize the efficiency of thestorage station by creating and managing a control systembased on ICT and IoT,
+    coupled with mathematical analysisand big data algorithms.
   tags:
     - optimal control
     - big data
     - IoT
     - ICT
+
+- title: FLOAT
+  long_title: Floating-point Arithmatics
+  date: April 2016
+  description: >-
+    I implemented mathematical operations for floating-point numbers (IEEE 765 standard)
+    through bitwise operations in C++ using Newton's Algorithm, CORDIC and others.
+    
+    Having learned the floating numbers machine representation and implemented
+    the square root function as an assignment for a course in computer-based calculations,
+    I was compelled to extend the assignment to other mathematical operations.
+  tags:
+    - IEEE 765
+    - C++
+    - Floating-point
+    - low-level

@@ -1,6 +1,10 @@
 - category: Mathematics & Computer Science Theory
   style: text
   list:
+  - item: Functional Analysis
+    more: vector analysis, fourier analysis, generalized functions (distributions).
+  - item: Control Theory
+    more: linear and non-linear systems, optimal control.
   - item: Signal Processing
     more: analog and digital signals, continuous and discrete time, statistical signal processing, audio signal processing.
   - item: Numerical Analysis
@@ -8,17 +12,13 @@
       linear systems, function interpolation and quadrature, least squares,
       ODE and PDE numerical approximation (Runge-Kutta, finite difference, finite elements),
       curve and surface spline approximation, mesh generation.
-  - item: Control Theory
-    more: linear and non-linear systems, optimal control.
-  - item: Functional Analysis
-    more: vector analysis, fourier analysis, generalized functions (distributions).
   - item: Metaheuristics
     more: >-
       local search algorithms (Hill-Climbing, Simulated Annealing, Local Beam, Taboo),
       evolutionary optimization, ant colony optimization.
   - item: Probability, Statistics and Data Analysis
     more: >-
-      basic probability, law of large numbers, estimation theory, Markov chains,
+      law of large numbers, estimation theory, Markov chains,
       linear models (simple/multiple linear regression, ANOVA), multidimensional data analysis (PCA, CA, FA),
       data mining (K-means clustering, SVM).
   - item: Combinatorics
@@ -53,7 +53,7 @@
     - HTML
     - Markdown
 
-- category: Libraries, Frameworks, OS, and Tools
+- category: Libraries, Frameworks, Operating Systems and Tools
   style: nested
   list:
   - item: Numerical
@@ -62,19 +62,19 @@
     - scipy
     - matplotlib
     - sympy
-  - item: Web Development
+  - item: Java libraries
     sublist:
-    - Django
-    - Jekyll
+    - Remote Method Invocation (RMI)
+    - AWT, Swing, Java FX
   - item: Lexer and Parser Genrators
     sublist:
     - Lex/Yacc
     - GNU Flex/Bison
     - Antlr4
-  - item: Java libraries
+  - item: Web Development
     sublist:
-    - Remote Method Invocation (RMI)
-    - AWT, Swing, Java FX
+    - Django
+    - Jekyll
   - item: Operating Systems
     sublist:
     - GNU/Linux (Arch and Debian-based distributions)
