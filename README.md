@@ -13,8 +13,11 @@ hosted by [GitHub Pages](https://pages.github.com/).
 
 # Theme
 
-**Color Scheme:** Terminology ![](https://pin.it/plpuarrx3rotqr)
-**Font:** (Roboto Slab)[https://fonts.google.com/specimen/Roboto+Slab] by Christian Robertson
+**Color Scheme:** Terminology
+
+![terminology](https://visme.co/blog/wp-content/uploads/2016/09/website23-1024x512.jpg)
+
+**Font:** [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab) by Christian Robertson
 
 # Forking
 
