@@ -40,6 +40,7 @@ Don't worry, if your project is open source you can have a liceseKey for free,
 please refer to their [documentation](https://github.com/alvarotrigo/fullPage.js#options).
 
 # To-Do List
+- add project links
 - blog
 - migrate to svg icons
 - French Version (i18n)
