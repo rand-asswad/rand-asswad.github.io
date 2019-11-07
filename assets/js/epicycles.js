@@ -1,193 +1,144 @@
-function sketchFourier(fileName, div, scale=1, period=1, mode='single') {
-    if (mode == 'single') return sketchSingle(fileName, div, scale, period);
-    if (mode == 'double') return sketchDouble(fileName, div, scale, period);
-    return undefined;
-}
+class FourierSketch {
+    constructor(dataSrc, div, scale=1, period=1) {
+        this.canvas = new SVG(div);
+        this.path = this.canvas.createElement("polyline", {id:"path"});
+        this.vectors = this.canvas.createElement("g", {id:"vectors"});
+        this.epicycles = this.canvas.createElement("g", {id:"epicycles"});
+        this.cycle = [];
+        this.vector = [];
 
-function sketchSingle(fileName, div, scale, period) {
-    let data;
-    let f = [];
-    let coefs;
-    let path = [];
-    let dt;
+        this.preprocess(dataSrc, scale);
+        this.length = this._f.length;
+        this.coefs = FourierCoefs(this._f, this.length);
+        this.coefs.sort((a, b) => b.r - a.r);
 
-    var sketch = function(p) {
-        p.disableFriendlyErrors = true;
+        this.initDrawing();
+        this.nbCoefs = Math.floor(this.coefs.length);
 
-        p.bgColor = 0;
-        p.pathColor = 255;
-        p.cyclesColor = "#555";
-        p.vectorsColor = "#999";
+        this._play = true;
+        this.current_frame = 0;
+        this.time_interval = 1000 * period / this.length;
+    }
 
-        p.period = period;
-        let dim;
+    set nbCoefs(nb) {
+        this.nb_coefs = (nb > this.coefs.length) ? this.coefs.length:nb;
+        let N = Math.floor(nb / 2);
+        this.index_range = {start: -N, stop: this.nb_coefs - N};
+        this.partialSeries();
+    }
 
-        p.preload = function() {
-            data = p.loadStrings(fileName);
+    preprocess(data, scale) {
+        this._f = [];
+        let xlim = {min: Infinity, max: -Infinity};
+        let ylim = {min: Infinity, max: -Infinity};
+        for (let i = 0; i < data.length; i++) {
+            const x = data[i].x * scale;
+            const y = data[i].y * scale;
+            const c = new Complex(x, y);
+            this._f.push(c);
+            xlim.min = (x < xlim.min) ? x : xlim.min;
+            xlim.max = (x > xlim.max) ? x : xlim.max;
+            ylim.min = (y < ylim.min) ? y : ylim.min;
+            ylim.max = (y > ylim.max) ? y : ylim.max;
         }
+        let dim = {width: xlim.max - xlim.min, height: ylim.max - ylim.min};
+        let center = {x: (xlim.min + xlim.max) / 2, y: (ylim.min + ylim.max) / 2};
+        for (let i = 0; i < data.length; i++) {
+            this._f[i].re -= center.x;
+            this._f[i].im -= center.y;
+        }
+        let margin = (dim.width + dim.height) / 4;
+        let viewBox = [
+            -dim.width/2 - margin, -dim.height/2 - margin,
+            dim.width+2*margin, dim.height+2*margin
+        ];
+        this.canvas.width  = "100%";//dim.width;
+        this.canvas.height = "100%";//dim.height;
+        this.canvas.viewBox = viewBox.join(' ');
+    }
 
-        var parseData = function() {
-            let xlim = {min: Infinity, max: -Infinity};
-            let ylim = {min: Infinity, max: -Infinity};
-            for (let i = 0; i < data.length; i++) {
-                const s = data[i].split(',');
-                const x = parseFloat(s[0]) * scale;
-                const y = parseFloat(s[1]) * scale;
-                const c = new Complex(x, y);
-                f.push(c);
-                xlim.min = (x < xlim.min) ? x : xlim.min;
-                xlim.max = (x > xlim.max) ? x : xlim.max;
-                ylim.min = (y < ylim.min) ? y : ylim.min;
-                ylim.max = (y > ylim.max) ? y : ylim.max;
+    partialSeries() {
+        // partial[k][n] = cumulative sum of the first n coefs at instant t[k]
+        this.partial = new Array(this.length);
+        for (let k = 0; k < this.length; k++) {
+            let x = 0, y = 0;
+            this.partial[k] = [];
+            for (let n = 0; n < this.coefs.length; n++) {
+                let coef = copy(this.coefs[n]);
+                if (coef.index >= this.index_range.start && coef.index < this.index_range.stop) {
+                    let phase = coef.arg + coef.index * TAU * k / this.length;
+                    x += coef.r * Math.cos(phase);
+                    y += coef.r * Math.sin(phase);
+                    this.partial[k].push({x: x, y: y});
+                    
+                    this.cycle[n].setAttribute("visibility", "visible");
+                    this.vector[n].setAttribute("visibility", "visible");
+                } else {
+                    this.cycle[n].setAttribute("visibility",  "hidden");
+                    this.vector[n].setAttribute("visibility", "hidden");
+                }
             }
-            dim = {width: xlim.max - xlim.min, height: ylim.max - ylim.min};
-            let center = {x: (xlim.min + xlim.max) / 2, y: (ylim.min + ylim.max) / 2};
-            for (let i = 0; i < data.length; i++) {
-                f[i].re -= center.x;
-                f[i].im -= center.y;
-            }
-        }
-
-        p.setup = function() {
-            parseData();
-            p.createCanvas(dim.width * 1.5, dim.height * 1.5);
-            p.frameRate(Math.round(f.length / period));
-            coefs = FourierCoefs(f, f.length);
-            coefs.sort((a, b) => b.r - a.r);
-            dt = period / f.length;
-            p.time = 0;
-        }
-
-        p.draw = function() {
-            p.background(p.bgColor);
-            p.ellipseMode(p.RADIUS);
-            let initial_pos = {x: p.width / 2, y: p.height / 2};
-            path.push(epiCycles(p, initial_pos, coefs));
-
-            p.beginShape();
-            p.noFill();
-            p.stroke(p.pathColor);
-            for (let i = 0; i < path.length; i++)
-                p.vertex(path[i].x, path[i].y);
-            p.endShape();
-
-            p.time += dt;
-            if (p.time >= period) time = 0;
-        }
-
-        p.start = function() {
-            p.time = 0;
-            path = [];
-            p.loop();
         }
     }
 
-    return new p5(sketch, div);
-}
-
-function sketchDouble(fileName, div, scale, period) {
-    let data;
-    let x = [];
-    let y = [];
-    let coefsX;
-    let coefsY;
-    let path = [];
-    let dt;
-
-    var sketch = function(p) {
-        p.bgColor = 0;
-        p.pathColor = 255;
-        p.cyclesColor = "#555";
-        p.vectorsColor = "#999";
-        p.coordColor = "#777";
-
-        p.period = period;
-        let dim;
-        
-        p.preload = function() {
-            data = p.loadStrings(fileName);
-        }
-
-        var parseData = function() {
-            let xlim = {min: Infinity, max: -Infinity};
-            let ylim = {min: Infinity, max: -Infinity};
-            for (let i = 0; i < data.length; i++) {
-                const s = data[i].split(',');
-                const px = parseFloat(s[0]) * scale;
-                const py = parseFloat(s[1]) * scale;
-                const cx = new Complex(px, 0);
-                const cy = new Complex(0, py);
-                x.push(cx);
-                y.push(cy);
-                xlim.min = (px < xlim.min) ? px : xlim.min;
-                xlim.max = (px > xlim.max) ? px : xlim.max;
-                ylim.min = (py < ylim.min) ? py : ylim.min;
-                ylim.max = (py > ylim.max) ? py : ylim.max;
-            }
-            dim = {width: xlim.max - xlim.min, height: ylim.max - ylim.min};
-            let center = {x: (xlim.min + xlim.max) / 2, y: (ylim.min + ylim.max) / 2};
-            for (let i = 0; i < data.length; i++) {
-                x[i].re -= center.x;
-                y[i].im -= center.y;
-            }
-        }
-
-        p.setup = function() {
-            parseData();
-            p.createCanvas(dim.width * 3, dim.height * 3);
-            p.frameRate(Math.round(data.length / period));
-            coefsX = FourierCoefs(x, x.length/2, false);
-            coefsY = FourierCoefs(y, y.length/2, false);
-            coefsX.sort((a, b) => b.r - a.r);
-            coefsY.sort((a, b) => b.r - a.r);
-            dt = period / x.length;
-            p.time = 0;
-        }
-
-        p.draw = function() {
-            p.background(p.bgColor);
-            p.ellipseMode(p.RADIUS);
-            x_pos = {x: p.width * .7, y: p.height * .3};
-            y_pos = {x: p.width * .3, y: p.height * .7};
-            let vx = epiCycles(p, x_pos, coefsX);
-            let vy = epiCycles(p, y_pos, coefsY);
-            path.push(p.createVector(vx.x, vy.y));
-    
-            p.stroke(p.color(p.coordColor));
-            p.line(vx.x, vx.y, vx.x, vy.y);
-            p.line(vy.x, vy.y, vx.x, vy.y);
-
-            p.beginShape();
-            p.noFill();
-            p.stroke(p.pathColor);
-            for (let i = 0; i < path.length; i++)
-                p.vertex(path[i].x, path[i].y);
-            p.endShape();
-
-            p.time += dt;
-            if (p.time >= period) time = 0;
+    initDrawing() {
+        this.epicycles.setAttribute("fill", "none");
+        this.epicycles.setAttribute("stroke", "black");
+        this.epicycles.setAttribute("stroke-width", ".3");
+        this.vectors.setAttribute("fill", "none");
+        this.vectors.setAttribute("stroke", "grey");
+        this.vectors.setAttribute("stroke-width", ".3");
+        this.path.setAttribute("fill", "none");
+        this.path.setAttribute("stroke", "black");
+        for (let n = 0; n < this.coefs.length; n++) {
+            this.cycle.push(this.epicycles.createElement("circle"));
+            this.vector.push(this.vectors.createElement("line"));
         }
     }
 
-    return new p5(sketch, div);
+    drawFrame(k) {
+        let prev = {x: 0, y: 0};
+        for (let n = 0; n < this.nb_coefs; n++) {
+            // draw cycle
+            this.cycle[n].center = copy(prev);
+            this.cycle[n].radius = this.coefs[n].r;
+
+            // draw vector
+            this.vector[n].start = copy(prev);
+            this.vector[n].end   = copy(this.partial[k][n]);
+
+            prev = copy(this.partial[k][n]);
+        }
+        if (this.path.length >= this.length) this.path.pop();
+        this.path.push(prev);
+    }
+
+    animate() {
+        this._play = true;
+        setInterval(() => {
+            if (this._play) {
+                this.drawFrame(this.current_frame++);
+                if (this.current_frame >= this.length) this.current_frame = 0;
+            }
+        }, this.time_interval);
+        this.canvas.parent.addEventListener("click", (e) => {
+            this._play = !this._play;
+        });
+    }
+
+    play() {this._play = true;}
+    pause() {this._play = false;}
+
+    controlSlider(id) {
+        var slider = document.getElementById(id);
+        slider.setAttribute("max", this.coefs.length);
+        slider.setAttribute("value", this.nb_coefs);
+        slider.addEventListener("change", (e) => {
+            this.nbCoefs = e.target.value;
+        });
+    }
 }
 
-function epiCycles(p, fig_pos, coefs) {
-    let x = fig_pos.x;
-    let y = fig_pos.y;
-    for (let n = 0; n < coefs.length; n++) {
-        let prev_x = x;
-        let prev_y = y;
-        let phase = coefs[n].arg + coefs[n].index * TAU * p.time / p.period;
-        x += coefs[n].r * Math.cos(phase);
-        y += coefs[n].r * Math.sin(phase);
-
-        p.stroke(p.color(p.cyclesColor));
-        p.noFill();
-        p.circle(prev_x, prev_y, coefs[n].r);
-
-        p.stroke(p.color(p.vectorsColor));
-        p.line(prev_x, prev_y, x, y);
-    }
-    return p.createVector(x, y);
+function copy(obj) {
+    return Object.assign({}, obj);
 }

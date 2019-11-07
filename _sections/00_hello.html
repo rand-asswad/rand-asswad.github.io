@@ -4,7 +4,12 @@ order: "00"
 ---
 
 
-<div class="col-md-6 order-md-2 text-center" id="sketch-holder"></div>
+<div class="col-md-6 order-md-2 text-center d-flex flex-column" style="height: 100%;">
+    <div id="sketch-holder" class="p-2"></div>
+    <div class="p-2" style="width: 100%;">
+        <input id="nbCoefs" type="range" min="1" max="100" value="100" class="slider">
+    </div>
+</div>
 <div class="col-md-6 order-md-1 d-flex flex-column">
     <div class="p-2">
         <h1>Hi, I'm Rand!</h1>
@@ -21,9 +26,11 @@ order: "00"
 <a href="#about_me" class="next"></a>
 
 <script>
-    var p = sketchFourier("/assets/me.csv", "sketch-holder", 3, 10);
-    p.bgColor = "#25274D";
-    p.pathColor = "#2E9CCA";
-    p.cyclesColor = "#AAABB8";
-    p.vectorsColor = "#29648A";
+    var sketch = new FourierSketch(myPts, "sketch-holder", 1, 20);
+    sketch.canvas.viewBox = "-90 -100 170 200";
+    sketch.controlSlider("nbCoefs");
+    sketch.path.setAttribute("stroke", "#2E9CCA");
+    sketch.epicycles.setAttribute("stroke", "#AAABB8");
+    sketch.vectors.setAttribute("stroke", "#29648A");
+    sketch.animate();
 </script>
