@@ -14,6 +14,23 @@
     - fourier analysis
     - python
 
+- title: TAQUIN
+  long_title: The Taquin Game (8-puzzle)
+  date: November 2019
+  github: https://github.com/rand-asswad/taquin 
+  link: https://rand-asswad.github.io/taquin/
+  description: >-
+    I implemented the famous sliding tiles game in Prolog using A* graph search algorithm,
+    for N×M size puzzles.
+
+    I also implemented a Greedy algorithm and Iterative-Deepening DFS search algorithm,
+    and compared results.
+  tags:
+    - prolog
+    - graph-search-algorithms
+    - a-star
+    - iterative-deepening-search
+
 - title: AM2T
   long_title: AsciiMath to Tex
   date: May 2019
