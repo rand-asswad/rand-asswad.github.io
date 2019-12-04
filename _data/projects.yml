@@ -1,7 +1,8 @@
 - title: MUALLEF
   long_title: Music Signal Analysis Library
   date: ongoing
-  link: https://github.com/rand-asswad/muallef 
+  github: https://github.com/rand-asswad/muallef 
+  link: https://rand-asswad.github.io/muallef 
   description: >-
     I have suggested this project as my Master’s program semestrial project.
     The objective is to implement a library that converts audio files into a musical score.
@@ -16,7 +17,8 @@
 - title: AM2T
   long_title: AsciiMath to Tex
   date: May 2019
-  link: https://github.com/rand-asswad/am2t 
+  github: https://github.com/rand-asswad/am2t 
+  link: https://rand-asswad.github.io/am2t 
   description: >-
     I implemented an *AsciiMath to LaTeX* interpretor using [ANTLR](https://www.antlr.org/).
     This project was part of the course *lexical and syntaxical analysis* in my INSA Master's program.
@@ -32,22 +34,10 @@
     - tex math
     - antlr4
 
-- title: NORIAS
-  long_title: NORIAS
-  date: July - December 2017
-  description: >-
-    The project aims to minimize the loss of produced energyby proposing a new decentralized storage solution.
-    My role in NORIAS is to maximize the efficiency of thestorage station by creating and managing a control systembased on ICT and IoT,
-    coupled with mathematical analysisand big data algorithms.
-  tags:
-    - optimal control
-    - big data
-    - IoT
-    - ICT
-
 - title: FLOAT
   long_title: Floating-point Arithmatics
   date: April 2016
+  github: https://github.com/rand-asswad/float-calc 
   description: >-
     I implemented mathematical operations for floating-point numbers (IEEE 765 standard)
     through bitwise operations in C++ using Newton's Algorithm, CORDIC and others.

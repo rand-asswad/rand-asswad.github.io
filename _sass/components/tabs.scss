@@ -99,11 +99,30 @@ $tab-content-title-color: $theme-grey;
         transition: opacity 0.5s ease-in;
       }
 
-      h1, .tab-title {
+      .tab-title {
         padding-left: 0;
         font-size: $tab-content-title-size;
         color: $tab-content-title-color;
         margin-bottom: $tab-title-margin-bottom;
+
+        h1 {
+          font-size: inherit;
+          color: inherit;
+        }
+
+        .icons {
+          position: absolute;
+          right: 0;
+
+          a.fa-btn {
+            margin-left: 0.2em;
+            color: $tab-content-title-color;
+
+            &:hover {
+              color: $icons-hover-color;
+            }
+          }
+        }
       }
       
       h2, h3, h4, h5, h6, .tab-subtitle {

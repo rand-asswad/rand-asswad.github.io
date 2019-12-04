@@ -14,7 +14,13 @@ order: "04"
         <div class="tabs-content">
             {% for p in site.data.projects %}
                 <div class="content" id="proj{% increment tab %}">
-                    <h1 class="tab-title">{{ p.long_title }}</h1>
+                    <div class="tab-title">
+                        <div class="icons">
+                            {% if p.github %}<a href="{{ p.github }}" target="_blank" class="fa-btn"><i class="fab fa-github"></i></a>{% endif %}
+                            {% if p.link %}<a href="{{ p.link }}" target="_blank" class="fa-btn"><i class="fas fa-info-circle"></i></a>{% endif %}
+                        </div>
+                        <h1>{{ p.long_title }}</h1>
+                    </div>
                     <ul class="list-inline">
                     {% for tag in p.tags %}
                     <li class="list-inline-item text-primary">{{ tag }}</li>
