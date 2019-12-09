@@ -11,4 +11,6 @@ h1#site-title {
     font-size: $title-font-size;
     font-weight: $title-font-weight;
     text-transform: uppercase;
+
+    z-index: 1000;
 }

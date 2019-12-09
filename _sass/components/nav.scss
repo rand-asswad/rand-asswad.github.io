@@ -8,6 +8,8 @@ $nav-font-size: 25px;
 $nav-font-active-size: 35px;
 $nav-font-hover-size: 37px;
 
+$mobile-nav-font-size: 40px;
+
 // padding
 $hand-length: 30px;
 $hand-padding-right: 5px;
@@ -61,5 +63,136 @@ $vertical-padding: 4px;
         &::before {
             width: $hand-length;
         }
+    }
+}
+
+// mobile navigation button
+#nav-btn.mobile {
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    
+    #nav-stack {
+        float: left;
+        position: relative;
+        height: 15px;
+        width: 20px;
+        //transform: translateY(-100px);
+        opacity: 1;
+        transition: transform .6s ease .8s, opacity .5s .6s ease;
+    
+        span {
+            content: "";
+            display: inline-block;
+            height: 2px;
+            background-color: $theme-grey;
+            position: absolute;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            &:nth-child(1) {
+                top: 0;
+                //@include transition(transform 0.5s ease, background .8s .5s ease);
+                transition: all 0.5s ease;
+            }
+            &:nth-child(2) {
+                top: 6px;
+                //@include transition(transform 0.5s ease, background .8s .5s ease);
+                transition: all 0.5s ease;
+            }
+            &:last-child {
+                bottom: 0;
+                //@include transition(transform 0.5s ease, background .8s .5s ease);
+                transition: all 0.5s ease;
+            }
+        }
+    
+        &.active {
+            span {
+                &:nth-child(1) {
+                    top: 5px;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    transform: scale(0);
+                }
+                &:last-child {
+                    top: 5px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+// mobile navigation menu
+nav.mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+
+    opacity: 0;
+    background-color: transparent;
+    transition: all 0.5s ease-out;
+
+    ul#main-nav {
+        position: relative;
+        display: block;
+
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        font-size: 1.5em;
+
+        a {
+            position: relative;
+            display: inline;
+            padding: 0;
+            font-size: $mobile-nav-font-size;
+
+            &::before {
+                display: none;
+                content: none;
+                position: relative;
+            }
+
+            &:hover {
+                font-size: $mobile-nav-font-size;
+            }
+        }
+
+        #link-icons {
+            position: relative;
+            display: inline;
+            font-size: $mobile-nav-font-size;
+
+            li {
+                display: inline-block;
+                margin: 0.5em 0.2em;
+                font-size: inherit;
+            }
+
+            &::after {
+                display: none;
+                content: none;
+                position: relative;
+            }
+        }
+    }
+
+    &.active {
+        opacity: 0.9;
+        background-color: $body-bg;
+        transition: all 0.5s ease-in;
     }
 }

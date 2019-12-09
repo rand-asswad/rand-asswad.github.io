@@ -4,11 +4,19 @@ $side-padding: 250px;
 $top-padding: 10px;
 $bottom-padding: $top-padding;
 
+$mobile-break-point: 800px;
+$mobile-padding: 50px;
 
 section, .section {
     margin: 0px;
-    padding-left: $side-padding;
-    padding-right: $side-padding;
-    padding-top: $top-padding;
-    padding-bottom: $bottom-padding;
+    @media (min-width: #{$mobile-break-point}) {
+        padding-left: $side-padding;
+        padding-right: $side-padding;
+        padding-top: $top-padding;
+        padding-bottom: $bottom-padding;
+    }
+
+    @media (max-width: #{$mobile-break-point - 1px}) {
+        padding: $mobile-padding;
+    }
 }
