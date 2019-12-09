@@ -8,20 +8,32 @@ $card-text-size: 16px;
 $card-title-size: 22px;
 $card-bullet-size: $card-title-size;
 
+// break-point
+$break-point: 1400px;
 
 
 ul.grid-list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
 
     padding: 0;
     margin: 0;
 
-    // two columns
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
+    @media (min-width: #{$break-point}) {
+        // two columns
+        grid-template-columns: repeat(2, 50%);
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+    
+    @media (max-width: #{$break-point - 1px}) {
+        // one column
+        grid-template-columns: repeat(1, 100%);
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
 
     li {
         position: relative;
