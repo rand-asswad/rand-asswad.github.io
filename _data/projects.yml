@@ -1,17 +1,19 @@
 - title: MUALLEF
-  long_title: Music Signal Analysis Library
+  long_title: Muallef Music Signal Analysis Library
   date: ongoing
   github: https://github.com/rand-asswad/muallef 
   link: https://rand-asswad.github.io/muallef 
   description: >-
-    I have suggested this project as my Master’s program semestrial project.
-    The objective is to implement a library that converts audio files into a musical score.
-    The program implements onset and pitch detection algorithms,
-    and improves obtained results with machine learning algorithms.
+    I am currently working on this project for my Masters thesis.
+
+    The project is a state of the art of pitch and onset detection
+    algorithms in music signals, and a python library
+    that provides an API for the presented algorithms,
+    as well as a proposed scale detection algorithm.
   tags:
-    - music theory
-    - signal processing
-    - fourier analysis
+    - music-theory
+    - signal-processing
+    - fourier-analysis
     - python
 
 - title: TAQUIN
@@ -20,16 +22,16 @@
   github: https://github.com/rand-asswad/taquin 
   link: https://rand-asswad.github.io/taquin/
   description: >-
-    I implemented the famous sliding tiles game in Prolog using A* graph search algorithm,
-    for N×M size puzzles.
+    I implemented the famous sliding tiles game in Prolog using A* graph search algorithm
+    for N×M sized puzzles.
 
-    I also implemented a Greedy algorithm and Iterative-Deepening DFS search algorithm,
-    and compared results.
+    I also implemented a greedy algorithm and Iterative Deepening Depth-First-Search,
+    and compared the performance and results of the algorithms.
   tags:
     - prolog
-    - graph-search-algorithms
+    - graph-traversal
     - a-star
-    - iterative-deepening-search
+    - iterative-deepening-dfs
 
 - title: AM2T
   long_title: AsciiMath to Tex
@@ -44,11 +46,11 @@
     simple readable ASCII syntax unlike LaTeX or MathJax.
     AsciiMath is to TeX Math what Markdown is to LaTeX.
   tags:
-    - lexical and syntaxical analysis
+    - lexical-and-syntaxical-analysis
     - parser
-    - language processing
+    - language-processing
     - asciimath
-    - tex math
+    - tex-math
     - antlr4
 
 - title: FLOAT
@@ -65,5 +67,5 @@
   tags:
     - IEEE 765
     - C++
-    - Floating-point
+    - floating-point
     - low-level

@@ -1,7 +1,7 @@
 - school: INSA Rouen Normandie
   degree: Mathematical Engineering
   date: September 2014 - August 2019
-  link: https://www.insa-rouen.fr/en
+  link: https://www.insa-rouen.fr/en/education/engineering-specialization/mathematical-and-software-engineering
   description: >-
     French graduate engineering program (Diplôme d'Ingénieur)
     with focus on applied mathematics and computer science.
@@ -9,10 +9,10 @@
 - school: Université de Rouen
   degree: Theoretical and Applied Computer Science
   date: September 2019 - August 2019
-  link: http://rouenuniversity.univ-rouen.fr/
+  link: https://dpt-info-sciences.univ-rouen.fr/index.php/accueil-mita
   description: >-
     Research-oriented Master's program with focus on theoretical
-    computer science and preparation for thesis.
+    computer science and preparation for PhD.
 
 - school: Little Village School
   degree: Syrian Scientific Baccalaureate
@@ -20,4 +20,5 @@
   link: https://www.littlevillageschool.com/
   description: >-
     Rich school program that gave me a head start in later studies.
+
     Graduation grade 92.17%

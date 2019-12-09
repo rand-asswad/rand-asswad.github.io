@@ -31,29 +31,29 @@
 - category: Machine Languages
   style: nested
   list:
-  - item: Basic
+  - item: Basic User
     sublist:
-    - bash/shell
     - Fortran
     - Matlab/Octave
     - Prolog
+    - Lisp
     - Mathematica
     - Javascript
     - SQL
-    - PHP
-  - item: Experienced/Advanced
+  - item: Experienced User
     sublist:
+    - bash/shell
     - C
     - C++
     - Java
     - Python
   - item: Markup
     sublist:
-    - LaTeX
+    - LaTeX/TeX
     - HTML
     - Markdown
 
-- category: Libraries, Frameworks, Operating Systems and Tools
+- category: Libraries & Frameworks
   style: nested
   list:
   - item: Numerical
@@ -61,12 +61,11 @@
     - numpy
     - scipy
     - matplotlib
-    - sympy
   - item: Java libraries
     sublist:
     - Remote Method Invocation (RMI)
-    - AWT, Swing, Java FX
-  - item: Lexer and Parser Genrators
+    - Swing
+  - item: Lexer and Parser Generators
     sublist:
     - Lex/Yacc
     - GNU Flex/Bison
@@ -75,19 +74,24 @@
     sublist:
     - Django
     - Jekyll
+
+- category: Operating Systems & Tools
+  style: nested
+  list:
   - item: Operating Systems
     sublist:
     - GNU/Linux (Arch and Debian-based distributions)
     - Microsoft Windows
+  - item: Version Control
+    sublist:
+    - Git
+    - SVN
   - item: Image Processing
     sublist:
+    - GIMP
     - Adobe Photoshop
     - Adobe Illustrator
-    - GIMP
-  - item: Other
-    sublist:
-    - Git/SVN
-    - Apache Hadoop
+    - Blender
 
 - category: Human Languages
   style: text
