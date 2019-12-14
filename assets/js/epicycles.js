@@ -24,8 +24,23 @@ class FourierSketch {
     set nbCoefs(nb) {
         this.nb_coefs = (nb > this.coefs.length) ? this.coefs.length:nb;
         let N = Math.floor(nb / 2);
-        this.index_range = {start: -N, stop: this.nb_coefs - N};
+        this.index = this.generate_index(-N, this.nb_coefs - N);
         this.partialSeries();
+    }
+
+    generate_index(start, stop) {
+        let index = new Array();
+        for (let n = 0; n < this.coefs.length; n++) {
+            if (this.coefs[n].index >= start && this.coefs[n].index < stop) {
+                index.push(n);
+                this.cycle[n].setAttribute("visibility", "visible");
+                this.vector[n].setAttribute("visibility", "visible");
+            } else {
+                this.cycle[n].setAttribute("visibility",  "hidden");
+                this.vector[n].setAttribute("visibility", "hidden");
+            }
+        }
+        return index;
     }
 
     preprocess(data, skip) {
@@ -63,21 +78,13 @@ class FourierSketch {
         this.partial = new Array(this.length);
         for (let k = 0; k < this.length; k++) {
             let x = 0, y = 0;
-            this.partial[k] = [];
-            for (let n = 0; n < this.coefs.length; n++) {
-                let coef = copy(this.coefs[n]);
-                if (coef.index >= this.index_range.start && coef.index < this.index_range.stop) {
-                    let phase = coef.arg + coef.index * TAU * k / this.length;
-                    x += coef.r * Math.cos(phase);
-                    y += coef.r * Math.sin(phase);
-                    this.partial[k].push({x: x, y: y});
-                    
-                    this.cycle[n].setAttribute("visibility", "visible");
-                    this.vector[n].setAttribute("visibility", "visible");
-                } else {
-                    this.cycle[n].setAttribute("visibility",  "hidden");
-                    this.vector[n].setAttribute("visibility", "hidden");
-                }
+            this.partial[k] = new Array(this.nb_coefs);
+            for (let n = 0; n < this.nb_coefs; n++) {
+                let coef = copy(this.coefs[this.index[n]]);
+                let phase = coef.arg + coef.index * TAU * k / this.length;
+                x += coef.r * Math.cos(phase);
+                y += coef.r * Math.sin(phase);
+                this.partial[k][n] = copy({x: x, y: y});
             }
         }
     }
@@ -92,14 +99,14 @@ class FourierSketch {
         this.path.setAttribute("fill", "none");
         this.path.setAttribute("stroke", "black");
         for (let n = 0; n < this.coefs.length; n++) {
-            this.cycle.push(this.epicycles.createElement("circle"));
+            this.cycle.push(this.epicycles.createElement("circle", {id: this.coefs.index}));
             this.vector.push(this.vectors.createElement("line"));
         }
     }
 
     drawFrame(k) {
         let prev = {x: 0, y: 0};
-        for (let n = 0; n < this.nb_coefs; n++) {
+        this.index.forEach(n => {
             // draw cycle
             this.cycle[n].center = copy(prev);
             this.cycle[n].radius = this.coefs[n].r;
@@ -109,7 +116,7 @@ class FourierSketch {
             this.vector[n].end   = copy(this.partial[k][n]);
 
             prev = copy(this.partial[k][n]);
-        }
+        });
         if (this.path.length >= this.length) this.path.pop();
         this.path.push(prev);
     }
