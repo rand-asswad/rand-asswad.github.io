@@ -1,7 +1,7 @@
 # site variables
 title: Rand Asswad
 description: >- # appears on homepage and in google search results 
-  I'm a **Masters** student based in France, specializing in applied mathematics 
+  I'm a Masters student based in France, specializing in applied mathematics 
   and theoretical computer science.
 
   I am passionate about mathematics and math-adjacent domains,
@@ -18,8 +18,6 @@ sass:
 plugins:
   - jekyll-feed
 
-markdown: kramdown
-
 defaults:
   - scope:
       path: "assets/img"
@@ -28,9 +26,8 @@ defaults:
   - scope:
       type: "sections"
     values:
-      name: NewSection
+      title: NewSection
       order: 10
-      bgcolor: "#000"
       active: false
 
 collections:
