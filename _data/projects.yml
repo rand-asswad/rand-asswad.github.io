@@ -56,7 +56,6 @@
 - title: FLOAT
   long_title: Floating-point Arithmatics
   date: April 2016
-  github: https://github.com/rand-asswad/float-calc 
   description: >-
     I implemented mathematical operations for floating-point numbers (IEEE 765 standard)
     through bitwise operations in C++ using Newton's Algorithm, CORDIC and others.

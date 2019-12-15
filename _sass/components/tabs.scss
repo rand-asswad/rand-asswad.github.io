@@ -29,17 +29,21 @@ $tab-link-color: $theme-bright;
 $tab-content-title-color: $theme-grey;
 
 .tabs-container {
+  display: flex;
+  position: relative;
   width: 100%;
   min-height: 30vh;
-  display: flex;
+  height: auto;
   align-items: flex-start;
   padding: 0;
   margin: auto;
 
+  align-self: flex-start !important;
+
   // tabs class
   .tabs {
     float: left;
-    width: 15%;
+    width: max-content;
     height: 100%;
     border: none;
 
@@ -80,22 +84,23 @@ $tab-content-title-color: $theme-grey;
     padding-top: $tab-btn-padding-vert;
     padding-left: $tab-content-padding-left;
     border: none;
-    width: 85%;
-    height: 100%;
+    min-height: max-content;
     text-align: left;
 
     .content {
       position: absolute;
-      width: 100;
-      height: 100;
+      width: 100%;
+      height: 100%;
       visibility: hidden;
       opacity: 0;
+      z-index: 0;
       transition: opacity 0.5s ease-out;
 
       &.active {
         position: relative;
         visibility: visible;
         opacity: 1;
+        z-index: 10;
         transition: opacity 0.5s ease-in;
       }
 
@@ -108,11 +113,13 @@ $tab-content-title-color: $theme-grey;
         h1 {
           font-size: inherit;
           color: inherit;
+          width: 100%;
         }
 
         .icons {
-          position: absolute;
-          right: 0;
+          float: right;
+          margin-left: 10px;
+          min-width: max-content;
 
           a.fa-btn {
             margin-left: 0.2em;
