@@ -18,5 +18,7 @@ section, .section {
 
     @media (max-width: #{$mobile-break-point - 1px}) {
         padding: $mobile-padding;
+
+        height: auto !important;
     }
 }

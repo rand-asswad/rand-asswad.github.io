@@ -39,8 +39,8 @@
   github: https://github.com/rand-asswad/am2t 
   link: https://rand-asswad.github.io/am2t 
   description: >-
-    I implemented an *AsciiMath to LaTeX* interpretor using [ANTLR](https://www.antlr.org/).
-    This project was part of the course *lexical and syntaxical analysis* in my INSA Master's program.
+    Implemented an *AsciiMath to LaTeX* interpretor using [ANTLR](https://www.antlr.org/).
+    This project was part of the course *lexical and syntaxical analysis* in my INSA Masters program.
 
     AsciiMath is a markup language that represents a subset of mathematical expressions using
     simple readable ASCII syntax unlike LaTeX or MathJax.
@@ -57,7 +57,7 @@
   long_title: Floating-point Arithmatics
   date: April 2016
   description: >-
-    I implemented mathematical operations for floating-point numbers (IEEE 765 standard)
+    Implemented mathematical operations for floating-point numbers (IEEE 765 standard)
     through bitwise operations in C++ using Newton's Algorithm, CORDIC and others.
     
     Having learned the floating numbers machine representation and implemented

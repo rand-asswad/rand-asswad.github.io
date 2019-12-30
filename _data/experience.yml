@@ -4,11 +4,11 @@
   title: Research Intern
   date: June - August 2019
   description: >-
-    I contributed to the [Mind the Gap!](http://www.sciencedirect.com/science/article/pii/S0010448518302215)
+    Contributed to the [Mind the Gap!](http://www.sciencedirect.com/science/article/pii/S0010448518302215)
     algorithm developped by [Pixel team](https://pixel.inria.fr) that proposes a robust pipeline
     for generating hexahedral-dominant meshes from any global parametrization of a tetrahedral mesh.
     
-    I proposed and implemented improvements to the pipeline that helped obtain better meshes with
+    Proposed and implemented improvements to the pipeline that helped obtain better meshes with
     less irregularities.
 
 - company: INSA
@@ -17,10 +17,10 @@
   title: Web Development Intern
   date: July - September 2017
   description: >-
-    I established a Proof of Concept of a web client of the free software [AMC](https://www.auto-multiple-choice.net/)
+    Established a Proof of Concept of a web client of the free software [AMC](https://www.auto-multiple-choice.net/)
     that creates and manages multiple choice questionnaires (MCQ) as it is only available on UNIX systems.
 
-    I implemented a Django web application that communicates with AMC on the server side.
+    Implemented a Django web application that communicates with AMC on the server side.
 
 - company: CAFDA
   company_w_location: CAFDA
@@ -28,7 +28,7 @@
   title: Volunteer Translator
   date: July - August 2016
   description: >-
-    I volunteered as a French-Arabic translator for asylum-seekers.
+    Volunteered as a French-Arabic translator for asylum-seekers.
 
     The CAFDA is an organization that receives asylum-seeking families and accompanies them in their
     asylum demand procedure and in their access to social rights.
