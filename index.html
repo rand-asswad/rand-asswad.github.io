@@ -2,34 +2,32 @@
 layout: home
 ---
 
-<body>
-    {% include loader.html %}
-    {% include links.html %}
-    <h1 id="site-title">{{ site.title }}</h1>
-    <div id="nav-btn" class="mobile">
-        <div id="nav-stack">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+{% include loader.html %}
+{% include links.html %}
+<h1 id="site-title">{{ site.title }}</h1>
+<div id="nav-btn" class="mobile">
+    <div id="nav-stack">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-    
-    <nav>
-        <ul id="main-nav">
-            {% for section in site.sections %}
-            <li data-menuanchor="{{ section.title | replace: " ", "_" }}">
-                <a href="#{{ section.title | replace: " ", "_" }}" >{{ section.title }}</a>
-            </li>
-            {% endfor %}
-            {% include links.html %}
-        </ul>
-    </nav>
+</div>
 
-    <div id="fullpage" class="container-fluid">
+<nav>
+    <ul id="main-nav">
         {% for section in site.sections %}
-        <section data-anchor="{{ section.title | replace: " ", "_" }}">
-            <div class="row align-items-center">{{ section.content }}</div>
-        </section>
+        <li data-menuanchor="{{ section.title | replace: " ", "_" }}">
+            <a href="#{{ section.title | replace: " ", "_" }}" >{{ section.title }}</a>
+        </li>
         {% endfor %}
-    </div>
-</body>
+        {% include links.html %}
+    </ul>
+</nav>
+
+<div id="fullpage" class="container-fluid">
+    {% for section in site.sections %}
+    <section data-anchor="{{ section.title | replace: " ", "_" }}">
+        <div class="row align-items-center">{{ section.content }}</div>
+    </section>
+    {% endfor %}
+</div>

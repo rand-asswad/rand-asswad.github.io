@@ -1,0 +1,5 @@
+# Rmd files
+*.rmd
+*.Rmd
+
+# In-production

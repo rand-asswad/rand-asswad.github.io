@@ -2,7 +2,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=.7">
     <link rel='icon' href='/assets/img/favicon.ico' type='image/x-icon'>
-    <title>{{ site.title | escape }}</title>
+    <title>
+        {% if page.title %}{{ site.title | escape }} | {{ page.title | escape }}
+        {% else %}{{ site.title | escape }}{% endif %}
+    </title>
 
     <!-- Font Awesome 5 KIT -->
     <script src="https://kit.fontawesome.com/69abfcab1a.js" crossorigin="anonymous"></script>
@@ -12,4 +15,7 @@
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <!-- Highlight.js stylesheet -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/default.min.css">
 </head>

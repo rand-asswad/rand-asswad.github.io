@@ -21,4 +21,10 @@ section, .section {
 
         height: auto !important;
     }
+    
+    background-color: $theme-darker;
+}
+
+.container-fluid {
+    padding: 0;
 }

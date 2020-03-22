@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 
 <!-- Title -->
@@ -12,13 +12,11 @@ layout: default
 
 <!-- Author -->
 <p class="lead">
-    by <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.name }}{% endif %}</a>
+    {% if page.author %}by {{ page.author }}{% endif %}
 </p>
 
-<hr>
-
 <!-- Date/Time -->
-<p>Posted on {{ page.date | date: '%B %d, %Y' }}</p>
+<p>{{ page.date | date: '%B %d, %Y' }}</p>
 
 <hr>
 
