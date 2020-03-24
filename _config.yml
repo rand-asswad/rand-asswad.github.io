@@ -33,11 +33,7 @@ defaults:
 collections:
   - sections
 
-# syntax highlighting
-markdown: kramdown
-highlighter: rouge
+# disable rouge to use hljs
 kramdown:
-  input: GFM
-  syntax_highlighter: rouge
   syntax_highlighter_opts:
-    css_class: 'syntax'
+    disable : true
