@@ -1,20 +1,40 @@
-- title: MUALLEF
-  long_title: Muallef Music Signal Analysis Library
-  date: ongoing
+- title: MIR
+  long_title: Music Information Retrieval - Masters Thesis
+  date: March 2020
   github: https://github.com/rand-asswad/muallef 
   link: https://rand-asswad.github.io/muallef 
   description: >-
-    I am currently working on this project for my Masters thesis.
+    Research project exploring the domain of *Music Information Retrieval*
+    and *Automatic Music Transcription*.
 
-    The project is a state of the art of pitch and onset detection
-    algorithms in music signals, and a python library
-    that provides an API for the presented algorithms,
-    as well as a proposed scale detection algorithm.
+    Studied algorithms of single and multiple pitch estimation
+    and onset detection.
+    Provided a Python API for these algorithms using own implementation
+    and/or external libraries.
   tags:
     - music-theory
     - signal-processing
-    - fourier-analysis
-    - python
+    - music-information-retrieval
+    - pitch-analysis
+    - automatic-music-transcription
+
+- title: SNAKES
+  long_title: Active Contour Models - Snakes
+  date: February 2020
+  github: https://github.com/rand-asswad/active-contour-models
+  link: https://rand-asswad.github.io/active-contour-models/
+  description: >-
+    Studied and implemented active contour models for parametric curve and level-set curves,
+    evolving the curves by minimizing the mean-curvature or the geodesic metric.
+    A medical image is segmented using the proposed algorithms and their performance is compared.
+    
+    The project is based on [Numerical Tours (G. Peyré)](https://www.numerical-tours.com/)
+    which explores image processing among other data science and applied mathematics topics.
+  tags:
+    - image-processing
+    - active-contours
+    - level-set-method
+    - geodesic-curve-evolution
 
 - title: TAQUIN
   long_title: The Taquin Game (8-puzzle)
@@ -22,10 +42,10 @@
   github: https://github.com/rand-asswad/taquin 
   link: https://rand-asswad.github.io/taquin/
   description: >-
-    I implemented the famous sliding tiles game in Prolog using A* graph search algorithm
+    Implemented the famous sliding tiles game in Prolog using A* graph search algorithm
     for N×M sized puzzles.
 
-    I also implemented a greedy algorithm and Iterative Deepening Depth-First-Search,
+    Implemented also a greedy algorithm and Iterative Deepening Depth-First-Search,
     and compared the performance and results of the algorithms.
   tags:
     - prolog

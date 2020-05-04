@@ -39,6 +39,7 @@
     - Lisp
     - Mathematica
     - Javascript
+    - C#
     - SQL
   - item: Experienced User
     sublist:
@@ -74,6 +75,9 @@
     sublist:
     - Django
     - Jekyll
+  - item: Game Engine
+    sublist:
+    - Unity 3D
 
 - category: Operating Systems & Tools
   style: nested
