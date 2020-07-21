@@ -27,6 +27,8 @@
     more: automata, formal language theory, lexical and syntaxical analysis.
   - item: Mathematical Logic
     more: first-order logic, lambda calculus, constraint programming.
+  - item: Multi-Agent System
+    more: Jason, GAMA, Multi-Agent Reinforcement Learning.
 
 - category: Machine Languages
   style: nested
