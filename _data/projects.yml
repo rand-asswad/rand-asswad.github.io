@@ -1,8 +1,8 @@
 - title: MIR
   long_title: Music Information Retrieval - Masters Thesis
   date: March 2020
-  github: https://github.com/rand-asswad/muallef 
-  link: https://rand-asswad.github.io/muallef 
+  github: https://github.com/rand-asswad/muallef
+  link: https://rand-asswad.github.io/muallef
   description: >-
     Research project exploring the domain of *Music Information Retrieval*
     and *Automatic Music Transcription*.
@@ -22,7 +22,7 @@
   long_title: Active Contour Models - Snakes
   date: February 2020
   github: https://github.com/rand-asswad/active-contour-models
-  link: https://rand-asswad.github.io/active-contour-models/
+  link: https://rand-asswad.github.io/active-contour-models
   description: >-
     Studied and implemented active contour models for parametric curve and level-set curves,
     evolving the curves by minimizing the mean-curvature or the geodesic metric.
@@ -36,11 +36,34 @@
     - level-set-method
     - geodesic-curve-evolution
 
+- title: MAS
+  long_title: Multi-Agent Systems
+  date: June 2020
+  github: https://github.com/rand-asswad/multi-agent-systems
+  description: >-
+    Studied Multi-Agent Systems as part of my Masters program, with focus on
+    the **belief-desire-intention** model that was applied in two mini-projects.
+
+    Implemented *capture the flag* game using [jason](http://jason.sourceforge.net/wp/)
+    as a basic BDI-model application. Also built a simulation of the propagation of the flu
+    in a city using [GAMA](https://gama-platform.github.io/) modeling environment.
+
+    Studied **Multi-Agent Reinforcement Learning** in the framework
+    of Game Theory by extensively analysing a scientific paper and comparing it
+    with more recent litterature.
+  tags:
+    - BDI-model
+    - MARL
+    - game-theory
+    - jason
+    - gama-platform
+
+
 - title: TAQUIN
   long_title: The Taquin Game (8-puzzle)
   date: November 2019
-  github: https://github.com/rand-asswad/taquin 
-  link: https://rand-asswad.github.io/taquin/
+  github: https://github.com/rand-asswad/taquin
+  link: https://rand-asswad.github.io/taquin
   description: >-
     Implemented the famous sliding tiles game in Prolog using A* graph search algorithm
     for N×M sized puzzles.
@@ -56,8 +79,8 @@
 - title: AM2T
   long_title: AsciiMath to Tex
   date: May 2019
-  github: https://github.com/rand-asswad/am2t 
-  link: https://rand-asswad.github.io/am2t 
+  github: https://github.com/rand-asswad/am2t
+  link: https://rand-asswad.github.io/am2t
   description: >-
     Implemented an *AsciiMath to LaTeX* interpretor using [ANTLR](https://www.antlr.org/).
     This project was part of the course *lexical and syntaxical analysis* in my INSA Masters program.
@@ -84,7 +107,7 @@
     the square root function as an assignment for a course in computer-based calculations,
     I was compelled to extend the assignment to other mathematical operations.
   tags:
-    - IEEE 765
+    - IEEE-765
     - C++
     - floating-point
     - low-level
