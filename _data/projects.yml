@@ -3,6 +3,7 @@
   date: March 2020
   github: https://github.com/rand-asswad/muallef
   link: https://rand-asswad.github.io/muallef
+  pdf: report.pdf
   description: >-
     Research project exploring the domain of *Music Information Retrieval*
     and *Automatic Music Transcription*.
@@ -23,6 +24,7 @@
   date: February 2020
   github: https://github.com/rand-asswad/active-contour-models
   link: https://rand-asswad.github.io/active-contour-models
+  pdf: book.pdf
   description: >-
     Studied and implemented active contour models for parametric curve and level-set curves,
     evolving the curves by minimizing the mean-curvature or the geodesic metric.
@@ -64,6 +66,7 @@
   date: November 2019
   github: https://github.com/rand-asswad/taquin
   link: https://rand-asswad.github.io/taquin
+  pdf: book.pdf
   description: >-
     Implemented the famous sliding tiles game in Prolog using A* graph search algorithm
     for N×M sized puzzles.
@@ -81,6 +84,7 @@
   date: May 2019
   github: https://github.com/rand-asswad/am2t
   link: https://rand-asswad.github.io/am2t
+  pdf: book.pdf
   description: >-
     Implemented an *AsciiMath to LaTeX* interpretor using [ANTLR](https://www.antlr.org/).
     This project was part of the course *lexical and syntaxical analysis* in my INSA Masters program.
