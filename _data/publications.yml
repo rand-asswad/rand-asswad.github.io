@@ -1,0 +1,32 @@
+- title: GSI
+  long_title: An auditory cortex model for sound processing
+  date: March 2021
+  github: https://github.com/rand-asswad/WCA1
+  link: https://hal.archives-ouvertes.fr/hal-03160486
+  pdf: document
+  abstract: >-
+    The reconstruction mechanisms built by the human auditory system during
+    sound reconstruction are still a matter of debate.
+    The purpose of this study is to refine the auditory cortex model introduced in [9],
+    and inspired by the geometrical modelling of vision.
+    The algorithm transforms the degraded sound in an 'image' in the time-frequency domain
+    via a short-time Fourier transform. Such an image is then lifted in the Heisenberg group
+    and it is reconstructed via a Wilson-Cowan differo-integral equation.
+    Numerical experiments on a library of speech recordings are provided,
+    showing the good reconstruction properties of the algorithm.
+  description: >-
+    Preprint of submitted article to the conference
+    [GSI 2021](https://www.see.asso.fr/en/GSI2021).
+    Written as part of my internship at [L2S](https://l2s.centralesupelec.fr/en/)
+    working on a bio-inspired model for sound reconstruction.
+  authors:
+    - Rand Asswad
+    - Ugo Boscain
+    - Giuseppina Turco
+    - Dario Prandi
+    - Ludovic Sacchelli
+  tags:
+    - auditory-cortex
+    - Heisenberg-group
+    - Wilson-Cowan-equation
+    - Kolmogorov-operator
