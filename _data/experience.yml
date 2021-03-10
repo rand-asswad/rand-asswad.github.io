@@ -1,3 +1,19 @@
+- company: L2S
+  company_w_location: Laboratory of Signals and Systems (Centralesupelec, CNRS)
+  link: https://l2s.centralesupelec.fr/en/
+  title: Research Intern
+  date: November 2020 - June 2021
+  description: >-
+    Worked on a bio-inspired geometric model for sound reconstruction.
+    The spectrum of the degraded sound is lifted in the Heisenberg group
+    and reconstructed via the Wilson-Cowan differo-integral equation.
+
+    Constributed to an [article](https://hal.archives-ouvertes.fr/hal-03160486)
+    submitted to the [GSI 2021](https://www.see.asso.fr/en/GSI2021) conference.
+
+    Improved and extended the [implementation](https://github.com/rand-asswad/WCA1)
+    of the proposed model, and ran experiments on a library of speech recordings.
+
 - company: INRIA
   company_w_location: INRIA Nancy Grand-Est
   link: https://www.inria.fr/en/centre/nancy

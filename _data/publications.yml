@@ -15,8 +15,8 @@
     Numerical experiments on a library of speech recordings are provided,
     showing the good reconstruction properties of the algorithm.
   description: >-
-    Preprint of submitted article to the conference
-    [GSI 2021](https://www.see.asso.fr/en/GSI2021).
+    Preprint of submitted article to the
+    [GSI 2021](https://www.see.asso.fr/en/GSI2021) conference.
     Written as part of my internship at [L2S](https://l2s.centralesupelec.fr/en/)
     working on a bio-inspired model for sound reconstruction.
   authors:
