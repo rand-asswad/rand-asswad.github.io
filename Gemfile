@@ -1,14 +1,9 @@
 source "https://rubygems.org"
 
 # jekyll / github pages
-# github-pages 204 is equivalent to jekyll 3.8.5
-# gem "jekyll", "~> 3.8.5", group: :jekyll_plugins
-gem "github-pages", "~> 204", group: :jekyll_plugins
-
-# jekyll plugins
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.13.0"
-end
+# github-pages 212 is equivalent to jekyll 3.9.0
+# gem "jekyll", "~> 3.9.0", group: :jekyll_plugins
+gem "github-pages", "~> 212", group: :jekyll_plugins
 
 # Windows and JRuby does not include zoneinfo files, fix:
 install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
