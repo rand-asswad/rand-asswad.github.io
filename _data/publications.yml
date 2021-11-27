@@ -1,8 +1,8 @@
 - title: GSI
-  long_title: An auditory cortex model for sound processing
-  date: March 2021
+  long_title: An Auditory Cortex Model for Sound Processing
+  date: July 2021
   github: https://github.com/rand-asswad/WCA1
-  link: https://hal.archives-ouvertes.fr/hal-03160486
+  link: https://doi.org/10.1007/978-3-030-80209-7_7
   pdf: document
   abstract: >-
     The reconstruction mechanisms built by the human auditory system during
@@ -15,8 +15,8 @@
     Numerical experiments on a library of speech recordings are provided,
     showing the good reconstruction properties of the algorithm.
   description: >-
-    Preprint of submitted article to the
-    [GSI 2021](https://www.see.asso.fr/en/GSI2021) conference.
+    Article published in the
+    [GSI 2021](https://www.see.asso.fr/en/GSI2021) conference proceedings.
     Written as part of my internship at [L2S](https://l2s.centralesupelec.fr/en/)
     working on a bio-inspired model for sound reconstruction.
   authors:

@@ -1,6 +1,14 @@
+- school: Université de Lorraine
+  degree: Fundamental and Applied Mathematics
+  date: September 2021 - August 2022
+  link: https://iecl.univ-lorraine.fr/master-2-mfa/
+  description: >-
+    Research-oriented Master's program with focus on
+    PDEs, Lie Algebras, and Control Theory.
+
 - school: INSA Rouen Normandie
   degree: Mathematical Engineering
-  date: September 2014 - August 2020 (pending internship)
+  date: September 2014 - August 2021
   link: https://www.insa-rouen.fr/en/education/engineering-specialization/mathematical-and-software-engineering
   description: >-
     French graduate engineering program (Diplôme d'Ingénieur)
@@ -11,7 +19,7 @@
   date: September 2019 - August 2020
   link: https://dpt-info-sciences.univ-rouen.fr/index.php/accueil-mita
   description: >-
-    Research-oriented Masters program with focus on algebra, theoretical
+    Research-oriented Master's program with focus on algebra, theoretical
     computer science, and preparation for PhD.
 
 - school: Little Village School

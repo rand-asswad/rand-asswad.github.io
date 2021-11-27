@@ -8,11 +8,14 @@
     The spectrum of the degraded sound is lifted in the Heisenberg group
     and reconstructed via the Wilson-Cowan differo-integral equation.
 
-    Contributed to an [article](https://hal.archives-ouvertes.fr/hal-03160486)
-    submitted to the [GSI 2021](https://www.see.asso.fr/en/GSI2021) conference.
+    Contributed to an [article](https://doi.org/10.1007/978-3-030-80209-7_7)
+    published in the [GSI 2021](https://www.see.asso.fr/en/GSI2021) conference proceedings.
 
     Improved and extended the [implementation](https://github.com/rand-asswad/WCA1)
     of the proposed model, and ran experiments on a library of speech recordings.
+
+    This internship concluded my Master's degree at INSA Rouen Normandie
+    ([published report](https://rand-asswad.xyz/WCA1-docs/)).
 
 - company: INRIA
   company_w_location: INRIA Nancy Grand-Est
