@@ -4,7 +4,7 @@
   github: https://github.com/rand-asswad/muallef
   link: https://rand-asswad.github.io/muallef
   pdf: book.pdf
-  description: >-
+  description: |
     Research project exploring the domain of *Music Information Retrieval*
     and *Automatic Music Transcription*.
 
@@ -25,7 +25,7 @@
   github: https://github.com/rand-asswad/active-contour-models
   link: https://rand-asswad.github.io/active-contour-models
   pdf: book.pdf
-  description: >-
+  description: |
     Studied and implemented active contour models for parametric curve and level-set curves,
     evolving the curves by minimizing the mean-curvature or the geodesic metric.
     A medical image is segmented using the proposed algorithms and their performance is compared.
@@ -42,7 +42,7 @@
   long_title: Multi-Agent Systems
   date: June 2020
   github: https://github.com/rand-asswad/multi-agent-systems
-  description: >-
+  description: |
     Studied Multi-Agent Systems as part of my Masters program, with focus on
     the **belief-desire-intention** model that was applied in two mini-projects.
 
@@ -67,7 +67,7 @@
   github: https://github.com/rand-asswad/taquin
   link: https://rand-asswad.github.io/taquin
   pdf: book.pdf
-  description: >-
+  description: |
     Implemented the famous sliding tiles game in Prolog using A* graph search algorithm
     for N×M sized puzzles.
 
@@ -85,7 +85,7 @@
   github: https://github.com/rand-asswad/am2t
   link: https://rand-asswad.github.io/am2t
   pdf: book.pdf
-  description: >-
+  description: |
     Implemented an *AsciiMath to LaTeX* interpretor using [ANTLR](https://www.antlr.org/).
     This project was part of the course *lexical and syntaxical analysis* in my INSA Masters program.
 
@@ -103,7 +103,7 @@
 - title: FLOAT
   long_title: Floating-point Arithmatics
   date: April 2016
-  description: >-
+  description: |
     Implemented mathematical operations for floating-point numbers (IEEE 765 standard)
     through bitwise operations in C++ using Newton's Algorithm, CORDIC and others.
     

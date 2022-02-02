@@ -3,7 +3,7 @@
   link: https://l2s.centralesupelec.fr/en/
   title: Research Intern
   date: November 2020 - June 2021
-  description: >-
+  description: |
     Worked on a bio-inspired geometric model for sound reconstruction.
     The spectrum of the degraded sound is lifted in the Heisenberg group
     and reconstructed via the Wilson-Cowan differo-integral equation.
@@ -22,7 +22,7 @@
   link: https://www.inria.fr/en/centre/nancy
   title: Research Intern
   date: June - August 2019
-  description: >-
+  description: |
     Contributed to the [Mind the Gap!](http://www.sciencedirect.com/science/article/pii/S0010448518302215)
     algorithm developped by [Pixel team](https://pixel.inria.fr) that proposes a robust pipeline
     for generating hexahedral-dominant meshes from any global parametrization of a tetrahedral mesh.
@@ -35,7 +35,7 @@
   link: https://www.insa-rouen.fr/en
   title: Web Development Intern
   date: July - September 2017
-  description: >-
+  description: |
     Established a Proof of Concept of a web client of the free software [AMC](https://www.auto-multiple-choice.net/)
     that creates and manages multiple choice questionnaires (MCQ) as it is only available on UNIX systems.
 
@@ -46,7 +46,7 @@
   link: https://fr.wikipedia.org/wiki/Coordination_de_l%27accueil_des_familles_demandeuses_d%27asile
   title: Volunteer Translator
   date: July - August 2016
-  description: >-
+  description: |
     Volunteered as a French-Arabic translator for asylum-seekers.
 
     The CAFDA is an organization that receives asylum-seeking families and accompanies them in their

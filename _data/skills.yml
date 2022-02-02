@@ -8,16 +8,16 @@
   - item: Signal Processing
     more: analog and digital signals, continuous and discrete time, statistical signal processing, audio signal processing.
   - item: Numerical Analysis
-    more: >-
+    more: |
       linear systems, function interpolation and quadrature, least squares,
       ODE and PDE numerical approximation (Runge-Kutta, finite difference, finite elements),
       curve and surface spline approximation, mesh generation.
   - item: Metaheuristics
-    more: >-
+    more: |
       local search algorithms (Hill-Climbing, Simulated Annealing, Local Beam, Taboo),
       evolutionary optimization, ant colony optimization.
   - item: Probability, Statistics and Data Analysis
-    more: >-
+    more: |
       law of large numbers, estimation theory, Markov chains,
       linear models (simple/multiple linear regression, ANOVA), multidimensional data analysis (PCA, CA, FA),
       data mining (K-means clustering, SVM).

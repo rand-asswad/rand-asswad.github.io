@@ -4,7 +4,7 @@
   github: https://github.com/rand-asswad/WCA1
   link: https://doi.org/10.1007/978-3-030-80209-7_7
   pdf: document
-  abstract: >-
+  abstract: |
     The reconstruction mechanisms built by the human auditory system during
     sound reconstruction are still a matter of debate.
     The purpose of this study is to refine the auditory cortex model introduced in [9],
@@ -14,7 +14,7 @@
     and it is reconstructed via a Wilson-Cowan differo-integral equation.
     Numerical experiments on a library of speech recordings are provided,
     showing the good reconstruction properties of the algorithm.
-  description: >-
+  description: |
     Article published in the
     [GSI 2021](https://www.see.asso.fr/en/GSI2021) conference proceedings.
     Written as part of my internship at [L2S](https://l2s.centralesupelec.fr/en/)

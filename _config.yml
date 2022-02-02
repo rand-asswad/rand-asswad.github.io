@@ -1,6 +1,6 @@
 # site variables
 title: Rand Asswad
-description: >- # appears on homepage and in google search results 
+description: | # appears on homepage and in google search results 
   I'm a Master's student based in France, specialized in **mathematics**, 
   **theoretical computer science**, and **numerical analysis**.
 
