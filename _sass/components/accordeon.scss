@@ -1,7 +1,7 @@
 $acc-title-padding-horz: 15px;
 $acc-title-padding-vert: 15px;
 $acc-content-padding-top: 5px;
-$acc-content-padding-bottom: 20px;
+$acc-content-padding-bottom: 5px;
 
 $acc-border-width: 5px;
 $acc-border-color: $theme-grey;
@@ -12,9 +12,9 @@ $acc-title-color: $theme-grey;
 $acc-title-hover-color: $theme-bright;
 $acc-title-selected-color: $theme-bright;
 
-$acc-title-size: 25px;
-$acc-subtitle-size: 18px;
-$acc-text-size: 20px;
+$acc-title-size: 20px;
+$acc-subtitle-size: 17px;
+$acc-text-size: 15px;
 
 $acc-subtitle-color: $theme-bright;
 $acc-link-color: $theme-bright;
@@ -22,14 +22,14 @@ $acc-link-color: $theme-bright;
 $acc-highlight-hover: $theme-dark;
 
 .accordeon {
-    width: 100%;
+    min-width: 100%;
     min-height: 40vh;
     padding: 0;
     margin: auto;
     
     .accordeon-title, h1 {
         padding: $acc-title-padding-vert $acc-title-padding-horz;
-        width: 100%;
+        min-width: 100%;
         margin: 0;
         cursor: pointer;
         border-left-style: solid;
@@ -62,7 +62,7 @@ $acc-highlight-hover: $theme-dark;
             font-size: $acc-subtitle-size;
             color: $acc-subtitle-color;
             padding-top: 0;
-            padding-bottom: 0.2em;
+            padding-bottom: 0;
         }
 
         p {
