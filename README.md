@@ -7,8 +7,7 @@ hosted by [GitHub Pages](https://pages.github.com/).
 
 - [Bootstrap 4](https://getbootstrap.com) mostly for the grid
 - [Font Awesome 5](https://fontawesome.com/) for social icons
-- [fullpage.js](https://alvarotrigo.com/fullPage/) for sectioned scroll
-- jQuery & Popper for stuff I stole (I don't know either)
+- jQuery & Popper for forked components (my own components are written in vanilla js)
 - [highlight.js](https://highlightjs.org/) and [MathJax](https://www.mathjax.org/) for the incoming blog
 
 # Theme
@@ -34,16 +33,9 @@ I did it with [Vanilla JS](http://vanilla-js.com/) to optimize its speed,
 so please give me credit if you use it in your work.
 I'm probably going to open up a repo for it.
 
-It's worth noting that I'm using [fullpage.js](https://alvarotrigo.com/fullPage/)
-which is under the [GPLv3 License](https://en.wikipedia.org/wiki/GNU_General_Public_License).
-Don't worry, if your project is open source you can have a liceseKey for free,
-please refer to their [documentation](https://github.com/alvarotrigo/fullPage.js#options).
-
 # To-Do List
-- add project links
 - blog
 - migrate to svg icons
 - French Version (i18n)
-- Fix tabs js bug
 - clean-up sass mess
 - minify & unify js

@@ -1,14 +1,17 @@
 
 // section padding
 $side-padding: 210px;
-$top-padding: 10px;
+$top-padding: 150px;
 $bottom-padding: $top-padding;
 
-$mobile-break-point: 800px;
-$mobile-padding: 50px;
+$last-bottom-margin: 50vw;
+
+$mobile-padding: 25px;
 
 section, .section {
     margin: 0px;
+    position: relative;
+
     @media (min-width: #{$mobile-break-point}) {
         padding-left: $side-padding;
         padding-right: $side-padding;
@@ -20,6 +23,10 @@ section, .section {
         padding: $mobile-padding;
 
         height: auto !important;
+    }
+
+    &:last-child {
+        margin-bottom: $last-bottom-margin;
     }
 }
 

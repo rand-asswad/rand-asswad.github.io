@@ -7,6 +7,12 @@ $main-font: "Roboto Slab", serif;
 $main-font-size: 17px;
 $main-h1-size: 30px;
 
+$mobile-break-point: 800px;
+
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none !important;
 }
@@ -24,5 +30,23 @@ body {
 
     .highlighter-rouge {
         color: $code-text-color;
+    }
+}
+
+.desktop {
+    @media (min-width: #{$mobile-break-point}) {
+        display: initial;
+    }
+    @media (max-width: #{$mobile-break-point - 1px}) {
+        display: none;
+    }
+}
+
+.mobile {
+    @media (min-width: #{$mobile-break-point}) {
+        display: none;
+    }
+    @media (max-width: #{$mobile-break-point - 1px}) {
+        display: initial;
     }
 }

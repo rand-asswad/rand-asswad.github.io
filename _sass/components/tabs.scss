@@ -3,12 +3,15 @@ $tab-btn-padding-vert: 15px;
 $tab-btn-padding-horz: 15px;
 $tab-content-padding-left: 30px;
 
-$tab-btn-border-width: 5px;
+$tab-btn-border-width: 1px;
+$tab-btn-border-selected-width: 3px;
 $tab-btn-border-color: $theme-grey;
 $tab-btn-border-hover-color: $theme-grey;
 $tab-btn-border-selected-color: $theme-bright;
 
-$tab-btn-text-size: 20px;
+$tab-btn-padding-inactive-horz: $tab-btn-padding-horz + $tab-btn-border-selected-width - $tab-btn-border-width;
+
+$tab-btn-text-size: 15px;
 $tab-btn-text-color: $theme-grey;
 $tab-btn-text-hover-color: $theme-bright;
 $tab-btn-text-selected-color: $theme-bright;
@@ -32,34 +35,58 @@ $tab-content-title-color: $theme-grey;
   display: flex;
   position: relative;
   width: 100%;
-  min-height: 30vh;
+  //min-height: 30vh;
   height: auto;
   align-items: flex-start;
   padding: 0;
   margin: auto;
-
   align-self: flex-start !important;
+
+  @media (min-width: #{$mobile-break-point}) {
+    flex-direction: row;
+  }
+  @media (max-width: #{$mobile-break-point - 1px}) {
+    flex-direction: column;
+  }
 
   // tabs class
   .tabs {
     float: left;
-    width: max-content;
-    height: 100%;
     border: none;
+    @media (min-width: #{$mobile-break-point}) {
+      width: max-content;
+      height: 100%;
+    }
+    @media (max-width: #{$mobile-break-point - 1px}) {
+      width: 100%;
+      display: flex;
+      overflow-x: auto;
+    }
 
     // tab button
     a, .tab {
-      display: block;
-      padding: $tab-btn-padding-vert $tab-btn-padding-horz;
-      width: 100%;
-      border-left-style: solid;
-      border-left-width: $tab-btn-border-width;
-      border-left-color: $tab-btn-border-color;
-      text-align: left;
+      padding: $tab-btn-padding-vert $tab-btn-padding-inactive-horz;
       color: $tab-btn-text-color;
       font-size: $tab-btn-text-size;
       background-color: $tab-btn-color;
       transition: background-color 0.1s ease-out;
+
+      @media (min-width: #{$mobile-break-point}) {
+        display: block;
+        width: 100%;
+        border-left-style: solid;
+        border-left-width: $tab-btn-border-width;
+        border-left-color: $tab-btn-border-color;
+        text-align: left;
+      }
+      @media (max-width: #{$mobile-break-point - 1px}) {
+        display: inline-block;
+        width: max-content;
+        border-bottom-style: solid;
+        border-bottom-width: $tab-btn-border-width;
+        border-bottom-color: $tab-btn-border-color;
+        text-align: left;
+      }
 
       &:hover {
         background-color: $tab-btn-hover-color;
@@ -69,9 +96,11 @@ $tab-content-title-color: $theme-grey;
       }
 
       &.active {
+        padding: $tab-btn-padding-vert $tab-btn-padding-horz;
         background-color: $tab-btn-selected-color;
         color: $tab-btn-text-selected-color;
         border-left-color: $tab-btn-border-selected-color;
+        border-left-width: $tab-btn-border-selected-width;
         transition: background-color 0.1s ease-out;
       }
 
@@ -79,6 +108,7 @@ $tab-content-title-color: $theme-grey;
   }
 
   .tabs-content {
+    position: relative;
     float: left;
     padding: 0;
     padding-top: $tab-btn-padding-vert;
@@ -89,20 +119,23 @@ $tab-content-title-color: $theme-grey;
     text-align: left;
 
     .content {
-      position: absolute;
+      display: none;
+      position: relative;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      visibility: hidden;
-      opacity: 0;
-      z-index: 0;
-      transition: opacity 0.5s ease-out;
+      //visibility: hidden;
+      //opacity: 0;
+      //z-index: 0;
+      //transition: opacity 0.3s ease-out;
 
       &.active {
-        position: relative;
-        visibility: visible;
-        opacity: 1;
-        z-index: 10;
-        transition: opacity 0.5s ease-in;
+        display: initial;
+        //visibility: visible;
+        //opacity: 1;
+        //z-index: 10;
+        //transition: opacity 0.7s ease-in;
       }
 
       .tab-title {
@@ -143,7 +176,6 @@ $tab-content-title-color: $theme-grey;
 
       a {
         color: $tab-link-color;
-        white-space: nowrap;
 
         &:hover {
           text-decoration: underline;

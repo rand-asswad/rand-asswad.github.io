@@ -3,7 +3,7 @@ layout: home
 ---
 
 {% include loader.html %}
-{% include links.html %}
+<div class="desktop">{% include links.html %}</div>
 <h1 id="site-title">{{ site.title }}</h1>
 <div id="nav-btn" class="mobile">
     <div id="nav-stack">
@@ -16,17 +16,17 @@ layout: home
 <nav>
     <ul id="main-nav">
         {% for section in site.sections %}
-        <li data-menuanchor="{{ section.title | replace: " ", "_" }}">
-            <a href="#{{ section.title | replace: " ", "_" }}" >{{ section.title }}</a>
+        <li data-menuanchor='{{ section.title | replace: " ", "_" }}'>
+            <a href='#{{ section.title | replace: " ", "_" }}' >{{ section.title }}</a>
         </li>
         {% endfor %}
-        {% include links.html %}
+        <div class="mobile">{% include links.html %}</div>
     </ul>
 </nav>
 
-<div id="fullpage" class="container-fluid">
+<div id="main" class="container-fluid">
     {% for section in site.sections %}
-    <section data-anchor="{{ section.title | replace: " ", "_" }}">
+    <section id='{{ section.title | replace: " ", "_" }}'>
         <div class="row align-items-center">{{ section.content }}</div>
     </section>
     {% endfor %}
