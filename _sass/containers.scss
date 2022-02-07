@@ -4,7 +4,7 @@ $side-padding: 210px;
 $top-padding: 150px;
 $bottom-padding: $top-padding;
 
-$last-bottom-margin: 50vw;
+$last-bottom-margin: 50vh;
 
 $mobile-padding: 25px;
 
@@ -32,4 +32,25 @@ section, .section {
 
 .container-fluid {
     padding: 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    height: auto;
+    padding: 15px;
+    font-size: 12px;
+    text-align: center;
+
+    a {
+        padding: 10px;
+        color: $theme-grey;
+
+        &:hover {
+            color: $theme-bright;
+        }
+    }
 }
