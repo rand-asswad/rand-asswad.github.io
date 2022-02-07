@@ -1,7 +1,5 @@
 # production
 /draft/
-head_old.html
-nav.html
 /**/*.backup.*
 assets/fonts/
 
