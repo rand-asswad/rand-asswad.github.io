@@ -16,4 +16,4 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 # Fix dependabot alerts
 # activesupport patch in >= 4.1.11
-gem "activesupport", "~> 4.1.16", group: :jekyll_plugins
+gem "activesupport", "~> 4.2.11.3", group: :jekyll_plugins

@@ -1,11 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.1.16)
-      i18n (~> 0.6, >= 0.6.9)
-      json (~> 1.7, >= 1.7.7)
+    activesupport (4.2.11.3)
+      i18n (~> 0.7)
       minitest (~> 5.1)
-      thread_safe (~> 0.1)
+      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
@@ -217,7 +216,6 @@ GEM
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0, < 5.0)
-    json (1.8.6)
     kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -281,7 +279,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  activesupport (~> 4.1.16)
+  activesupport (~> 4.2.11.3)
   github-pages (~> 223)
   tzinfo
   tzinfo-data
