@@ -1,0 +1,21 @@
+---
+title: education
+order: "02"
+---
+
+<div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0">
+
+    <h1>Education</h1>
+    <div class="accordeon">
+        {% for e in site.data.education %}
+        <div class="accordeon-item">
+            <h1 class="accordeon-title">{{ e.degree }} <a href="{{ e.link }}" target="_blank">@ {{ e.school }}</a></h1>
+            <div class="accordeon-content">
+                <h2 class="accordeon-subtitle">{{ e.date }}</h2>
+                <p>{{ e.description | markdownify }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
