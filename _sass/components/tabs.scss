@@ -70,6 +70,19 @@ $tab-content-title-color: $theme-grey;
       font-size: $tab-btn-text-size;
       background-color: $tab-btn-color;
       transition: background-color 0.1s ease-out;
+      
+      &:hover {
+        background-color: $tab-btn-hover-color;
+        color: $tab-btn-text-hover-color;
+        transition: background-color 0.2s ease-in;
+      }
+
+      &.active {
+        //padding: $tab-btn-padding-vert $tab-btn-padding-horz;
+        background-color: $tab-btn-selected-color;
+        color: $tab-btn-text-selected-color;
+        transition: background-color 0.1s ease-out;
+      }
 
       @media (min-width: #{$mobile-break-point}) {
         display: block;
@@ -78,7 +91,17 @@ $tab-content-title-color: $theme-grey;
         border-left-width: $tab-btn-border-width;
         border-left-color: $tab-btn-border-color;
         text-align: left;
+      
+        &:hover {
+          border-left-color: $tab-btn-border-hover-color;
+        }
+
+        &.active {
+          border-left-color: $tab-btn-border-selected-color;
+          border-left-width: $tab-btn-border-selected-width;
+        }
       }
+
       @media (max-width: #{$mobile-break-point - 1px}) {
         display: inline-block;
         width: max-content;
@@ -86,24 +109,16 @@ $tab-content-title-color: $theme-grey;
         border-bottom-width: $tab-btn-border-width;
         border-bottom-color: $tab-btn-border-color;
         text-align: left;
-      }
 
-      &:hover {
-        background-color: $tab-btn-hover-color;
-        color: $tab-btn-text-hover-color;
-        border-left-color: $tab-btn-border-hover-color;
-        transition: background-color 0.2s ease-in;
-      }
+        &:hover {
+          border-bottom-color: $tab-btn-border-hover-color;
+        }
 
-      &.active {
-        padding: $tab-btn-padding-vert $tab-btn-padding-horz;
-        background-color: $tab-btn-selected-color;
-        color: $tab-btn-text-selected-color;
-        border-left-color: $tab-btn-border-selected-color;
-        border-left-width: $tab-btn-border-selected-width;
-        transition: background-color 0.1s ease-out;
+        &.active {
+          border-bottom-color: $tab-btn-border-selected-color;
+          border-bottom-width: $tab-btn-border-selected-width;
+        }
       }
-
     }
   }
 
@@ -117,6 +132,13 @@ $tab-content-title-color: $theme-grey;
     width: 100%;
     min-height: max-content;
     text-align: left;
+    
+    @media (min-width: #{$mobile-break-point}) {
+      padding-left: $tab-content-padding-left;
+    }
+    @media (max-width: #{$mobile-break-point - 1px}) {
+      padding-left: $tab-btn-padding-vert;
+    }
 
     .content {
       display: none;
