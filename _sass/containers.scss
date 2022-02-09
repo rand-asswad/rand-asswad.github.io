@@ -1,27 +1,24 @@
+// section margins
+$side-margin: 200px;
+$top-margin: 200px;
+$bottom-margin: $top-margin;
 
-// section padding
-$side-padding: 210px;
-$top-padding: 150px;
-$bottom-padding: $top-padding;
+$last-bottom-margin: $bottom-margin;
 
-$last-bottom-margin: 50vh;
-
-$mobile-padding: 25px;
+$mobile-margin: 25px;
 
 section, .section {
-    margin: 0px;
     position: relative;
 
     @media (min-width: #{$mobile-break-point}) {
-        padding-left: $side-padding;
-        padding-right: $side-padding;
-        padding-top: $top-padding;
-        padding-bottom: $bottom-padding;
+        margin-left: $side-margin;
+        margin-right: $side-margin;
+        margin-top: $top-margin;
+        margin-bottom: $bottom-margin;
     }
 
     @media (max-width: #{$mobile-break-point - 1px}) {
-        padding: $mobile-padding;
-
+        margin: $mobile-margin;
         height: auto !important;
     }
 
@@ -31,7 +28,7 @@ section, .section {
 }
 
 .container-fluid {
-    padding: 0;
+    margin: 0;
 }
 
 footer {
@@ -41,12 +38,12 @@ footer {
     align-items: center;
     min-height: 70px;
     height: auto;
-    padding: 15px;
+    margin: 15px;
     font-size: 12px;
     text-align: center;
 
     a {
-        padding: 10px;
+        margin: 10px;
         color: $theme-grey;
 
         &:hover {

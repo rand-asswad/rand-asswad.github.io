@@ -34,9 +34,11 @@ so please give me credit if you use it in your work.
 I'm probably going to open up a repo for it.
 
 # To-Do List
-- remove bootstrap
-- blog
-- migrate to svg icons
-- French Version (i18n)
-- clean-up sass mess
-- minify & unify js
+- [ ] Fix epicycles sketch position
+- [x] Fix scroll spy offset
+- [ ] Remove Bootstrap
+- [ ] Prepare blog
+- [ ] Migrate to nicer svg icons
+- [ ] Tidy up sass code
+- [ ] Minify & unify js
+- [ ] French version (i18n)
