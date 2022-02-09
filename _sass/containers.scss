@@ -1,32 +1,27 @@
 // section margins
-$side-margin: 200px;
-$top-margin: 200px;
-$bottom-margin: $top-margin;
+$section-margin-side: 200px;
+$section-margin-top: 100px;
+$section-margin-bottom: 200px;
 
-$last-bottom-margin: $bottom-margin;
-
-$mobile-margin: 25px;
+$section-margin-mobile: 25px;
 
 section, .section {
     position: relative;
 
     @media (min-width: #{$mobile-break-point}) {
-        margin-left: $side-margin;
-        margin-right: $side-margin;
-        margin-top: $top-margin;
-        margin-bottom: $bottom-margin;
+        margin-left: $section-margin-side;
+        margin-right: $section-margin-side;
+        margin-top: $section-margin-top;
+        margin-bottom: $section-margin-bottom;
     }
 
     @media (max-width: #{$mobile-break-point - 1px}) {
-        margin: $mobile-margin;
+        margin: $section-margin-mobile;
         height: auto !important;
-    }
-
-    &:last-child {
-        margin-bottom: $last-bottom-margin;
     }
 }
 
+// override bootstrap margin
 .container-fluid {
     margin: 0;
 }
