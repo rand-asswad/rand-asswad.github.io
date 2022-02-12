@@ -1,4 +1,3 @@
-
 class Complex {
     constructor(re, im) {
         this.re = re;
@@ -91,3 +90,6 @@ function divide(x, y) {
     }
     return x / y;
 }
+
+
+export { Complex, add, prod, divide };

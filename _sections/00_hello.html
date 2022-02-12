@@ -25,7 +25,10 @@ order: "00"
 
 <a href="#about_me" class="next desktop"></a>
 
-<script>
+<script type="module">
+    import { FourierSketch } from './assets/js/sketch/epicycles.js';
+    import { myPts } from './assets/js/sketch/me.js';
+
     var sketch = new FourierSketch(myPts, "sketch-holder", 400, 20, 2);
     sketch.canvas.viewBox = "-90 -100 170 200";
     //sketch.controlSlider("nbCoefs");

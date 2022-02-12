@@ -1,3 +1,5 @@
+import { TAU } from './math.js';
+import { Complex, prod } from './complex.js';
 
 function FourierCoefs(f, nb_coefs, sym = true) {
     const coefs = [];
@@ -5,7 +7,7 @@ function FourierCoefs(f, nb_coefs, sym = true) {
     const N = (sym) ? Math.floor(nb_coefs / 2) : 0;
 
     for (let n = -N; n < nb_coefs - N; n++) {
-        c = new Complex(0, 0);
+        let c = new Complex(0, 0);
         for (let k = 0; k < M; k++) {
             let phi = TAU * n * k / M;
             c.add(prod(f[k], new Complex(Math.cos(phi), -Math.sin(phi))));
@@ -17,3 +19,5 @@ function FourierCoefs(f, nb_coefs, sym = true) {
 
     return coefs;
 }
+
+export { FourierCoefs };

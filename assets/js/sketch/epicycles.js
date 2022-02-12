@@ -1,3 +1,8 @@
+import { TAU } from './math.js';
+import { Complex } from './complex.js';
+import { FourierCoefs } from './fourier.js';
+import { SVG } from './svg_api.js';
+
 class FourierSketch {
     constructor(dataSrc, div, nb_coefs=null, period=1, skip=1) {
         this.canvas = new SVG(div);
@@ -150,3 +155,5 @@ class FourierSketch {
 function copy(obj) {
     return Object.assign({}, obj);
 }
+
+export { FourierSketch };

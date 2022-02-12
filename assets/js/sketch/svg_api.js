@@ -125,3 +125,5 @@ class Polyline extends Element {
         }
     }
 }
+
+export { Element, SVG, Circle, Line, Polyline, createElement };
