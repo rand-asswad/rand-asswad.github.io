@@ -16,9 +16,9 @@ order: "05"
                 <div class="content" id="proj{% increment tab %}">
                     <div class="tab-title">
                         <div class="icons">
-                            {% if p.github %}<a href="{{ p.github }}" target="_blank" class="fa-btn"><i class="fab fa-github"></i></a>{% endif %}
-                            {% if p.link %}<a href="{{ p.link }}" target="_blank" class="fa-btn"><i class="fas fa-info-circle"></i></a>{% endif %}
-                            {% if p.pdf %}<a href="{{ p.link }}/{{ p.pdf }}" target="_blank" class="fa-btn"><i class="fas fa-file-pdf"></i></a>{% endif %}
+                            {% if p.github %}<a href="{{ p.github }}" target="_blank" class="fa-btn"><span class="fab fa-github" title="github repository"></span></a>{% endif %}
+                            {% if p.link %}<a href="{{ p.link }}" target="_blank" class="fa-btn"><span class="fas fa-info-circle" title="project page"></span></a>{% endif %}
+                            {% if p.pdf %}<a href="{{ p.link }}/{{ p.pdf }}" target="_blank" class="fa-btn"><span class="fas fa-file-pdf" title="project PDF report"></span></a>{% endif %}
                         </div>
                         <h1>{{ p.long_title }}</h1>
                     </div>
