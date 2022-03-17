@@ -3,24 +3,20 @@ title: experience
 order: "03"
 ---
 
-<div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0">
-
-    <h1>Experience</h1>
-    <div id="experience" class="tabs-container">
-        <div class="tabs">
-            {% for e in site.data.experience %}
-                <a href="#tab{% increment tabLink %}" class="tab">{{ e.company }}</a>
-            {% endfor %}
-        </div>
-        <div class="tabs-content">
-            {% for e in site.data.experience %}
-                <div class="content" id="tab{% increment tab %}">
-                    <h1 class="tab-title">{{ e.title }} <a href="{{ e.link }}" target="_blank">@ {{ e.company_w_location }}</a></h1>
-                    <h2 class="tab-subtitle">{{ e.date }}</h2>
-                    <p class="tab-content">{{ e.description | markdownify }}</p>
-                </div>
-            {% endfor %}
-        </div>
+<h1>Experience</h1>
+<div id="experience" class="tabs-container">
+    <div class="tabs">
+        {% for e in site.data.experience %}
+            <a href="#tab{% increment tabLink %}" class="tab">{{ e.company }}</a>
+        {% endfor %}
     </div>
-
+    <div class="tabs-content">
+        {% for e in site.data.experience %}
+            <div class="content" id="tab{% increment tab %}">
+                <h1 class="tab-title">{{ e.title }} <a href="{{ e.link }}" target="_blank">@ {{ e.company_w_location }}</a></h1>
+                <h2 class="tab-subtitle">{{ e.date }}</h2>
+                <p class="tab-content">{{ e.description | markdownify }}</p>
+            </div>
+        {% endfor %}
+    </div>
 </div>

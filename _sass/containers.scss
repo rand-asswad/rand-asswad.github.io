@@ -1,29 +1,49 @@
-// section margins
-$section-margin-side: 200px;
+// wide section margins
 $section-margin-top: 100px;
 $section-margin-bottom: 200px;
 
-$section-margin-mobile: 25px;
+/*
+ * Responsive section width as a function of the viewport width
+ * width = viewport - 50px         (vw <= 650px)
+ * width = 600px                   (650px < vw <= 1000px)
+ * width = 0.75×viewport - 150px   (1000px < vw <= 1400px)
+ * width = 900px                   (vw >= 1400px)
+ */
+section {
+    max-width: 900px;
+    width: calc(75vw - 150px);
+    margin: $section-margin-top auto $section-margin-bottom;
 
-section, .section {
-    position: relative;
-
-    @media (min-width: #{$mobile-break-point}) {
-        margin-left: $section-margin-side;
-        margin-right: $section-margin-side;
-        margin-top: $section-margin-top;
-        margin-bottom: $section-margin-bottom;
+    // tablets and small desktops
+    @media (max-width: 1000px) {
+        width: 600px;
     }
 
-    @media (max-width: #{$mobile-break-point - 1px}) {
-        margin: $section-margin-mobile;
-        height: auto !important;
+    // mobile
+    @media (max-width: 650px) {
+        width: calc(100vw - 50px);
+        margin: 50px auto;
+    }
+
+    // no width limit for .wide 
+    &.wide {
+        max-width: 100%;
     }
 }
 
-// override bootstrap margin
-.container-fluid {
-    margin: 0;
+// align items in #hello section
+section#hello {
+    min-height: calc(100vh - #{$section-margin-top} - #{$section-margin-bottom});
+
+    @media (min-width: 1200px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        & > div {
+            width: 50%;
+        }
+    }
 }
 
 footer {

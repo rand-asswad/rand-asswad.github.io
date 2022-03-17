@@ -3,14 +3,12 @@ title: about me
 order: "01"
 ---
 
-<div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0">
-    <h1>A few things about me</h1>
-    <ul class="grid-list">
-    {% for c in site.data.about_me %}
-        <li>
-            <h1>{{ c.head }}</h1>
-            {{ c.body | markdownify }}
-        </li>
-    {% endfor %}
-    </ul>
-</div>
+<h1>A few things about me</h1>
+<ul class="grid-list">
+{% for c in site.data.about_me %}
+    <li>
+        <h1>{{ c.head }}</h1>
+        {{ c.body | markdownify }}
+    </li>
+{% endfor %}
+</ul>

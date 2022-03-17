@@ -1,28 +1,25 @@
 ---
 title: hello
 order: "00"
+class: wide
 ---
 
 
-<div class="col-xl-6 order-xl-2 text-center d-flex flex-column" style="height: 100%;">
-    <div id="sketch-holder" class="p-2"></div>
-    <!--div class="p-2" style="width: 100%;">
+<div id="sketch-container">
+    <div id="sketch-holder"></div>
+    <!--div>
         <input id="nbCoefs" type="range" min="1" max="100" value="100" class="slider">
     </div-->
 </div>
-<div class="col-xl-6 order-xl-1 d-flex flex-column">
-    <div class="p-2">
-        <h1 class="text-secondary">Hi, I'm <span class="text-primary">Rand.</span></h1>
-    </div>
-    <div class="p-2" style="text-align: left;">
-        {{ site.description | markdownify }}
-    </div>
-    <div class="p-2">
+<div id="hello-text">
+    <h1 class="text-secondary">Hi, I'm <span class="text-primary">Rand.</span></h1>
+    {{ site.description | markdownify }}
+    <div class="cv-btn-container">
         <a href="/assets/rand_asswad_cv_en.pdf" target="_blank" class="cv-btn">English CV</a>
         <a href="/assets/rand_asswad_cv_fr.pdf" target="_blank" class="cv-btn">French CV</a>
     </div>
 </div>
 
-<a href="#about_me" class="desktop"><span class="next" title="next section"></span></a>
+<a href="#about_me"><span class="next" title="next section"></span></a>
 
 {% include epicycles.html %}

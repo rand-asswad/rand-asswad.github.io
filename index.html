@@ -24,13 +24,13 @@ layout: home
     </ul>
 </nav>
 
-<div id="main" class="container-fluid">
+<main role="main">
     {% for section in site.sections %}
-    <section id='{{ section.title | replace: " ", "_" }}'>
-        <div class="row align-items-center">{{ section.content }}</div>
+    <section id='{{ section.title | replace: " ", "_" }}' {% if section.class %}class="{{ section.class }}"{% endif %}>
+        {{ section.content }}
     </section>
     {% endfor %}
-</div>
+</main>
 
 <footer>
     <a href="https://github.com/rand-asswad/rand-asswad.github.io" target="_blank">

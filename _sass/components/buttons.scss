@@ -27,6 +27,11 @@ a.cv-btn {
 $next-btn-color: $theme-grey;
 
 section .next {
+    // remove from small screens
+    @media (max-width: 1200px) {
+        display: none;
+    }
+
     position: absolute;
     bottom: 70px;
     left: 50%;

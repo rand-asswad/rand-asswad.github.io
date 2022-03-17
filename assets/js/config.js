@@ -1,11 +1,11 @@
 // this script should be run last
 
 // control desktop/mobile versions
-const mobileMaxWidth = 800;
+const navBreakPoint = 1000;
 
 var mainNav = document.querySelector("nav");
 function updateComponentsOnResize() {
-    if (window.innerWidth < mobileMaxWidth) {
+    if (window.innerWidth < navBreakPoint) {
         mainNav.classList.add("mobile");
     } else {
         mainNav.classList.remove("mobile");

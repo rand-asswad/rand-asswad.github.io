@@ -1,5 +1,5 @@
 const links = document.querySelectorAll("#main-nav a");
-const sections = document.querySelectorAll("#main section");
+const sections = document.querySelectorAll("main section");
 
 // update active nav links on scroll
 // source: https://javascript.tutorialink.com/add-class-active-on-scroll-vanilla-js/
