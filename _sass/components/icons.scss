@@ -7,6 +7,12 @@ $icon-size: 25px;
 $icon-hand-length: 70px;
 $icon-margin: 20px;
 
+// for mail_large.svg
+svg.feather.feather-mail {
+    position: relative;
+    top: 2px;
+}
+
 ul#link-icons {
     position: fixed;
     top: 0;

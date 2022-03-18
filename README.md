@@ -39,7 +39,7 @@ I'm probably going to open up a repo for it.
 - [x] Fix scroll spy offset
 - [x] Remove Bootstrap
 - [ ] Prepare blog
-- [ ] Migrate to nicer svg icons
+- [x] Migrate to nicer svg icons
 - [ ] Tidy up sass code
 - [ ] Minify & unify js
 - [ ] French version (i18n)
