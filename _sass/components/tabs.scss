@@ -86,7 +86,6 @@ $tab-content-title-color: $theme-grey;
 
       @media (min-width: #{$mobile-break-point}) {
         display: block;
-        width: 100%;
         border-left-style: solid;
         border-left-width: $tab-btn-border-width;
         border-left-color: $tab-btn-border-color;
@@ -165,11 +164,13 @@ $tab-content-title-color: $theme-grey;
         font-size: $tab-content-title-size;
         color: $tab-content-title-color;
         margin-bottom: $tab-title-margin-bottom;
+        margin-top: 0;
 
         h1 {
           font-size: inherit;
           color: inherit;
           width: 100%;
+          margin-top: 0;
         }
 
         .icons {
