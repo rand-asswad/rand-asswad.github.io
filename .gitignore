@@ -2,6 +2,7 @@
 /draft/
 /**/*.backup.*
 assets/fonts/
+_sass/bootstrap.full/
 
 # Jekyll metadata
 _site/

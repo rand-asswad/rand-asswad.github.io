@@ -37,7 +37,7 @@ I'm probably going to open up a repo for it.
 - [x] Group title and links/menu in header
 - [ ] Fix epicycles sketch position
 - [x] Fix scroll spy offset
-- [ ] Remove Bootstrap
+- [x] Remove Bootstrap
 - [ ] Prepare blog
 - [ ] Migrate to nicer svg icons
 - [ ] Tidy up sass code

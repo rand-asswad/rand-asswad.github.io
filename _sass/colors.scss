@@ -16,9 +16,16 @@ $light: $theme-light;
 $link-color: $theme-bright;
 $link-hover-color: $theme-light;
 
+$text-color: $theme-grey;
 $code-text-color: $theme-light;
 
 $body-bg: $theme-darker;
 // blog colors, to be managed later
 //$body-bg: #FCFCFC;
 //$text-color: #555555;
+
+// define classes for quick use
+.text-primary{color: $primary !important;}
+.text-secondary{color: $secondary !important;}
+.text-dark{color: $dark !important;}
+.text-light{color: $light !important;}

@@ -1,11 +1,7 @@
-// color
-$main-text-color: $theme-grey;
-$main-bg-color: $theme-darker;
-
 // font
 $main-font: "Roboto Slab", serif;
 $main-font-size: 17px;
-$main-h1-size: 30px;
+$main-h1-size: 1.8em;
 
 $mobile-break-point: 800px;
 
@@ -15,22 +11,28 @@ html {
 
 a {
     text-decoration: none !important;
+    color: $link-color;
+    &:hover {
+        color: $link-hover-color;
+    }
 }
 
 body {
-    color: $main-text-color;
+    background-color: $body-bg;
+    color: $text-color;
     font-family: $main-font;
     font-size: $main-font-size;
-
-    h1 {
-        color: $primary;
-        margin-bottom: 15px;
-        font-size: $main-h1-size;
-    }
 
     .highlighter-rouge {
         color: $code-text-color;
     }
+}
+
+// override defaults
+h1 {
+    color: $primary;
+    margin-bottom: 0.9em;
+    font-size: $main-h1-size;
 }
 
 .desktop {
