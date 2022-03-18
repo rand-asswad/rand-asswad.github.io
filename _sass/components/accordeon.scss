@@ -1,68 +1,56 @@
-$acc-title-padding-horz: 15px;
-$acc-title-padding-vert: 15px;
-$acc-content-padding-top: 5px;
-$acc-content-padding-bottom: 5px;
+$acc-padding: 15px;
 
 $acc-border-width: 3px;
 $acc-border-color: $theme-grey;
-$acc-border-hover-color: $theme-bright;
-$acc-border-selected-color: $theme-bright;
+$acc-border-color-active: $theme-bright;
 
 $acc-title-color: $theme-grey;
-$acc-title-hover-color: $theme-bright;
-$acc-title-selected-color: $theme-bright;
+$acc-subtitle-color: $theme-bright;
+$acc-link-color: $theme-bright;
 
 $acc-title-size: 20px;
 $acc-subtitle-size: 17px;
 $acc-text-size: 15px;
 
-$acc-subtitle-color: $theme-bright;
-$acc-link-color: $theme-bright;
-
-$acc-highlight-hover: $theme-dark;
+$acc-hover-color: $theme-dark;
 
 .accordeon {
-    min-width: 100%;
-    //min-height: 40vh;
-    padding: 0;
-    margin: auto;
-    
-    .accordeon-title, h1 {
-        padding: $acc-title-padding-vert $acc-title-padding-horz;
-        min-width: 100%;
-        margin: 0;
-        cursor: pointer;
-        border-left-style: solid;
-        border-left-width: $acc-border-width;
-        border-left-color: $acc-border-color;
-        text-align: left;
-        color: $acc-title-color;
-        font-size: $acc-title-size;
-        transition: background-color 0.1s ease-out;
+    display: flex;
+    flex-direction: column;
+}
 
-        &.active {
-            border-left-color: $acc-border-selected-color;
-            transition: background-color 0.1s ease-out;
-        }
-        
+.accordeon-item {
+    width: 100%;
+    cursor: pointer;
+    border-left-style: solid;
+    border-left-width: $acc-border-width;
+    border-left-color: $acc-border-color;
+    transition: background-color 0.1s ease-out;
+    
+    &:hover {
+        background-color: $acc-hover-color;
+        transition: background-color 0.1s ease-in;
     }
 
-    .accordeon-content {
-        display: none;
-        padding-right: $acc-title-padding-horz;
-        padding-left: $acc-title-padding-horz;
-        padding-top: $acc-content-padding-top;
-        padding-bottom: $acc-content-padding-bottom;
-        border-left-style: solid;
-        border-left-width: $acc-border-width;
-        border-left-color: $acc-border-selected-color;
-        text-align: left;
+    &.active {
+        border-left-color: $acc-border-color-active;
+        transition: background-color 0.1s ease-out;
+    }
+    
+    & > .accordeon-title, & > header, & > h1 {
+        padding: $acc-padding;
+        color: $acc-title-color;
+        font-size: $acc-title-size;
+        margin: 0;
+    }
 
-        h2, .accordeon-subtitle {
+    & > .accordeon-content {
+        display: none;
+        padding: 0 $acc-padding;
+
+        .accordeon-subtitle, & > h2 {
             font-size: $acc-subtitle-size;
             color: $acc-subtitle-color;
-            padding-top: 0;
-            padding-bottom: 0;
         }
 
         p {
@@ -70,14 +58,10 @@ $acc-highlight-hover: $theme-dark;
         }
     }
 
-    .accordeon-item {
-        &:hover {
-            border-left-color: $acc-border-hover-color;
-            background-color: $acc-highlight-hover;
-            transition: background-color 0.2s ease-in;
-        }
+    &.active > .accordeon-content {
+        display: block;
     }
-    
+
     a {
         color: $acc-link-color;
         white-space: nowrap;

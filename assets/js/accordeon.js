@@ -1,16 +1,90 @@
-(function($){
-    var contents = $('.accordeon-content');
-    var titles = $('.accordeon-title');
-    titles.on('click',function(){
-        var title = $(this);
-        contents.filter(':visible').slideUp(function() {
-            $(this).prev('.accordeon-title').removeClass('active');
-        });
-    
-        var content = title.next('.accordeon-content'); 
-    
-        if (!content.is(':visible')) {
-            content.slideDown(function(){title.addClass('active')});
-        }
-    });
-})(jQuery);
+/* Slide animation with Vanilla JS
+ * source: https://dev.to/bmsvieira/vanilla-js-slidedown-up-4dkn
+ */
+let slideUp = (target, duration=500) => {
+    target.style.transitionProperty = 'height, margin, padding';
+    target.style.transitionDuration = duration + 'ms';
+    target.style.boxSizing = 'border-box';
+    target.style.height = target.offsetHeight + 'px';
+    target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    window.setTimeout( () => {
+        target.style.display = 'none';
+        target.style.removeProperty('height');
+        target.style.removeProperty('padding-top');
+        target.style.removeProperty('padding-bottom');
+        target.style.removeProperty('margin-top');
+        target.style.removeProperty('margin-bottom');
+        target.style.removeProperty('overflow');
+        target.style.removeProperty('transition-duration');
+        target.style.removeProperty('transition-property');
+        //alert("!");
+    }, duration);
+}
+
+let slideDown = (target, duration=500) => {
+    target.style.removeProperty('display');
+    let display = window.getComputedStyle(target).display;
+    if (display === 'none') display = 'block';
+    target.style.display = display;
+    let height = target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    target.offsetHeight;
+    target.style.boxSizing = 'border-box';
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + 'ms';
+    target.style.height = height + 'px';
+    target.style.removeProperty('padding-top');
+    target.style.removeProperty('padding-bottom');
+    target.style.removeProperty('margin-top');
+    target.style.removeProperty('margin-bottom');
+    window.setTimeout( () => {
+        target.style.removeProperty('height');
+        target.style.removeProperty('overflow');
+        target.style.removeProperty('transition-duration');
+        target.style.removeProperty('transition-property');
+    }, duration);
+}
+
+var slideToggle = (target, duration = 500) => {
+    if (window.getComputedStyle(target).display === 'none') {
+        return slideDown(target, duration);
+    } else {
+        return slideUp(target, duration);
+    }
+}
+
+/* Activate accordeon items on click
+ * works well with or without the animation 
+ */
+const accordeon = document.querySelectorAll(".accordeon");
+
+for (let i = 0; i < accordeon.length; i++) {
+    let items = accordeon[i].querySelectorAll(".accordeon-item");
+    for (let j = 0; j < items.length; j++) {
+        items[j].onclick = (e) => {
+            if (items[j].classList.contains("active")) {
+                slideUp(items[j].querySelector(".accordeon-content"));
+                items[j].classList.remove("active");
+            } else {
+                let active_accordeon = accordeon[i].querySelector(".accordeon-item.active");
+                if (active_accordeon) {
+                    slideUp(active_accordeon.querySelector(".accordeon-content"));
+                    active_accordeon.classList.remove("active");
+                }
+                slideDown(items[j].querySelector(".accordeon-content"));
+                items[j].classList.add("active");
+            }
+        };
+    }
+}
