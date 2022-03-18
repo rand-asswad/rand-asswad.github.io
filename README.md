@@ -34,6 +34,7 @@ so please give me credit if you use it in your work.
 I'm probably going to open up a repo for it.
 
 # To-Do List
+- [x] Group title and links/menu in header
 - [ ] Fix epicycles sketch position
 - [x] Fix scroll spy offset
 - [ ] Remove Bootstrap

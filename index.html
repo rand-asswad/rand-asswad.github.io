@@ -3,15 +3,17 @@ layout: home
 ---
 
 {% include loader.html %}
-<div class="desktop">{% include links.html %}</div>
-<h1 id="site-title">{{ site.title }}</h1>
-<div id="nav-btn" class="mobile">
-    <div id="nav-stack">
-        <span></span>
-        <span></span>
-        <span></span>
+<header>
+    <h1 id="site-title">{{ site.title }}</h1>
+    <div class="desktop">{% include links.html %}</div>
+    <div id="nav-btn" class="mobile">
+        <div id="nav-stack">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
-</div>
+</header>
 
 <nav>
     <ul id="main-nav">
