@@ -1,6 +1,6 @@
 // activate nav button
-var mainNav = document.querySelector("nav");
-var mobileNavBtn = document.querySelector("#nav-btn.mobile");
+const mainNav = document.querySelector("nav");
+const mobileNavBtn = document.querySelector("#nav-btn.mobile");
 mobileNavBtn.addEventListener("click", (e) => {
     if (mobileNavBtn.querySelector(".active")) { // is active
         mobileNavBtn.querySelector("#nav-stack").classList.remove("active");
@@ -12,8 +12,7 @@ mobileNavBtn.addEventListener("click", (e) => {
 });
 
 // hide nav on button click
-//let mobileNavLinks = mainNav.querySelectorAll("li a");
-var mobileNavLinks = document.querySelectorAll("nav li a");
+const mobileNavLinks = mainNav.querySelectorAll("li a");
 for (let i = 0; i < mobileNavLinks.length; i++) {
     mobileNavLinks[i].addEventListener("click", (e) => {
         mobileNavBtn.querySelector("#nav-stack").classList.remove("active");

@@ -21,7 +21,6 @@ class FourierSketch {
         this.initDrawing();
         this.nbCoefs = Math.floor(this.coefs.length);
 
-        this._play = true;
         this.current_frame = 0;
         this.time_interval = 1000 * period / this.length;
     }
