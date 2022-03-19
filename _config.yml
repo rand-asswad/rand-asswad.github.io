@@ -1,6 +1,9 @@
 # site variables
 title: Rand Asswad
-description: | # appears on homepage and in google search results 
+meta_description: | # appears in search engines preview
+  Rand Asswad is an engineer in applied mathematics and computer science,
+  specialized in AI and mathematical modeling.
+description: | # appears on homepage
   I'm a Master's student based in France, specialized in **mathematics**, 
   **theoretical computer science**, and **numerical analysis**.
 
