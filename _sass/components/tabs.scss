@@ -128,15 +128,13 @@ $tab-content-title-color: $theme-grey;
     padding-top: $tab-btn-padding-vert;
     padding-left: $tab-content-padding-left;
     border: none;
-    width: 100%;
+    width: calc(100% - $tab-content-padding-left);
     min-height: max-content;
     text-align: left;
     
-    @media (min-width: #{$mobile-break-point}) {
-      padding-left: $tab-content-padding-left;
-    }
     @media (max-width: #{$mobile-break-point - 1px}) {
       padding-left: $tab-btn-padding-vert;
+      width: calc(100% - $tab-btn-padding-vert);
     }
 
     .content {
