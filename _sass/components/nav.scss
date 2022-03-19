@@ -7,7 +7,6 @@ $nav-font: "Roboto Slab", serif;
 $nav-font-size: 20px;
 $nav-font-active-size: 27px;
 $nav-font-hover-size: 27px;
-
 $mobile-nav-font-size: 30px;
 
 // padding
@@ -15,123 +14,132 @@ $hand-length: 30px;
 $hand-padding-right: 5px;
 $vertical-padding: 4px;
 
-#main-nav {
-	position: fixed;
+nav {
+    position: fixed;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
-	left: 0;
-    z-index: 1;
-    list-style: none;
-    padding: 0;
-    margin: 0;
 
-	a {
-		font-family: $nav-font;
-		font-size: $nav-font-size;
-		text-decoration: none;
-		color: $nav-color;
-		transition: all 0.3s ease;
-        display: block;
-        padding: $vertical-padding 0 $vertical-padding $hand-length+$hand-padding-right;
-        position: relative;
+    ul#main-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-		&:hover {
-			font-size: $nav-font-hover-size;
-			color: $nav-active-color;
-		}
-    
-        &::before {
-            content: "";
-            display: block;
-            width: 0;
-            height: 1px;
-            background-color: $nav-active-color;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            margin-top: -1px;
+        a {
+            font-family: $nav-font;
+            font-size: $nav-font-size;
+            text-decoration: none;
+            color: $nav-color;
             transition: all 0.3s ease;
-        }
-    }
+            display: block;
+            padding: $vertical-padding 0 $vertical-padding $hand-length+$hand-padding-right;
+            position: relative;
+
+            &:hover {
+                font-size: $nav-font-hover-size;
+                color: $nav-active-color;
+            }
         
-    a.active, .active > a {
-        font-size: $nav-font-active-size;
-        color: $nav-active-color;
-        pointer-events: none;
-        cursor: default;
-    
-        &::before {
-            width: $hand-length;
+            &::before {
+                content: "";
+                display: block;
+                width: 0;
+                height: 1px;
+                background-color: $nav-active-color;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -1px;
+                transition: all 0.3s ease;
+            }
+        }
+            
+        a.active, .active > a {
+            font-size: $nav-font-active-size;
+            color: $nav-active-color;
+            pointer-events: none;
+            cursor: default;
+        
+            &::before {
+                width: $hand-length;
+            }
         }
     }
 }
 
-// mobile navigation menu
-nav.mobile {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -10;
-    margin: 0;
-    padding: 0;
-
-    opacity: 0;
-    background-color: transparent;
-    transition: all 0.5s ease-out;
-
-    ul#main-nav {
-        position: relative;
-        display: block;
-
-        overflow: hidden;
+@media (max-width: $nav-break-point) {
+    nav {
+        top: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
         margin: 0;
         padding: 0;
-        list-style: none;
-        text-align: center;
-        font-size: 1.5em;
 
-        a {
+        // styling
+        opacity: 0;
+        background-color: transparent;
+        transition: all 0.5s ease-out;
+        
+        &.active {
+            opacity: 0.9;
+            background-color: $body-bg;
+            transition: all 0.5s ease-in;
+            z-index: 999;
+        }
+
+        ul#main-nav {
             position: relative;
-            display: inline;
-            padding: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
             font-size: $mobile-nav-font-size;
 
-            &::before {
-                display: none;
-                content: none;
-                position: relative;
+            & > li {
+                padding: 0.2em 0;
             }
 
-            &:hover {
+            a {
+                position: relative;
+                display: inline;
+                padding: 0;
                 font-size: $mobile-nav-font-size;
+
+                &.active {
+                    font-size: $mobile-nav-font-size;
+                }
+                
+                &:hover {
+                    font-size: $mobile-nav-font-size;
+                }
+
+                // clear line before
+                &::before {
+                    display: none;
+                    content: none;
+                    position: relative;
+                }
             }
-        }
 
-        #link-icons {
-            position: relative;
-            display: inline;
-            font-size: $mobile-nav-font-size;
-
-            li {
-                display: inline-block;
-                margin: 0.5em 0.2em;
-                font-size: inherit;
-            }
-
-            &::after {
-                display: none;
-                content: none;
+            #link-icons {
                 position: relative;
+                display: inline;
+                font-size: $mobile-nav-font-size;
+
+                li {
+                    display: inline-block;
+                    margin: 0.5em 0.2em;
+                    font-size: inherit;
+                }
+
+                // clear line after
+                &::after {
+                    display: none;
+                    content: none;
+                    position: relative;
+                }
             }
         }
-    }
-
-    &.active {
-        opacity: 0.9;
-        background-color: $body-bg;
-        transition: all 0.5s ease-in;
-        z-index: 999;
     }
 }

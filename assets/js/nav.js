@@ -1,4 +1,5 @@
 // activate nav button
+var mainNav = document.querySelector("nav");
 var mobileNavBtn = document.querySelector("#nav-btn.mobile");
 mobileNavBtn.addEventListener("click", (e) => {
     if (mobileNavBtn.querySelector(".active")) { // is active
