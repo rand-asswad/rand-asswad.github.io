@@ -12,6 +12,9 @@ description: | # appears on homepage
 baseurl: ""
 url: ""
 
+# Google Analytics measurements ID
+google_analytics: G-S3FZD64MJT
+
 # sass config
 sass:
   sass_dir: _sass
