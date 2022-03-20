@@ -3,6 +3,7 @@
 /**/*.backup.*
 assets/fonts/
 _sass/bootstrap.full/
+_posts/
 
 # Jekyll metadata
 _site/

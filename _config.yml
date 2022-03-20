@@ -12,18 +12,16 @@ description: | # appears on homepage
 baseurl: ""
 url: ""
 
-# Google Analytics measurements ID
-google_analytics: G-S3FZD64MJT
+# jekyll collections
+collections:
+  - sections
 
 # sass config
 sass:
   sass_dir: _sass
   style: compressed
 
-# jekyll plugins
-plugins:
-  - jekyll-feed
-
+# static files
 defaults:
   - scope:
       path: "assets/img"
@@ -36,10 +34,15 @@ defaults:
       order: 10
       active: false
 
-collections:
-  - sections
+# jekyll plugins
+plugins:
+  - jekyll-minifier
 
-# disable rouge to use hljs
-kramdown:
-  syntax_highlighter_opts:
-    disable : true
+# minifier settings
+jekyll-minifier:
+  compress_css: false
+  uglifier_args:
+    harmony: true
+
+# Google Analytics measurements ID
+google_analytics: G-S3FZD64MJT
