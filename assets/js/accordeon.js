@@ -1,68 +1,38 @@
 /* Slide animation with Vanilla JS
- * source: https://dev.to/bmsvieira/vanilla-js-slidedown-up-4dkn
+ * sources:
+ * - https://dev.to/bmsvieira/vanilla-js-slidedown-up-4dkn
+ * - https://css-tricks.com/using-css-transitions-auto-dimensions/
+ * 
+ * the sliding element should have the following styles:
+ *   height: auto;
+ *   overflow: hidden;
+ *   transition: height [duration] [transition-timing-function];
  */
-let slideUp = (target, duration=500) => {
-    target.style.transitionProperty = 'height, margin, padding';
-    target.style.transitionDuration = duration + 'ms';
-    target.style.boxSizing = 'border-box';
-    target.style.height = target.offsetHeight + 'px';
-    target.offsetHeight;
-    target.style.overflow = 'hidden';
-    target.style.height = 0;
-    target.style.paddingTop = 0;
-    target.style.paddingBottom = 0;
-    target.style.marginTop = 0;
-    target.style.marginBottom = 0;
-    window.setTimeout( () => {
-        target.style.display = 'none';
-        target.style.removeProperty('height');
-        target.style.removeProperty('padding-top');
-        target.style.removeProperty('padding-bottom');
-        target.style.removeProperty('margin-top');
-        target.style.removeProperty('margin-bottom');
-        target.style.removeProperty('overflow');
-        target.style.removeProperty('transition-duration');
-        target.style.removeProperty('transition-property');
-        //alert("!");
-    }, duration);
-}
 
-let slideDown = (target, duration=500) => {
-    target.style.removeProperty('display');
-    let display = window.getComputedStyle(target).display;
-    if (display === 'none') display = 'block';
-    target.style.display = display;
-    let height = target.offsetHeight;
-    target.style.overflow = 'hidden';
-    target.style.height = 0;
-    target.style.paddingTop = 0;
-    target.style.paddingBottom = 0;
-    target.style.marginTop = 0;
-    target.style.marginBottom = 0;
-    target.offsetHeight;
-    target.style.boxSizing = 'border-box';
-    target.style.transitionProperty = "height, margin, padding";
-    target.style.transitionDuration = duration + 'ms';
+let slideUp = (target) => {
+    var height = target.scrollHeight;
+    var transition = target.style.transition;
+    target.style.transition = '';
+
+    requestAnimationFrame(() => {
+        target.style.height = height + 'px';
+        target.style.transition = transition;
+
+        requestAnimationFrame(() => {
+            target.style.height = 0;
+        })
+    });
+};
+
+let slideDown = (target) => {
+    var height = target.scrollHeight;
     target.style.height = height + 'px';
-    target.style.removeProperty('padding-top');
-    target.style.removeProperty('padding-bottom');
-    target.style.removeProperty('margin-top');
-    target.style.removeProperty('margin-bottom');
-    window.setTimeout( () => {
-        target.style.removeProperty('height');
-        target.style.removeProperty('overflow');
-        target.style.removeProperty('transition-duration');
-        target.style.removeProperty('transition-property');
-    }, duration);
-}
-
-var slideToggle = (target, duration = 500) => {
-    if (window.getComputedStyle(target).display === 'none') {
-        return slideDown(target, duration);
-    } else {
-        return slideUp(target, duration);
-    }
-}
+    //target.style.display = 'block'; // if it's set as none
+    
+    target.addEventListener('transitioned', (e) => {
+        target.style.height = null;
+    }, { once: true });
+};
 
 /* Activate accordeon items on click
  * works well with or without the animation 
@@ -72,19 +42,25 @@ const accordeon = document.querySelectorAll(".accordeon");
 for (let i = 0; i < accordeon.length; i++) {
     let items = accordeon[i].querySelectorAll(".accordeon-item");
     for (let j = 0; j < items.length; j++) {
-        items[j].onclick = (e) => {
-            if (items[j].classList.contains("active")) {
-                slideUp(items[j].querySelector(".accordeon-content"));
-                items[j].classList.remove("active");
+        let element = items[j];
+
+        // add event listeners
+        element.onclick = (e) => {
+            if (element.classList.contains("active")) {
+                slideUp(element.querySelector(".accordeon-content"));
+                element.classList.remove("active");
             } else {
                 let active_accordeon = accordeon[i].querySelector(".accordeon-item.active");
                 if (active_accordeon) {
                     slideUp(active_accordeon.querySelector(".accordeon-content"));
                     active_accordeon.classList.remove("active");
                 }
-                slideDown(items[j].querySelector(".accordeon-content"));
-                items[j].classList.add("active");
+                slideDown(element.querySelector(".accordeon-content"));
+                element.classList.add("active");
             }
         };
+
+        // start collapsed
+        element.querySelector(".accordeon-content").style.height = 0;
     }
 }

@@ -25,16 +25,16 @@ $acc-hover-color: $theme-dark;
     border-left-style: solid;
     border-left-width: $acc-border-width;
     border-left-color: $acc-border-color;
-    transition: background-color 0.1s ease-out;
+    transition: background-color 0.1s ease;
     
     &:hover {
         background-color: $acc-hover-color;
-        transition: background-color 0.1s ease-in;
+        transition: background-color 0.1s ease;
     }
 
     &.active {
         border-left-color: $acc-border-color-active;
-        transition: background-color 0.1s ease-out;
+        transition: background-color 0.1s ease;
     }
     
     & > .accordeon-title, & > header, & > h1 {
@@ -45,8 +45,11 @@ $acc-hover-color: $theme-dark;
     }
 
     & > .accordeon-content {
-        display: none;
         padding: 0 $acc-padding;
+        // slide up-down animation
+        height: auto;
+        overflow: hidden;
+        transition: height 0.3s ease;
 
         .accordeon-subtitle, & > h2 {
             font-size: $acc-subtitle-size;
@@ -56,10 +59,6 @@ $acc-hover-color: $theme-dark;
         p {
             font-size: $acc-text-size;
         }
-    }
-
-    &.active > .accordeon-content {
-        display: block;
     }
 
     a {
