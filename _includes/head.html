@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.meta_description }}">
+    <meta name="description" content="{{ site.description | strip_newlines }}">
     <link rel='icon' href='/assets/img/favicon.ico' type='image/x-icon'>
     <title>
         {% if page.title %}{{ site.title | escape }} | {{ page.title | escape }}
