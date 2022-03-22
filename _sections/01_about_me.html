@@ -5,10 +5,10 @@ order: "01"
 
 <h1>A few things about me</h1>
 <ul class="grid-list">
-{% for c in site.data.about_me %}
+  {% for c in site.data.about_me %}
     <li>
-        <h1>{{ c.head }}</h1>
-        {{ c.body | markdownify }}
+      <h1>{{ c.head }}</h1>
+      {{ c.body | markdownify }}
     </li>
-{% endfor %}
+  {% endfor %}
 </ul>

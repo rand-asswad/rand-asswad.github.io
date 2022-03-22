@@ -10,59 +10,59 @@ $section-margin-bottom: 200px;
  * width = 900px                   (vw >= 1400px)
  */
 section {
-    max-width: 900px;
-    width: calc(75vw - 150px);
-    margin: $section-margin-top auto $section-margin-bottom;
+  max-width: 900px;
+  width: calc(75vw - 150px);
+  margin: $section-margin-top auto $section-margin-bottom;
 
-    // tablets and small desktops
-    @media (max-width: 1000px) {
-        width: 600px;
-    }
+  // tablets and small desktops
+  @media (max-width: 1000px) {
+    width: 600px;
+  }
 
-    // mobile
-    @media (max-width: 650px) {
-        width: calc(100vw - 50px);
-        margin: 50px auto;
-    }
+  // mobile
+  @media (max-width: 650px) {
+    width: calc(100vw - 50px);
+    margin: 50px auto;
+  }
 
-    // no width limit for .wide 
-    &.wide {
-        max-width: 100%;
-    }
+  // no width limit for .wide 
+  &.wide {
+    max-width: 100%;
+  }
 }
 
 // align items in #hello section
 section#hello {
-    min-height: calc(100vh - #{$section-margin-top} - #{$section-margin-bottom});
+  min-height: calc(100vh - #{$section-margin-top} - #{$section-margin-bottom});
 
-    @media (min-width: 1200px) {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 
-        & > div {
-            width: 50%;
-        }
+    & > div {
+      width: 50%;
     }
+  }
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 70px;
-    height: auto;
-    margin: 15px;
-    font-size: 12px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+  height: auto;
+  margin: 15px;
+  font-size: 12px;
+  text-align: center;
 
-    a {
-        margin: 10px;
-        color: $theme-grey;
+  a {
+    margin: 10px;
+    color: $theme-grey;
 
-        &:hover {
-            color: $theme-bright;
-        }
+    &:hover {
+      color: $theme-bright;
     }
+  }
 }

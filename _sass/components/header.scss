@@ -5,101 +5,101 @@ $title-font-weight: 400;
 $title-font-color: $icons-color;
 
 header {
-    height: 70px;
-    background-color: $body-bg;
-    opacity: 0.9;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
+  height: 70px;
+  background-color: $body-bg;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
 h1#site-title, header > h1 {
-    display: inline-block;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: $header-side-spacing;
-    transform: translate(0, -50%);
-    color: $title-font-color;
-    font-size: $title-font-size;
-    font-weight: $title-font-weight;
-    text-transform: uppercase;
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: $header-side-spacing;
+  transform: translate(0, -50%);
+  color: $title-font-color;
+  font-size: $title-font-size;
+  font-weight: $title-font-weight;
+  text-transform: uppercase;
 
-    // align with section margins on small screens
-    @media (max-width: 650px) {
-        left: $header-side-spacing-mobile;
-    }
+  // align with section margins on small screens
+  @media (max-width: 650px) {
+    left: $header-side-spacing-mobile;
+  }
 }
 
 header ul#link-icons.horizontal {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 // mobile navigation button
 #nav-btn.mobile {
-    position: absolute;
-    top: 50%;
-    right: $header-side-spacing;
-    transform: translate(0, -50%);
-    
-    // align with section margins on small screens
-    @media (max-width: 650px) {
-        right: $header-side-spacing-mobile;
+  position: absolute;
+  top: 50%;
+  right: $header-side-spacing;
+  transform: translate(0, -50%);
+  
+  // align with section margins on small screens
+  @media (max-width: 650px) {
+    right: $header-side-spacing-mobile;
+  }
+  
+  #nav-stack {
+    float: left;
+    position: relative;
+    height: 15px;
+    width: 20px;
+    //transform: translateY(-100px);
+    opacity: 1;
+    transition: transform .6s ease .8s, opacity .5s .6s ease;
+
+    span {
+      content: "";
+      display: inline-block;
+      height: 2px;
+      background-color: $theme-grey;
+      position: absolute;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      &:nth-child(1) {
+        top: 0;
+        //@include transition(transform 0.5s ease, background .8s .5s ease);
+        transition: all 0.5s ease;
+      }
+      &:nth-child(2) {
+        top: 6px;
+        //@include transition(transform 0.5s ease, background .8s .5s ease);
+        transition: all 0.5s ease;
+      }
+      &:last-child {
+        bottom: 0;
+        //@include transition(transform 0.5s ease, background .8s .5s ease);
+        transition: all 0.5s ease;
+      }
     }
-    
-    #nav-stack {
-        float: left;
-        position: relative;
-        height: 15px;
-        width: 20px;
-        //transform: translateY(-100px);
-        opacity: 1;
-        transition: transform .6s ease .8s, opacity .5s .6s ease;
-    
-        span {
-            content: "";
-            display: inline-block;
-            height: 2px;
-            background-color: $theme-grey;
-            position: absolute;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            &:nth-child(1) {
-                top: 0;
-                //@include transition(transform 0.5s ease, background .8s .5s ease);
-                transition: all 0.5s ease;
-            }
-            &:nth-child(2) {
-                top: 6px;
-                //@include transition(transform 0.5s ease, background .8s .5s ease);
-                transition: all 0.5s ease;
-            }
-            &:last-child {
-                bottom: 0;
-                //@include transition(transform 0.5s ease, background .8s .5s ease);
-                transition: all 0.5s ease;
-            }
+
+    &.active {
+      span {
+        &:nth-child(1) {
+          top: 5px;
+          transform: rotate(45deg);
         }
-    
-        &.active {
-            span {
-                &:nth-child(1) {
-                    top: 5px;
-                    transform: rotate(45deg);
-                }
-                &:nth-child(2) {
-                    transform: scale(0);
-                }
-                &:last-child {
-                    top: 5px;
-                    transform: rotate(-45deg);
-                }
-            }
+        &:nth-child(2) {
+          transform: scale(0);
         }
+        &:last-child {
+          top: 5px;
+          transform: rotate(-45deg);
+        }
+      }
     }
+  }
 }

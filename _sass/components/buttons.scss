@@ -6,71 +6,71 @@ $cv-btn-hover-color: $body-bg;
 $cv-btn-hover-bg-color: $theme-bright;
 
 a.cv-btn {
-    text-decoration: none;
-    text-align: center;
-    color: $cv-btn-color;
-    background-color: $cv-btn-bg-color;
-    border: 1px solid $cv-btn-color;
-    border-radius: 3px;
-    display: inline-block;
-    padding: 1em;
-    margin-right: 0.5em;
-    animation: all .3s ease;
+  text-decoration: none;
+  text-align: center;
+  color: $cv-btn-color;
+  background-color: $cv-btn-bg-color;
+  border: 1px solid $cv-btn-color;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 1em;
+  margin-right: 0.5em;
+  animation: all .3s ease;
 
-    &:hover {
-        color: $cv-btn-hover-color;
-        background-color: $cv-btn-hover-bg-color;
-        animation: all .3s ease;
-    }
+  &:hover {
+    color: $cv-btn-hover-color;
+    background-color: $cv-btn-hover-bg-color;
+    animation: all .3s ease;
+  }
 }
 
 $next-btn-color: $theme-grey;
 
 section .next {
-    // remove from small screens
-    @media (max-width: 1200px) {
-        display: none;
-    }
+  // remove from small screens
+  @media (max-width: 1200px) {
+    display: none;
+  }
 
-    position: absolute;
-    bottom: 70px;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid $next-btn-color;
-    border-bottom: 1px solid $next-btn-color;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-animation: nextbtn 1.5s infinite;
-    animation: nextbtn 1.5s infinite;
-    box-sizing: border-box;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid $next-btn-color;
+  border-bottom: 1px solid $next-btn-color;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: nextbtn 1.5s infinite;
+  animation: nextbtn 1.5s infinite;
+  box-sizing: border-box;
 }
 
 @-webkit-keyframes nextbtn {
-    0% {
-        -webkit-transform: rotate(-45deg) translate(0, 0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
-        opacity: 0;
-    }
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
 }
 
 @keyframes nextbtn {
-    0% {
-        transform: rotate(-45deg) translate(0, 0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: rotate(-45deg) translate(-20px, 20px);
-        opacity: 0;
-    }
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
 }

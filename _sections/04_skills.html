@@ -5,30 +5,30 @@ order: "04"
 
 <h1>Skills</h1>
 <div class="accordeon">
-{% for skill in site.data.skills %}
+  {% for skill in site.data.skills %}
     <div class="accordeon-item">
-        <h1 class="accordeon-title">{{ skill.category }}</h1>
-        <div class="accordeon-content">
-            {% if skill.style == "text" %}
-                {% for s in skill.list %}
-                    <p><strong class="text-primary">{{ s.item }}:</strong> {{ s.more }}</p>
-                {% endfor %}
-            {% elsif skill.style == "nested" %}
-                {% for s in skill.list %}
-                    <!--ul class="list-inline">
-                        <strong class="text-primary">{{ s.item }}: </strong>
-                        {% for li in s.sublist %}
-                            <li class="list-inline-item">{{ li }}</li>
-                        {% endfor %}
-                    </ul-->
-                    <p><strong class="text-primary">{{ s.item }}:</strong>
-                        {% for li in s.sublist %}{{ li }}{% if forloop.last == false %}, {% else %}.{% endif%}{% endfor %}
-                    </p>
-                {% endfor %}
-            {% else %}
-                {{ skill.list | markdownify }}
-            {% endif%}
-        </div>
+      <h1 class="accordeon-title">{{ skill.category }}</h1>
+      <div class="accordeon-content">
+        {% if skill.style == "text" %}
+          {% for s in skill.list %}
+            <p><strong class="text-primary">{{ s.item }}:</strong> {{ s.more }}</p>
+          {% endfor %}
+        {% elsif skill.style == "nested" %}
+          {% for s in skill.list %}
+            <!--ul class="list-inline">
+              <strong class="text-primary">{{ s.item }}: </strong>
+              {% for li in s.sublist %}
+                <li class="list-inline-item">{{ li }}</li>
+              {% endfor %}
+            </ul-->
+            <p><strong class="text-primary">{{ s.item }}:</strong>
+              {% for li in s.sublist %}{{ li }}{% if forloop.last == false %}, {% else %}.{% endif%}{% endfor %}
+            </p>
+          {% endfor %}
+        {% else %}
+          {{ skill.list | markdownify }}
+        {% endif%}
+      </div>
     </div>
-{% endfor %}
+  {% endfor %}
 </div>

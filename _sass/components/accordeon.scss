@@ -15,54 +15,54 @@ $acc-text-size: 15px;
 $acc-hover-color: $theme-dark;
 
 .accordeon {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .accordeon-item {
-    width: 100%;
-    cursor: pointer;
-    border-left-style: solid;
-    border-left-width: $acc-border-width;
-    border-left-color: $acc-border-color;
+  width: 100%;
+  cursor: pointer;
+  border-left-style: solid;
+  border-left-width: $acc-border-width;
+  border-left-color: $acc-border-color;
+  transition: background-color 0.1s ease;
+  
+  &:hover {
+    background-color: $acc-hover-color;
     transition: background-color 0.1s ease;
-    
-    &:hover {
-        background-color: $acc-hover-color;
-        transition: background-color 0.1s ease;
+  }
+
+  &.active {
+    border-left-color: $acc-border-color-active;
+    transition: background-color 0.1s ease;
+  }
+  
+  & > .accordeon-title, & > header, & > h1 {
+    padding: $acc-padding;
+    color: $acc-title-color;
+    font-size: $acc-title-size;
+    margin: 0;
+  }
+
+  & > .accordeon-content {
+    padding: 0 $acc-padding;
+    // slide up-down animation
+    height: auto;
+    overflow: hidden;
+    transition: height 0.3s ease;
+
+    .accordeon-subtitle, & > h2 {
+      font-size: $acc-subtitle-size;
+      color: $acc-subtitle-color;
     }
 
-    &.active {
-        border-left-color: $acc-border-color-active;
-        transition: background-color 0.1s ease;
+    p {
+      font-size: $acc-text-size;
     }
-    
-    & > .accordeon-title, & > header, & > h1 {
-        padding: $acc-padding;
-        color: $acc-title-color;
-        font-size: $acc-title-size;
-        margin: 0;
-    }
+  }
 
-    & > .accordeon-content {
-        padding: 0 $acc-padding;
-        // slide up-down animation
-        height: auto;
-        overflow: hidden;
-        transition: height 0.3s ease;
-
-        .accordeon-subtitle, & > h2 {
-            font-size: $acc-subtitle-size;
-            color: $acc-subtitle-color;
-        }
-
-        p {
-            font-size: $acc-text-size;
-        }
-    }
-
-    a {
-        color: $acc-link-color;
-        white-space: nowrap;
-    }
+  a {
+    color: $acc-link-color;
+    white-space: nowrap;
+  }
 }

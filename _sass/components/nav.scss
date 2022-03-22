@@ -15,131 +15,131 @@ $hand-padding-right: 5px;
 $vertical-padding: 4px;
 
 nav {
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 
-    ul#main-nav {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+  ul#main-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-        a {
-            font-family: $nav-font;
-            font-size: $nav-font-size;
-            text-decoration: none;
-            color: $nav-color;
-            transition: all 0.3s ease;
-            display: block;
-            padding: $vertical-padding 0 $vertical-padding $hand-length+$hand-padding-right;
-            position: relative;
+    a {
+      font-family: $nav-font;
+      font-size: $nav-font-size;
+      text-decoration: none;
+      color: $nav-color;
+      transition: all 0.3s ease;
+      display: block;
+      padding: $vertical-padding 0 $vertical-padding $hand-length+$hand-padding-right;
+      position: relative;
 
-            &:hover {
-                font-size: $nav-font-hover-size;
-                color: $nav-active-color;
-            }
-        
-            &::before {
-                content: "";
-                display: block;
-                width: 0;
-                height: 1px;
-                background-color: $nav-active-color;
-                position: absolute;
-                left: 0;
-                top: 50%;
-                margin-top: -1px;
-                transition: all 0.3s ease;
-            }
-        }
-            
-        a.active, .active > a {
-            font-size: $nav-font-active-size;
-            color: $nav-active-color;
-            pointer-events: none;
-            cursor: default;
-        
-            &::before {
-                width: $hand-length;
-            }
-        }
+      &:hover {
+        font-size: $nav-font-hover-size;
+        color: $nav-active-color;
+      }
+  
+      &::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: $nav-active-color;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -1px;
+        transition: all 0.3s ease;
+      }
     }
+      
+    a.active, .active > a {
+      font-size: $nav-font-active-size;
+      color: $nav-active-color;
+      pointer-events: none;
+      cursor: default;
+  
+      &::before {
+        width: $hand-length;
+      }
+    }
+  }
 }
 
 @media (max-width: $nav-break-point) {
-    nav {
-        top: 0;
-        transform: none;
-        width: 100%;
-        height: 100%;
-        z-index: -10;
-        margin: 0;
-        padding: 0;
+  nav {
+    top: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    margin: 0;
+    padding: 0;
 
-        // styling
-        opacity: 0;
-        background-color: transparent;
-        transition: all 0.5s ease-out;
-        
-        &.active {
-            opacity: 0.9;
-            background-color: $body-bg;
-            transition: all 0.5s ease-in;
-            z-index: 999;
-        }
-
-        ul#main-nav {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-            text-align: center;
-            font-size: $mobile-nav-font-size;
-
-            & > li {
-                padding: 0.2em 0;
-            }
-
-            a {
-                position: relative;
-                display: inline;
-                padding: 0;
-                font-size: $mobile-nav-font-size;
-
-                &.active {
-                    font-size: $mobile-nav-font-size;
-                }
-                
-                &:hover {
-                    font-size: $mobile-nav-font-size;
-                }
-
-                // clear line before
-                &::before {
-                    display: none;
-                    content: none;
-                    position: relative;
-                }
-            }
-
-            #link-icons {
-                position: relative;
-                display: inline;
-                font-size: $mobile-nav-font-size;
-
-                li {
-                    display: inline-block;
-                    margin: 0.5em 0.2em;
-                    font-size: inherit;
-                }
-
-                // clear line after
-                &::after {
-                    display: none;
-                    content: none;
-                    position: relative;
-                }
-            }
-        }
+    // styling
+    opacity: 0;
+    background-color: transparent;
+    transition: all 0.5s ease-out;
+    
+    &.active {
+      opacity: 0.9;
+      background-color: $body-bg;
+      transition: all 0.5s ease-in;
+      z-index: 999;
     }
+
+    ul#main-nav {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      font-size: $mobile-nav-font-size;
+
+      & > li {
+        padding: 0.2em 0;
+      }
+
+      a {
+        position: relative;
+        display: inline;
+        padding: 0;
+        font-size: $mobile-nav-font-size;
+
+        &.active {
+          font-size: $mobile-nav-font-size;
+        }
+        
+        &:hover {
+          font-size: $mobile-nav-font-size;
+        }
+
+        // clear line before
+        &::before {
+          display: none;
+          content: none;
+          position: relative;
+        }
+      }
+
+      #link-icons {
+        position: relative;
+        display: inline;
+        font-size: $mobile-nav-font-size;
+
+        li {
+            display: inline-block;
+            margin: 0.5em 0.2em;
+            font-size: inherit;
+        }
+
+        // clear line after
+        &::after {
+            display: none;
+            content: none;
+            position: relative;
+        }
+      }
+    }
+  }
 }

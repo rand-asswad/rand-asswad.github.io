@@ -13,55 +13,55 @@ $break-point: 1200px;
 
 
 ul.grid-list {
-    list-style: none;
-    display: grid;
+  list-style: none;
+  display: grid;
 
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 
-    @media (min-width: #{$break-point}) {
-        // two columns
-        grid-template-columns: repeat(2, 50%);
-        columns: 2;
-        -webkit-columns: 2;
-        -moz-columns: 2;
+  @media (min-width: #{$break-point}) {
+    // two columns
+    grid-template-columns: repeat(2, 50%);
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+  
+  @media (max-width: #{$break-point - 1px}) {
+    // one column
+    grid-template-columns: repeat(1, 100%);
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+
+  li {
+    position: relative;
+    padding-left: 2em;
+    display: list-item;
+        
+    color: $card-text-color;
+    font-size: $card-text-size;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $card-title-color;
+      font-size: $card-title-size;
+
+      padding: 0;
+      margin: 0;
+      padding-bottom: 0.5em;
     }
-    
-    @media (max-width: #{$break-point - 1px}) {
-        // one column
-        grid-template-columns: repeat(1, 100%);
-        columns: 1;
-        -webkit-columns: 1;
-        -moz-columns: 1;
+
+    &::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      top: -0.25em;
+
+      color: $card-bullet-color;
+      font-size: $card-title-size;
     }
-
-    li {
-        position: relative;
-        padding-left: 2em;
-        display: list-item;
-            
-        color: $card-text-color;
-        font-size: $card-text-size;
-
-        h1, h2, h3, h4, h5, h6 {
-            color: $card-title-color;
-            font-size: $card-title-size;
-
-            padding: 0;
-            margin: 0;
-            padding-bottom: 0.5em;
-        }
-
-        &::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            top: -0.25em;
-
-            color: $card-bullet-color;
-            font-size: $card-title-size;
-        }
-    }
+  }
 }
 
 /* imported from Bootstrap 4 (bootstrap/_type.scss) */

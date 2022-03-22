@@ -1,27 +1,26 @@
 $top-bar-height: 100px;
 
 .top-bar {
-    width: 100%;
-    height: $top-bar-height;
+  width: 100%;
+  height: $top-bar-height;
 
-    margin: 0;
+  margin: 0;
 
-    color: $theme-grey;
-    background-color: $theme-darker;
+  color: $theme-grey;
+  background-color: $theme-darker;
 }
 
 .page-content {
-    color: $text-color;
+  color: $text-color;
 
-    pre {
-        code {
-            padding: 8.5px;
-            background-color: #f5f5f9;
-        }
-
-        &.python code {
-            background-color: #e5e5e9;
-        }
+  pre {
+    code {
+      padding: 8.5px;
+      background-color: #f5f5f9;
     }
 
+    &.python code {
+      background-color: #e5e5e9;
+    }
+  }
 }

@@ -4,38 +4,38 @@ layout: home
 
 {% include loader.html %}
 <header>
-    <h1 id="site-title">{{ site.title }}</h1>
-    <div class="desktop">{% include links.html %}</div>
-    <div id="nav-btn" class="mobile">
-        <div id="nav-stack">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+  <h1 id="site-title">{{ site.title }}</h1>
+  <div class="desktop">{% include links.html %}</div>
+  <div id="nav-btn" class="mobile">
+    <div id="nav-stack">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+  </div>
 </header>
 
 <nav>
-    <ul id="main-nav">
-        {% for section in site.sections %}
-        <li data-menuanchor='{{ section.title | replace: " ", "_" }}'>
-            <a href='#{{ section.title | replace: " ", "_" }}' >{{ section.title }}</a>
-        </li>
-        {% endfor %}
-        <li class="mobile">{% include links.html %}</li>
-    </ul>
+  <ul id="main-nav">
+    {% for section in site.sections %}
+      <li data-menuanchor='{{ section.title | replace: " ", "_" }}'>
+        <a href='#{{ section.title | replace: " ", "_" }}' >{{ section.title }}</a>
+      </li>
+    {% endfor %}
+    <li class="mobile">{% include links.html %}</li>
+  </ul>
 </nav>
 
 <main role="main">
-    {% for section in site.sections %}
+  {% for section in site.sections %}
     <section id='{{ section.title | replace: " ", "_" }}' {% if section.class %}class="{{ section.class }}"{% endif %}>
-        {{ section.content }}
+      {{ section.content }}
     </section>
-    {% endfor %}
+  {% endfor %}
 </main>
 
 <footer>
-    <a href="https://github.com/rand-asswad/rand-asswad.github.io" target="_blank">
-        <div>Designed & built by Rand Asswad</div>
-    </a>
+  <a href="https://github.com/rand-asswad/rand-asswad.github.io" target="_blank">
+    <div>Designed & built by Rand Asswad</div>
+  </a>
 </footer>

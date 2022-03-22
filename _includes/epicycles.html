@@ -1,12 +1,12 @@
 <script defer type="module">
-    import { FourierSketch } from './assets/js/sketch/epicycles.js';
-    import { myPts } from './assets/js/sketch/me.js';
+  import { FourierSketch } from './assets/js/sketch/epicycles.js';
+  import { myPts } from './assets/js/sketch/me.js';
 
-    var sketch = new FourierSketch(myPts, "sketch-holder", 400, 20, 2);
-    sketch.canvas.viewBox = "-90 -100 170 200";
-    //sketch.controlSlider("nbCoefs");
-    sketch.path.setAttribute("stroke", "#2E9CCA");
-    sketch.epicycles.setAttribute("stroke", "#AAABB8");
-    sketch.vectors.setAttribute("stroke", "#29648A");
-    sketch.animate();
+  var sketch = new FourierSketch(myPts, "sketch-holder", 400, 20, 2);
+  sketch.canvas.viewBox = "-90 -100 170 200";
+  //sketch.controlSlider("nbCoefs");
+  sketch.path.setAttribute("stroke", "#2E9CCA");
+  sketch.epicycles.setAttribute("stroke", "#AAABB8");
+  sketch.vectors.setAttribute("stroke", "#29648A");
+  sketch.animate();
 </script>

@@ -9,64 +9,64 @@ $icon-margin: 20px;
 
 // for mail_large.svg
 svg.feather.feather-mail {
-    position: relative;
-    top: 2px;
+  position: relative;
+  top: 2px;
 }
 
 ul#link-icons {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    font-size: $icon-size;
+    
+    a {
+      color: $icons-color;
+
+      &:hover {
+        color: $icons-hover-color;
+      }
+    }
+  }
+
+  &.horizontal {
+    top: $icon-margin;
 
     li {
-        font-size: $icon-size;
-        
-        a {
-            color: $icons-color;
-
-            &:hover {
-                color: $icons-hover-color;
-            }
-        }
+      display: inline-block;
+      margin: 0 0.5em 0 0;
     }
 
-    &.horizontal {
-        top: $icon-margin;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: $icon-hand-length;
+      height: 1px;
+      background-color: $icons-color;
+      margin-bottom: 0.5em;
+    }
+  }
 
-        li {
-            display: inline-block;
-            margin: 0 0.5em 0 0;
-        }
+  &.vertical {
+    right: $icon-margin;
 
-        &::after {
-            content: "";
-            display: inline-block;
-            width: $icon-hand-length;
-            height: 1px;
-            background-color: $icons-color;
-            margin-bottom: 0.5em;
-        }
+    li {
+      display: block;
+      margin: 0.3em 0 0 0;
     }
 
-    &.vertical {
-        right: $icon-margin;
-
-        li {
-            display: block;
-            margin: 0.3em 0 0 0;
-        }
-
-        &::before {
-            content: "";
-            display: block;
-            height: $icon-hand-length;
-            width: 1px;
-            background-color: $icons-color;
-            margin-left: 0.6em;
-        }
+    &::before {
+      content: "";
+      display: block;
+      height: $icon-hand-length;
+      width: 1px;
+      background-color: $icons-color;
+      margin-left: 0.6em;
     }
+  }
 }
