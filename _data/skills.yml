@@ -1,34 +1,43 @@
 - category: Mathematics & Computer Science Theory
   style: text
   list:
-  - item: Functional Analysis
-    more: vector analysis, fourier analysis, generalized functions (distributions).
+  - item: Algebra
+    more: abstract algebra, linear algebra, Lie algebras, non-associative algebras.
+  - item: General Topology & Functional Analysis
+    more: |
+      topological structures, Banach spaces, Hilbert spaces, Sobolev spaces,
+      generalized functions (distributions), Fourier analysis.
   - item: Control Theory
     more: linear and non-linear systems, optimal control.
   - item: Signal Processing
-    more: analog and digital signals, continuous and discrete time, statistical signal processing, audio signal processing.
+    more: |
+      analog and digital signals, continuous and discrete time, statistical signal processing,
+      audio signal processing, time-frequency analysis.
   - item: Numerical Analysis
     more: |
       linear systems, function interpolation and quadrature, least squares,
       ODE and PDE numerical approximation (Runge-Kutta, finite difference, finite elements),
       curve and surface spline approximation, mesh generation.
-  - item: Metaheuristics
+  - item: Optimization
     more: |
-      local search algorithms (Hill-Climbing, Simulated Annealing, Local Beam, Taboo),
-      evolutionary optimization, ant colony optimization.
+      unconstrained and contrained optimization, convex (linear and non-linear) optimization,
+      combinatorial optimization, heuristics and metaheuristics, dynamic programming.
   - item: Probability, Statistics and Data Analysis
     more: |
       law of large numbers, estimation theory, Markov chains,
-      linear models (simple/multiple linear regression, ANOVA), multidimensional data analysis (PCA, CA, FA),
-      data mining (K-means clustering, SVM).
+      linear models (simple/multiple linear regression, ANOVA), multidimensional data analysis (PCA, CA, FA).
   - item: Combinatorics
     more: graph theory, matroid theory, computational complexity theory, combinatorial optimization.
   - item: Automata Theory & Language Processing
-    more: automata, formal language theory, lexical and syntaxical analysis.
+    more: automata, formal language theory, lexical and syntaxical analysis, compilers.
   - item: Mathematical Logic
-    more: first-order logic, lambda calculus, constraint programming.
-  - item: Multi-Agent System
-    more: Jason, GAMA, Multi-Agent Reinforcement Learning.
+    more: first-order logic, lambda calculus, constraint programming (logical and functional).
+  - item: Multi-Agent Systems
+    more: belief-desire-intention model (BDI), agent-based simulation, Multi-Agent Reinforcement Learning (MARL).
+  - item: Data Science & Machine Learning
+    more: |
+      supervised learning (K-means clustering, support-vector machine SVM),
+      artificial neural networks, reinforcement learning (game theory, Markov decision process).
 
 - category: Machine Languages
   style: nested
@@ -36,7 +45,7 @@
   - item: Basic User
     sublist:
     - Fortran
-    - Matlab/Octave
+    - Matlab
     - Prolog
     - Lisp
     - Mathematica
@@ -54,7 +63,7 @@
   - item: Markup
     sublist:
     - LaTeX/TeX
-    - HTML
+    - HTML+CSS
     - Markdown
 
 - category: Libraries & Frameworks
@@ -65,6 +74,11 @@
     - numpy
     - scipy
     - matplotlib
+  - item: Machine Learning
+    sublist:
+    - scikit-learn
+    - PyTorch
+    - TensorFlow
   - item: Java libraries
     sublist:
     - Remote Method Invocation (RMI)
@@ -78,6 +92,11 @@
     sublist:
     - Django
     - Jekyll
+    - WordPress
+  - item: Multi-Agent Systems
+    sublist:
+    - Jason (AgentSpeak)
+    - GAMA platform
   - item: Game Engine
     sublist:
     - Unity 3D
@@ -96,6 +115,7 @@
   - item: Image Processing
     sublist:
     - GIMP
+    - Inkscape
     - Adobe Photoshop
     - Adobe Illustrator
     - Blender
@@ -104,7 +124,7 @@
   style: text
   list:
   - item: English
-    more: Proficient - C1/C2 level (estimate)
+    more: Proficient - C1/C2 level (TOEIC certificate)
   - item: French
     more: Proficient - C1/C2 level (TCF certificate)
   - item: Arabic

@@ -1,10 +1,10 @@
-- school: Université de Lorraine
-  degree: Fundamental and Applied Mathematics
-  date: September 2021 - August 2022
-  link: https://iecl.univ-lorraine.fr/master-2-mfa/
-  description: |
-    Research-oriented Master's program with focus on
-    PDEs, Lie Algebras, and Control Theory.
+#- school: Université de Lorraine
+#  degree: Fundamental and Applied Mathematics
+#  date: September 2021 - August 2022
+#  link: https://iecl.univ-lorraine.fr/master-2-mfa/
+#  description: |
+#    Research-oriented Master's program with focus on
+#    PDEs, Lie Algebras, and Control Theory.
 
 - school: INSA Rouen Normandie
   degree: Mathematical Engineering
