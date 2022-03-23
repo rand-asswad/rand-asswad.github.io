@@ -27,7 +27,7 @@ order: "05"
           {% endfor %}
         </ul>
         <h2 class="tab-subtitle">{{ p.date }}</h2>
-        <p class="tab-content">{{ p.description | markdownify }}</p>
+        <div class="tab-content">{{ p.description | markdownify }}</div>
       </div>
     {% endfor %}
   </div>

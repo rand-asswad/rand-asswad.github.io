@@ -38,7 +38,6 @@ let slideDown = (target) => {
  * works well with or without the animation 
  */
 const accordeon = document.querySelectorAll(".accordeon");
-
 for (let i = 0; i < accordeon.length; i++) {
   let items = accordeon[i].querySelectorAll(".accordeon-item");
   for (let j = 0; j < items.length; j++) {
@@ -63,4 +62,24 @@ for (let i = 0; i < accordeon.length; i++) {
     // start collapsed
     element.querySelector(".accordeon-content").style.height = 0;
   }
+}
+
+/* Activate collapsible nested lists on click
+ * References for click event on child without its parent
+ * - https://www.quirksmode.org/js/events_order.html
+ * - https://stackoverflow.com/questions/5445719/disable-the-onclick-event-of-a-parent-element
+ */
+let collapsibles = document.querySelectorAll('ul.collapsible li');
+for (let i = 0, len = collapsibles.length; i < len; i++) {
+  let li = collapsibles[i];
+  li.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (li.querySelector('ul')) {
+      if (li.classList.contains('active')) {
+        li.classList.remove('active');
+      } else {
+        li.classList.add('active');
+      }
+    }
+  }, false);
 }

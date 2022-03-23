@@ -1,67 +1,82 @@
-// colors
-$card-text-color: $theme-grey;
-$card-title-color: $theme-grey;
-$card-bullet-color: $theme-bright;
+$marker-color: $theme-bright;
+$list-padding: 1.5em;
+$grid-break-point: 1200px;
+$grid-col-gap: 1em;
+$transition-duration: 0.5s;
 
-// text
-$card-text-size: 15px;
-$card-title-size: 20px;
-$card-bullet-size: $card-title-size;
-
-// break-point
-$break-point: 1200px;
-
-
-ul.grid-list {
+/* Unordered list with custom marker */
+@mixin my-ul {
   list-style: none;
-  display: grid;
-
-  padding: 0;
-  margin: 0;
-
-  @media (min-width: #{$break-point}) {
-    // two columns
-    grid-template-columns: repeat(2, 50%);
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-  }
-  
-  @media (max-width: #{$break-point - 1px}) {
-    // one column
-    grid-template-columns: repeat(1, 100%);
-    columns: 1;
-    -webkit-columns: 1;
-    -moz-columns: 1;
-  }
-
+  list-style-position: inside;
+  padding-inline-start: 0;
+  position: relative;
+}
+ul.list, .list-container ul, .tab-content ul {
+  @include my-ul;
   li {
     position: relative;
-    padding-left: 2em;
-    display: list-item;
-        
-    color: $card-text-color;
-    font-size: $card-text-size;
-
-    h1, h2, h3, h4, h5, h6 {
-      color: $card-title-color;
-      font-size: $card-title-size;
-
-      padding: 0;
-      margin: 0;
-      padding-bottom: 0.5em;
-    }
-
-    &::before {
-      content: "▹";
+    padding-left: $list-padding;
+    padding-top: 0.3em; 
+    padding-bottom: 0.3em;
+    &::before { // custom marker
+      content: "▷";
+      color: $marker-color;
       position: absolute;
       left: 0;
-      top: -0.25em;
-
-      color: $card-bullet-color;
-      font-size: $card-title-size;
     }
   }
+}
+ul.list ul {
+  @include my-ul;
+}
+
+/* redefine h* in list contexts, this should move though */
+.list, .list-container {
+  h1, h2, h3, h4, h5, h6 {
+    color: $theme-grey;
+    font-size: 1.3em;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 0.5em;
+  }
+}
+
+/* Grid layout */
+ul.grid-list {
+  @media (min-width: $grid-break-point) {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - #{0.5 * $grid-col-gap}));
+    -moz-columns: 2;
+    -webkit-columns: 2;
+    columns: 2;
+    -moz-column-gap: $grid-col-gap;
+    -webkit-column-gap: $grid-col-gap;
+    column-gap: $grid-col-gap;
+  }
+}
+
+/* Collapsible nested ul */
+ul.collapsible li {
+  cursor: pointer;
+  height: fit-content;
+  &::before {
+    transform: rotate(0);
+    transition: transform $transition-duration ease;
+  }
+  & > ul {
+    height: 0;
+    overflow: hidden;
+    transition: height $transition-duration ease;
+  }
+  &.active::before {
+    transform: rotate(90deg);
+  }
+  &.active > ul {
+    height: auto;
+  }
+}
+.hover-primary:hover {
+  color: $primary;
 }
 
 /* imported from Bootstrap 4 (bootstrap/_type.scss) */
