@@ -4,7 +4,31 @@ order: "04"
 ---
 
 <h1>Skills</h1>
-<ul id="skills" class="list collapsible">
+<div id="skills" class="accordeon">
+  {% for skill in site.data.skills %}
+  <div class="accordeon-item">
+    <h1 class="accordeon-title">{{ skill.category }}</h1>
+    <div class="accordeon-content">
+      <ul class="list">
+        {% if skill.style == "text" %}
+          {% for s in skill.list %}
+            <li><span class="text-primary">{{ s.item }}:</span> {{ s.more }}</li>
+          {% endfor %}
+        {% elsif skill.style == "inline" or skill.style == "nested" %}
+          {% for s in skill.list %}
+            <li><span class="text-primary">{{ s.item }}:</span>
+              {% for li in s.sublist %}{{ li }}{% if forloop.last == false %}, {% else %}.{% endif%}{% endfor %}
+            </li>
+          {% endfor %}
+        {% else %}
+          {{ skill.list | markdownify }}
+        {% endif%}
+      </ul>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<ul class="list collapsible">
   {% for skill in site.data.skills %}
     <li>
       <span class="hover-primary">{{ skill.category }}</span>
