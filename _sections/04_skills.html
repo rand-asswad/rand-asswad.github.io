@@ -4,31 +4,36 @@ order: "04"
 ---
 
 <h1>Skills</h1>
-<div class="accordeon">
+<ul id="skills" class="list collapsible">
   {% for skill in site.data.skills %}
-    <div class="accordeon-item">
-      <h1 class="accordeon-title">{{ skill.category }}</h1>
-      <div class="accordeon-content">
+    <li>
+      <span class="hover-primary">{{ skill.category }}</span>
+      <ul>
         {% if skill.style == "text" %}
           {% for s in skill.list %}
-            <p><strong class="text-primary">{{ s.item }}:</strong> {{ s.more }}</p>
+            <li><span class="text-primary">{{ s.item }}:</span> {{ s.more }}</li>
+          {% endfor %}
+        {% elsif skill.style == "inline" %}
+          {% for s in skill.list %}
+            <li><span class="text-primary">{{ s.item }}:</span>
+              {% for li in s.sublist %}{{ li }}{% if forloop.last == false %}, {% else %}.{% endif%}{% endfor %}
+            </li>
           {% endfor %}
         {% elsif skill.style == "nested" %}
           {% for s in skill.list %}
-            <!--ul class="list-inline">
-              <strong class="text-primary">{{ s.item }}: </strong>
-              {% for li in s.sublist %}
-                <li class="list-inline-item">{{ li }}</li>
-              {% endfor %}
-            </ul-->
-            <p><strong class="text-primary">{{ s.item }}:</strong>
-              {% for li in s.sublist %}{{ li }}{% if forloop.last == false %}, {% else %}.{% endif%}{% endfor %}
-            </p>
+            <li>
+              <span class="hover-primary">{{ s.item }}</span>
+              <ul>
+                {% for li in s.sublist %}
+                  <li>{{ li }}</li>
+                {% endfor %}
+              </ul>
+            </li>
           {% endfor %}
         {% else %}
           {{ skill.list | markdownify }}
         {% endif%}
-      </div>
-    </div>
+      </ul>
+    </li>
   {% endfor %}
-</div>
+</ul>
