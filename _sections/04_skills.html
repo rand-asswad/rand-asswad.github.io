@@ -9,7 +9,7 @@ order: "04"
   <div class="accordeon-item">
     <h1 class="accordeon-title">{{ skill.category }}</h1>
     <div class="accordeon-content">
-      <ul class="list">
+      <ul class="naked-list">
         {% if skill.style == "text" %}
           {% for s in skill.list %}
             <li><span class="text-primary">{{ s.item }}:</span> {{ s.more }}</li>
@@ -28,36 +28,3 @@ order: "04"
   </div>
   {% endfor %}
 </div>
-<ul class="list collapsible">
-  {% for skill in site.data.skills %}
-    <li>
-      <span class="hover-primary">{{ skill.category }}</span>
-      <ul>
-        {% if skill.style == "text" %}
-          {% for s in skill.list %}
-            <li><span class="text-primary">{{ s.item }}:</span> {{ s.more }}</li>
-          {% endfor %}
-        {% elsif skill.style == "inline" %}
-          {% for s in skill.list %}
-            <li><span class="text-primary">{{ s.item }}:</span>
-              {% for li in s.sublist %}{{ li }}{% if forloop.last == false %}, {% else %}.{% endif%}{% endfor %}
-            </li>
-          {% endfor %}
-        {% elsif skill.style == "nested" %}
-          {% for s in skill.list %}
-            <li>
-              <span class="hover-primary">{{ s.item }}</span>
-              <ul>
-                {% for li in s.sublist %}
-                  <li>{{ li }}</li>
-                {% endfor %}
-              </ul>
-            </li>
-          {% endfor %}
-        {% else %}
-          {{ skill.list | markdownify }}
-        {% endif%}
-      </ul>
-    </li>
-  {% endfor %}
-</ul>

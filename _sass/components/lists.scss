@@ -4,20 +4,31 @@ $grid-break-point: 1200px;
 $grid-col-gap: 1em;
 $transition-duration: 0.5s;
 
-/* Unordered list with custom marker */
+/* Naked list */
 @mixin my-ul {
   list-style: none;
   list-style-position: inside;
   padding-inline-start: 0;
   position: relative;
 }
+@mixin my-li {
+  padding-top: 0.3em; 
+  padding-bottom: 0.3em;
+}
+.naked-list {
+  @include my-ul;
+  li {
+    @include my-li;
+  }
+}
+
+/* Unordered list with custom marker */
 ul.list, .list-container ul, .tab-content ul {
   @include my-ul;
   li {
     position: relative;
     padding-left: $list-padding;
-    padding-top: 0.3em; 
-    padding-bottom: 0.3em;
+    @include my-li;
     &::before { // custom marker
       content: "▷";
       color: $marker-color;
