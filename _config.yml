@@ -6,6 +6,15 @@ description: | # appears in search engines preview (keep it under 120 chars)
 baseurl: ""
 url: ""
 
+# site theme definition
+# terminology: https://visme.co/blog/wp-content/uploads/2016/09/website23-1024x512.jpg
+theme:
+  darker: "#25274D"
+  dark:   "#464866"
+  grey:   "#AAABB8"
+  light:  "#29648A"
+  bright: "#2E9CCA"
+
 # jekyll collections
 collections:
   - sections

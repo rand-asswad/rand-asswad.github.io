@@ -7,9 +7,20 @@
     {% else %}{{ site.title | escape }}{% endif %}
   </title>
 
+  <!-- Define Theme Colors-->
+  <style>
+    :root {
+      --darker: {{ site.theme.darker }};
+      --dark:   {{ site.theme.dark   }};
+      --grey:   {{ site.theme.grey   }};
+      --light:  {{ site.theme.light  }};
+      --bright: {{ site.theme.bright }};
+    }
+  </style>
+
   <!-- Favicons & PWA -->
   <link rel="manifest" href="/assets/manifest.webmanifest" crossorigin="anonymous">
-  <meta name="theme-color" content="#25274d">
+  <meta name="theme-color" content="var(--darker)">
   {% include favicon.html %}
 
   <!-- Main Stylesheet -->

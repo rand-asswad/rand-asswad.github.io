@@ -5,8 +5,8 @@
   var sketch = new FourierSketch(myPts, "sketch-holder", 400, 20, 2);
   sketch.canvas.viewBox = "-90 -100 170 200";
   //sketch.controlSlider("nbCoefs");
-  sketch.path.setAttribute("stroke", "#2E9CCA");
-  sketch.epicycles.setAttribute("stroke", "#AAABB8");
-  sketch.vectors.setAttribute("stroke", "#29648A");
+  sketch.path.setAttribute("stroke", "var(--bright)");
+  sketch.epicycles.setAttribute("stroke", "var(--grey)");
+  sketch.vectors.setAttribute("stroke", "var(--light)");
   sketch.animate();
 </script>

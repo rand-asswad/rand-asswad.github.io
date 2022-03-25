@@ -1,11 +1,11 @@
 
 
 // terminology
-$theme-darker: #25274D;
-$theme-dark: #464866;
-$theme-grey: #AAABB8;
-$theme-light: #29648A;
-$theme-bright: #2E9CCA;
+$theme-darker:  var(--darker);
+$theme-dark:    var(--dark);
+$theme-grey:    var(--grey);
+$theme-light:   var(--light);
+$theme-bright:  var(--bright);
 
 // bootstrap colors
 $primary: $theme-bright;
