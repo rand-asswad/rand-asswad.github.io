@@ -86,9 +86,8 @@
     - Prolog
     - Lisp
     - Mathematica
-    - Javascript
-    - C#
     - SQL
+    - C#
   - item: Experienced User
     sublist:
     - bash/shell
@@ -97,6 +96,7 @@
     - Java
     - Python
     - Julia
+    - Javascript
   - item: Markup
     sublist:
     - LaTeX/TeX
