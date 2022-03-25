@@ -1,6 +1,8 @@
 # production
 /draft/
 /**/*.backup.*
+/**/*.backup
+/**/*.zip
 assets/fonts/
 _sass/bootstrap.full/
 _posts/
