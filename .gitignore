@@ -1,10 +1,9 @@
 # production
 /draft/
+/**/*.full.*
 /**/*.backup.*
 /**/*.backup
 /**/*.zip
-assets/fonts/
-_sass/bootstrap.full/
 
 # blog
 _posts/

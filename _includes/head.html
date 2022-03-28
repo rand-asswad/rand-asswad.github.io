@@ -1,6 +1,5 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{{ site.description | strip_newlines }}">
 <title>
   {% if page.title %}{{ site.title | escape }} | {{ page.title | escape }}
   {% else %}{{ site.title | escape }}{% endif %}
@@ -9,6 +8,9 @@
 <!-- Preconnect to Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Meta Tags & Open Graph -->
+{% include meta.html %}
 
 <!-- Favicons & PWA -->
 <link rel="manifest" href="/assets/manifest.webmanifest" crossorigin="anonymous">
