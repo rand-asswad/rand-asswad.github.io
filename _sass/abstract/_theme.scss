@@ -1,0 +1,11 @@
+
+/* Theming as inspired by this article
+ * https://bcodes.io/blog/post/theming-css-variables-in-scss
+ */
+:root.dark {
+    @include spread-map($theme-map-dark);
+}
+
+body {
+  background-color: var($--theme-background);
+}

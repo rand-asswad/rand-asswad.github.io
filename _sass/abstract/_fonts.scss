@@ -1,0 +1,14 @@
+// Lato (sans serif)
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,600&display=swap&subset=latin-ext');
+
+// Roboto Slab (serif)
+//@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400&display=swap&subset=latin-ext');
+
+// Roboto Mono (monospace)
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=optional');
+
+:root {
+  --sans-serif: "Lato", ui-sans-serif, -apple-system, sans-serif;
+  --serif: "Roboto Slab", ui-serif;
+  --mono: "Roboto Mono", ui-monospace, monospace;
+}

@@ -2,11 +2,10 @@ $header-side-spacing: 35px; // same as nav padding
 $header-side-spacing-mobile: 25px; // same as section margin
 $title-font-size: 30px;
 $title-font-weight: 400;
-$title-font-color: $icons-color;
 
-header {
-  height: 70px;
-  background-color: $body-bg;
+header.site-header {
+  height: $header-height;
+  background-color: var(--theme-background);
   opacity: 0.9;
   position: fixed;
   top: 0;
@@ -15,43 +14,54 @@ header {
   z-index: 9999;
 }
 
-h1#site-title, header > h1 {
+header.site-header .site-title {
   display: inline-block;
   margin: 0;
   position: absolute;
   top: 50%;
   left: $header-side-spacing;
   transform: translate(0, -50%);
-  color: $title-font-color;
+  color: var(--theme-secondary);
   font-size: $title-font-size;
   font-weight: $title-font-weight;
   text-transform: uppercase;
 
   // align with section margins on small screens
-  @media (max-width: 650px) {
+  @media (max-width: $sm) {
     left: $header-side-spacing-mobile;
+  }
+
+  // link
+  cursor: pointer;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+  a {
+    text-decoration: none !important;
+    color: inherit;
   }
 }
 
-header ul#link-icons.horizontal {
+header.site-header ul.link-icons.horizontal {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
 }
 
 // mobile navigation button
-#nav-btn.mobile {
+.nav-btn.mobile {
   position: absolute;
   top: 50%;
   right: $header-side-spacing;
   transform: translate(0, -50%);
   
   // align with section margins on small screens
-  @media (max-width: 650px) {
+  @media (max-width: $sm) {
     right: $header-side-spacing-mobile;
   }
   
-  #nav-stack {
+  .nav-stack {
     float: left;
     position: relative;
     height: 15px;
@@ -64,7 +74,7 @@ header ul#link-icons.horizontal {
       content: "";
       display: inline-block;
       height: 2px;
-      background-color: $theme-grey;
+      background-color: var($--theme-secondary);
       position: absolute;
       width: 100%;
       margin: 0;

@@ -1,0 +1,13 @@
+
+
+#sketch-holder svg {
+  #path {
+    stroke: var($--theme-primary);
+  }
+  #epicycles {
+    stroke: var($--theme-secondary);
+  }
+  #vectors {
+    stroke: var($--theme-tertiary);
+  }
+}

@@ -1,0 +1,39 @@
+
+body {
+  font-family: $--sans-serif;
+  font-size: $font-size-base;
+  line-height: 1.7;
+  color: var($--theme-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $--sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+// sizing for each h*
+h1 { font-size: $h1-font-size }
+h2 { font-size: $h2-font-size }
+
+p {
+  margin-block-end: 0.4em;
+}
+
+a {
+  text-decoration: none;
+  color: var($--theme-primary);
+  &:hover {
+    //color: var($--theme-tertiary);
+    text-decoration: underline;
+  }
+}
+
+// define classes for quick use
+.text-primary{   color: var($--theme-primary) !important }
+.text-secondary{ color: var($--theme-secondary) !important }
+.text-tertiary{  color: var($--theme-tertiary) !important }
+.mono { font-family: $--mono }
+.serif { font-family: $--serif }
+.sans-serif { font-family: $--sans-serif }
+.small { font-size: clamp(0.8rem, calc(0.74rem + 0.3vw), 1.1rem) }

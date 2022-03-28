@@ -3,7 +3,7 @@ title: portfolio
 order: "05"
 ---
 
-<h1>Projects</h1>
+<h1 class="section-header">Projects</h1>
 <div id="projects" class="tabs-container">
   <div class="tabs">
     {% for p in site.data.projects %}
@@ -21,9 +21,9 @@ order: "05"
           </div>
           <h1>{{ p.long_title }}</h1>
         </div>
-        <ul class="list-inline">
+        <ul class="tab-tags list-inline">
           {% for tag in p.tags %}
-            <li class="list-inline-item text-primary">{{ tag }}</li>
+            <li>{{ tag }}</li>
           {% endfor %}
         </ul>
         <h2 class="tab-subtitle">{{ p.date }}</h2>

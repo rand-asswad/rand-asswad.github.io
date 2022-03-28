@@ -1,4 +1,4 @@
-$marker-color: $theme-bright;
+$marker-color: var($--theme-primary);
 $list-padding: 1.5em;
 $grid-break-point: 1200px;
 $grid-col-gap: 1em;
@@ -10,6 +10,7 @@ $transition-duration: 0.5s;
   list-style-position: inside;
   padding-inline-start: 0;
   position: relative;
+  margin: 0;
 }
 @mixin my-li {
   padding-top: 0.3em; 
@@ -44,7 +45,7 @@ ul.list ul {
 /* redefine h* in list contexts, this should move though */
 .list, .list-container {
   h1, h2, h3, h4, h5, h6 {
-    color: $theme-grey;
+    color: var(--theme-secondary);
     font-size: 1.3em;
     padding: 0;
     margin: 0;
@@ -87,7 +88,7 @@ ul.collapsible li {
   }
 }
 .hover-primary:hover {
-  color: $primary;
+  color: var($--theme-primary);
 }
 
 /* imported from Bootstrap 4 (bootstrap/_type.scss) */
@@ -104,11 +105,11 @@ ul.collapsible li {
 // Inline turns list items into inline-block
 .list-inline {
   @include list-unstyled;
-}
-.list-inline-item {
-  display: inline-block;
+  & > li {
+    display: inline-block;
 
-  &:not(:last-child) {
-    margin-right: $list-inline-padding;
+    &:not(:last-child) {
+      margin-right: $list-inline-padding;
+    }
   }
 }

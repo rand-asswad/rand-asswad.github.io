@@ -1,13 +1,13 @@
 // colors
-$icons-color: $theme-grey;
-$icons-hover-color: $theme-bright;
+$icons-color: var($--theme-secondary);
+$icons-hover-color: var($--theme-primary);
 
 // dims
 $icon-size: 25px;
 $icon-hand-length: 70px;
 $icon-margin: 20px;
 
-ul#link-icons {
+ul.link-icons {
   position: fixed;
   top: 0;
   right: 0;

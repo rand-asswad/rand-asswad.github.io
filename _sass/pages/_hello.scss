@@ -1,0 +1,25 @@
+// align items in #hello section
+section#hello {
+  min-height: calc(100vh - #{$section-margin-top} - #{$section-margin-bottom});
+
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    & > div {
+      width: 50%;
+    }
+  }
+}
+
+.hello {
+  &-title {
+    font-size: clamp(35px, 5vw, 80px);
+    font-weight: 600;
+    margin-block-end: 2rem;
+  }
+  &-content {
+    margin-block-end: 2rem;
+  }
+}

@@ -1,0 +1,21 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+  height: auto;
+  margin: 15px;
+  font-size: 12px;
+  font-family: $--mono;
+  text-align: center;
+
+  a {
+    margin: 10px;
+    color: var($--theme-secondary);
+
+    &:hover {
+      color: var($--theme-primary);
+    }
+  }
+}

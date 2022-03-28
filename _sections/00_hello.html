@@ -11,11 +11,13 @@ class: wide
   </div-->
 </div>
 <div id="hello-text">
-  <h1 class="text-secondary">Hi, I'm <span class="text-primary">Rand.</span></h1>
-  {{ site.data.intro.summary | markdownify }}
+  <h1 class="hello-title">Hi, I'm <span class="text-primary">Rand.</span></h1>
+  <div class="hello-content">
+    {{ site.data.intro.summary | markdownify }}
+  </div>
   <div class="cv-btn-container">
-    <a href="/assets/rand_asswad_cv_en.pdf" target="_blank" class="cv-btn">English CV</a>
-    <a href="/assets/rand_asswad_cv_fr.pdf" target="_blank" class="cv-btn">French CV</a>
+    <a href="/assets/rand_asswad_cv_en.pdf" hreflang="en" target="_blank" class="btn">English CV</a>
+    <a href="/assets/rand_asswad_cv_fr.pdf" hreflang="fr" target="_blank" class="btn">French CV</a>
   </div>
 </div>
 

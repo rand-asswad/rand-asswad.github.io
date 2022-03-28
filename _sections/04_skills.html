@@ -3,12 +3,12 @@ title: skills
 order: "04"
 ---
 
-<h1>Skills</h1>
+<h1 class="section-header">Skills</h1>
 <div id="skills" class="accordeon">
   {% for skill in site.data.skills %}
   <div class="accordeon-item">
     <h1 class="accordeon-title">{{ skill.category }}</h1>
-    <div class="accordeon-content">
+    <div class="accordeon-content small">
       <ul class="naked-list">
         {% if skill.style == "text" %}
           {% for s in skill.list %}

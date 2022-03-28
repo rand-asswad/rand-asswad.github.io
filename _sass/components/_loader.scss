@@ -8,7 +8,7 @@ $loader-border-width: 8px;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: $body-bg;
+  background: var($--theme-background);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,8 +18,8 @@ $loader-border-width: 8px;
   }
 
   & > span {
-    border: $loader-border-width solid $theme-dark;
-    border-top: $loader-border-width solid $theme-bright;
+    border: $loader-border-width solid var($--theme-tertiary);
+    border-top: $loader-border-width solid var($--theme-primary);
     border-radius: 50%;
     width: $loader-size;
     height: $loader-size;

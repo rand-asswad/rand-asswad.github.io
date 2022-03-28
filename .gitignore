@@ -5,7 +5,10 @@
 /**/*.zip
 assets/fonts/
 _sass/bootstrap.full/
+
+# blog
 _posts/
+_layouts/post.html
 
 # Jekyll metadata
 _site/

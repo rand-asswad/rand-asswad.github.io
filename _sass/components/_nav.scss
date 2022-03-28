@@ -1,18 +1,18 @@
 // colors
-$nav-color: $theme-grey;
-$nav-active-color: $theme-bright;
+$nav-color: var(--theme-secondary);
+$nav-active-color: var(--theme-primary);
 
 // fonts
-$nav-font: "Roboto Slab", serif;
-$nav-font-size: 20px;
-$nav-font-active-size: 27px;
-$nav-font-hover-size: 27px;
-$mobile-nav-font-size: 30px;
+$nav-font: $--mono;
+$nav-font-size: 1.2rem;
+$nav-font-active-size: 1.5rem;
+$nav-font-hover-size: 1.5rem;
+$mobile-nav-font-size: 1.8rem;
 
 // padding
 $hand-length: 30px;
 $hand-padding-right: 5px;
-$vertical-padding: 4px;
+$nav-line-height: 1.8;
 
 nav {
   position: fixed;
@@ -28,11 +28,12 @@ nav {
     a {
       font-family: $nav-font;
       font-size: $nav-font-size;
+      line-height: $nav-line-height;
       text-decoration: none;
       color: $nav-color;
       transition: all 0.3s ease;
       display: block;
-      padding: $vertical-padding 0 $vertical-padding $hand-length+$hand-padding-right;
+      padding-inline-start: $hand-length+$hand-padding-right;
       position: relative;
 
       &:hover {
@@ -67,7 +68,7 @@ nav {
   }
 }
 
-@media (max-width: $nav-break-point) {
+@media (max-width: $md) {
   nav {
     top: 0;
     transform: none;
@@ -84,7 +85,7 @@ nav {
     
     &.active {
       opacity: 0.9;
-      background-color: $body-bg;
+      background-color: var(--theme-background);
       transition: all 0.5s ease-in;
       z-index: 999;
     }
@@ -96,22 +97,20 @@ nav {
       text-align: center;
       font-size: $mobile-nav-font-size;
 
-      & > li {
-        padding: 0.2em 0;
-      }
-
       a {
         position: relative;
-        display: inline;
         padding: 0;
+        line-height: 1.5;
         font-size: $mobile-nav-font-size;
 
         &.active {
           font-size: $mobile-nav-font-size;
+          line-height: 1.5;
         }
         
         &:hover {
           font-size: $mobile-nav-font-size;
+          line-height: 1.5;
         }
 
         // clear line before
@@ -122,22 +121,22 @@ nav {
         }
       }
 
-      #link-icons {
+      .link-icons {
         position: relative;
         display: inline;
         font-size: $mobile-nav-font-size;
 
         li {
-            display: inline-block;
-            margin: 0.5em 0.2em;
-            font-size: inherit;
+          display: inline-block;
+          margin: 0.5em 0.2em;
+          font-size: inherit;
         }
 
         // clear line after
         &::after {
-            display: none;
-            content: none;
-            position: relative;
+          display: none;
+          content: none;
+          position: relative;
         }
       }
     }

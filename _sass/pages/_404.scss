@@ -1,0 +1,15 @@
+
+
+main.page404 {
+  text-align: center;
+  color: var($--theme-secondary);
+  margin-block-start: 70px;
+  padding-block: 100px;
+
+  & > h1 {
+    font-family: $--sans-serif;
+    font-weight: 100;
+    font-size: clamp(150px, 30vw, 250px);
+    margin-block-end: 5rem;
+  }
+}

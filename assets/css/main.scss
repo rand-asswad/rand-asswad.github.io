@@ -1,26 +1,9 @@
 ---
-# main stylesheet
+# Main stylesheet file
 ---
 
-// partial code from bootstrap
-@import 'bootstrap/functions';
-@import 'bootstrap/vars';
-@import 'bootstrap/type';
-
-// define defaults
-@import 'colors';
-@import 'fonts';
-@import 'general';
-@import 'containers';
-
-// add components
-//@import 'page';
-@import 'components/loader';
-@import 'components/icons';
-@import 'components/header';
-@import 'components/buttons';
-@import 'components/lists';
-@import 'components/accordeon';
-@import 'components/tabs';
-@import 'components/nav';
-//@import 'components/slider';
+@import "abstract/abstract";
+@import "base/base";
+@import "layout/layout";
+@import "components/components";
+@import "pages/pages";

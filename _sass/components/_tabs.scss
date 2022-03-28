@@ -1,22 +1,21 @@
-
-$tab-btn-padding-vert: 15px;
-$tab-btn-padding-horz: 15px;
+$tab-btn-padding-vert: 11px;
+$tab-btn-padding-horz: 20px;
 $tab-content-padding-left: 30px;
 
 $tab-btn-border-width: 1px;
 $tab-btn-border-selected-width: 3px;
-$tab-btn-border-color: $theme-grey;
-$tab-btn-border-hover-color: $theme-grey;
-$tab-btn-border-selected-color: $theme-bright;
+$tab-btn-border-color: var($--theme-secondary);
+$tab-btn-border-hover-color: var($--theme-secondary);
+$tab-btn-border-selected-color: var($--theme-primary);
 
 $tab-btn-padding-inactive-horz: $tab-btn-padding-horz + $tab-btn-border-selected-width - $tab-btn-border-width;
 
 $tab-btn-text-size: 15px;
-$tab-btn-text-color: $theme-grey;
-$tab-btn-text-hover-color: $theme-bright;
-$tab-btn-text-selected-color: $theme-bright;
+$tab-btn-text-color: var($--theme-secondary);
+$tab-btn-text-hover-color: var($--theme-primary);
+$tab-btn-text-selected-color: var($--theme-primary);
 
-$highlighter-color: $theme-dark; // or try ##8892b0
+$highlighter-color: var($--theme-surface); // or try ##8892b0
 
 $tab-btn-color: transparent;
 $tab-btn-hover-color: $highlighter-color;
@@ -24,28 +23,24 @@ $tab-btn-selected-color: transparent;
 
 // content fonts
 $tab-content-title-size: 20px;
-$tab-content-subtitle-size: 17px;
+$tab-content-subtitle-size: 13px;
 $tab-content-text-size: 15px;
-$tab-title-margin-bottom: .5rem;
 
-$tab-link-color: $theme-bright;
-$tab-content-title-color: $theme-grey;
+$tab-link-color: var($--theme-primary);
+$tab-content-title-color: var($--theme-secondary);
 
 .tabs-container {
   display: flex;
   position: relative;
   width: 100%;
-  //min-height: 30vh;
   height: auto;
   align-items: flex-start;
   padding: 0;
   margin: auto;
   align-self: flex-start !important;
 
-  @media (min-width: #{$mobile-break-point}) {
-    flex-direction: row;
-  }
-  @media (max-width: #{$mobile-break-point - 1px}) {
+  flex-direction: row;
+  @media (max-width: $md) {
     flex-direction: column;
   }
 
@@ -53,11 +48,10 @@ $tab-content-title-color: $theme-grey;
   .tabs {
     float: left;
     border: none;
-    @media (min-width: #{$mobile-break-point}) {
-      width: max-content;
-      height: 100%;
-    }
-    @media (max-width: #{$mobile-break-point - 1px}) {
+
+    width: max-content;
+    height: 100%;
+    @media (max-width: $md) {
       width: 100%;
       display: flex;
       overflow-x: auto;
@@ -65,9 +59,11 @@ $tab-content-title-color: $theme-grey;
 
     // tab button
     a, .tab {
-      padding: $tab-btn-padding-vert $tab-btn-padding-inactive-horz;
+      padding-block: $tab-btn-padding-vert;
+      padding-inline: $tab-btn-padding-inactive-horz;
       color: $tab-btn-text-color;
       font-size: $tab-btn-text-size;
+      font-family: $--mono;
       background-color: $tab-btn-color;
       transition: background-color 0.1s ease-out;
       
@@ -82,9 +78,10 @@ $tab-content-title-color: $theme-grey;
         background-color: $tab-btn-selected-color;
         color: $tab-btn-text-selected-color;
         transition: background-color 0.1s ease-out;
+        padding-inline-start: $tab-btn-padding-horz;
       }
 
-      @media (min-width: #{$mobile-break-point}) {
+      @media (min-width: #{$md + 1px}) {
         display: block;
         border-left-style: solid;
         border-left-width: $tab-btn-border-width;
@@ -101,7 +98,7 @@ $tab-content-title-color: $theme-grey;
         }
       }
 
-      @media (max-width: #{$mobile-break-point - 1px}) {
+      @media (max-width: $md) {
         display: inline-block;
         width: max-content;
         border-bottom-style: solid;
@@ -124,71 +121,68 @@ $tab-content-title-color: $theme-grey;
   .tabs-content {
     position: relative;
     float: left;
-    padding: 0;
-    padding-top: $tab-btn-padding-vert;
-    padding-left: $tab-content-padding-left;
+    padding-block-start: $tab-btn-padding-vert;
+    padding-inline-start: $tab-content-padding-left;
     border: none;
-    width: calc(100% - $tab-content-padding-left);
+    width: calc(100% - #{$tab-content-padding-left});
     min-height: max-content;
     text-align: left;
     
-    @media (max-width: #{$mobile-break-point - 1px}) {
-      padding-left: $tab-btn-padding-vert;
-      width: calc(100% - $tab-btn-padding-vert);
+    @media (max-width: $md) {
+      padding-inline-start: $tab-btn-padding-vert;
+      width: calc(100% - #{$tab-btn-padding-vert});
     }
 
     .content {
       display: none;
       position: relative;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
-      //visibility: hidden;
-      //opacity: 0;
-      //z-index: 0;
-      //transition: opacity 0.3s ease-out;
 
       &.active {
         display: initial;
-        //visibility: visible;
-        //opacity: 1;
-        //z-index: 10;
-        //transition: opacity 0.7s ease-in;
       }
 
       .tab-title {
-        padding-left: 0;
         font-size: $tab-content-title-size;
         color: $tab-content-title-color;
-        margin-bottom: $tab-title-margin-bottom;
-        margin-top: 0;
+        margin-block: 0 0.5rem;
 
         h1 {
           font-size: inherit;
           color: inherit;
           width: 100%;
-          margin-top: 0;
         }
 
         .icons {
-          float: right;
-          margin-left: 10px;
+          float: right; //inline-end
+          margin-inline-start: 10px;
           min-width: max-content;
 
           a.icon {
-            margin-left: 0.2em;
             color: $tab-content-title-color;
 
             &:hover {
               color: $icons-hover-color;
             }
           }
+
+          a.icon + a.icon {
+            margin-inline-start: 0.2em;
+          }
         }
       }
       
-      h2, h3, h4, h5, h6, .tab-subtitle {
+      .tab-subtitle {
+        font-family: $--mono;
         font-size: $tab-content-subtitle-size;
+        margin-block-end: 1rem;
+      }
+
+      .tab-tags {
+        font-family: $--mono;
+        font-size: $tab-content-subtitle-size;
+        color: var($--theme-primary);
+        margin-block-end: 0.5rem;
       }
       
       p, .tab-content {

@@ -1,0 +1,46 @@
+/*
+ * Responsive section width as a function of the viewport width
+ * width = viewport - 50px         (vw <= 650px)
+ * width = 600px                   (650px < vw <= 1000px)
+ * width = 0.75×viewport - 150px   (1000px < vw <= 1400px)
+ * width = 900px                   (vw >= 1400px)
+ */
+section {
+  max-width: 900px;
+  width: calc(75vw - 150px);
+  margin: $section-margin-top auto $section-margin-bottom;
+
+  // tablets and small desktops
+  @media (max-width: $md) {
+    width: 600px;
+  }
+
+  // mobile
+  @media (max-width: $sm) {
+    width: calc(100vw - 50px);
+    margin: 50px auto;
+  }
+
+  // no width limit for .wide 
+  &.wide {
+    max-width: 100%;
+  }
+}
+
+section .section-header, section > h1 {
+  color: var($--theme-primary);
+  font-size: clamp(1.6rem,5vw,2rem);
+  margin-block-end: 2rem;
+}
+
+// offset section anchor links
+section:target::before {
+  content: '';
+  display: block;
+  height: calc($header-height + 15vh);
+  margin-top: calc(0px - ($header-height + 15vh));
+  @media (max-width: $sm) {
+    height: $header-height;
+    margin-top: -$header-height;
+  }
+}

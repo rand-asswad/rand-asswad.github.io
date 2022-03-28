@@ -1,0 +1,48 @@
+// Fonts
+$--sans-serif:  var(--sans-serif);
+$--serif:       var(--serif);
+$--mono:        var(--mono);
+
+// Font size
+$font-size-base:    clamp(1rem, calc(0.96rem + 0.18vw), 1.125rem);
+$h1-font-size:      clamp(1.75rem, calc(1.39rem + 1.79vw), 3rem);
+$h2-font-size:      clamp(1.5rem, calc(1.29rem + 1.07vw), 2.25rem);
+
+// Spacing
+$list-inline-padding: .5rem !default;
+$header-height: 70px;
+
+// Breakpoints (Desktop-first, using maximum values)
+$sm: 650px;
+$md: 1000px;
+$lg: 1400px;
+
+// layout
+$section-margin-top: 100px;
+$section-margin-bottom: 200px;
+
+// Theme
+
+// Link Sass and CSS variables
+$--theme-primary: --theme-primary;
+$--theme-secondary: --theme-secondary;
+$--theme-tertiary: --theme-tertiary;
+$--theme-surface: --theme-surface;
+$--theme-background: --theme-background;
+$--theme-on-primary: --theme-on-primary;
+$--theme-on-secondary: --theme-on-secondary;
+$--theme-on-tertiary: --theme-on-tertiary;
+$--theme-on-surface: --theme-on-surface;
+
+// Default dark theme
+$theme-map-dark: (
+    $--theme-background:   #25274D,  //darker
+    $--theme-primary:      #2E9CCA,  //bright
+    $--theme-secondary:    #AAABB8,  //grey
+    $--theme-tertiary:     #29648A,  //light
+    $--theme-surface:      #464866,  //dark
+    $--theme-on-primary:   #25274D,  //darker
+    $--theme-on-secondary: #29648A,  //light
+    $--theme-on-tertiary:  #AAABB8,  //grey
+    $--theme-on-surface:   #2E9CCA,  //bright
+);

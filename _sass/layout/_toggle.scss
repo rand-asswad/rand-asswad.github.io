@@ -1,0 +1,14 @@
+
+.desktop {
+  display: initial;
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+  @media (max-width: $md) {
+    display: initial;
+  }
+}

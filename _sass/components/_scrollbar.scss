@@ -1,0 +1,23 @@
+// Reference: https://www.digitalocean.com/community/tutorials/css-scrollbars
+
+$scrollbar-bg: var($--theme-surface);
+$scrollbar-thumb-color: var($--theme-tertiary);
+
+/* Works on Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: $scrollbar-thumb-color $scrollbar-bg;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $scrollbar-bg;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $scrollbar-thumb-color;
+}
