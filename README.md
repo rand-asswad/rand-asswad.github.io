@@ -3,7 +3,7 @@
 My personal website built with [jekyll](https://jekyllrb.com)
 hosted by [GitHub Pages](https://pages.github.com/).
 
-![demo](assets/img/demo.png)
+![demo](https://raw.githubusercontent.com/rand-asswad/rand-asswad.github.io/master/assets/img/demo.png)
 
 # Features
 
@@ -39,7 +39,7 @@ in mind to optimize performance.
 A near perfect score on the [Lighthouse](https://github.com/GoogleChrome/lighthouse)
 performance test!
 
-![lighthouse](assets/img/lighthouse_desktop_2022_03_29.png)
+![lighthouse](https://raw.githubusercontent.com/rand-asswad/rand-asswad.github.io/master/assets/img/lighthouse_desktop_2022_03_29.png)
 
 Full JSON report
 [here](https://gist.githubusercontent.com/rand-asswad/37c5f8595a8e3e0000b5b73126198b2e/raw/cb47c8ee752a237a6f4f9641d86556ef9060d4f5/rand-asswad.xyz_2022-03-29_24-55-37.lighthouse.report.json)
