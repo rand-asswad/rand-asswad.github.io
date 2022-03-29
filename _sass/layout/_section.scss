@@ -37,8 +37,8 @@ section .section-header, section > h1 {
 section:target::before {
   content: '';
   display: block;
-  height: calc($header-height + 15vh);
-  margin-top: calc(0px - ($header-height + 15vh));
+  height: calc(#{$header-height} + 15vh);
+  margin-top: calc(0px - (#{$header-height} + 15vh));
   @media (max-width: $sm) {
     height: $header-height;
     margin-top: -$header-height;
