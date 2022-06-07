@@ -24,6 +24,5 @@ jobs:
       with:
         provider: 'github'
         token: ${{ secrets.GITHUB_TOKEN }}
-        jekyll_src: './_src'
         cname: 'rand-asswad.xyz'
         pre_build_commands: 'pacman -S --noconfirm nodejs npm'
