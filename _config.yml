@@ -28,15 +28,15 @@ defaults:
       order: 10
       active: false
 
-## jekyll plugins
-#plugins:
-#  - jekyll-minifier
-#
-## minifier settings
-#jekyll-minifier:
-#  compress_css: false
-#  uglifier_args:
-#    harmony: true
+# jekyll plugins
+plugins:
+  - jekyll-minifier
+
+# minifier settings
+jekyll-minifier:
+  compress_css: false
+  uglifier_args:
+    harmony: true
 
 # Google Analytics measurements ID
 google_analytics: G-S3FZD64MJT

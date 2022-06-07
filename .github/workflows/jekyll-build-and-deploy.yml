@@ -32,3 +32,4 @@ jobs:
         provider: 'github'
         token: ${{ secrets.GITHUB_TOKEN }}
         cname: 'rand-asswad.xyz'
+        pre_build_commands: 'pacman -S --noconfirm nodejs npm'
