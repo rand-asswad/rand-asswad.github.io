@@ -15,4 +15,4 @@ end
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 # Plugins
-gem "jekyll-minifier", group: :jekyll_plugins
+#gem "jekyll-minifier", group: :jekyll_plugins
