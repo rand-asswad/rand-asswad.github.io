@@ -1,10 +1,14 @@
 # site variables
+url:          "https://rand-asswad.xyz"
+baseurl:      ""
+source:       ./_src
+destination:  ./_site
+
+# meta
 title: Rand Asswad
 description: | # appears in search engines preview (keep it under 120 chars)
   Rand Asswad is an engineer in applied mathematics and computer science, 
   specialized in AI and mathematical modeling.
-url: "https://rand-asswad.xyz"
-baseurl: ""
 
 # jekyll collections
 collections:
