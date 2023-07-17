@@ -1,3 +1,27 @@
+- company: INRIA
+  company_w_location: Inria Grenoble – Rhône-Alpes
+  link: https://www.inria.fr/en/inria-centre-university-grenoble-alpes
+  title: PhD Student
+  date: October 2022 - ongoing
+  description: |
+    Working on control of microorganisms communities, as a member of the
+    [Microcosme](https://team.inria.fr/microcosme) project-team.
+
+    Investigated nonlinear systems of bacteria and microalgae through mathematical
+    analysis and simulation.
+    Currently designing observers for such systems for future development of
+    feedback control of algal-bacterial consortia, through classical control
+    strategies and data-driven approaches.
+
+- company: UGA
+  company_w_location: Université Grenoble Alpes 
+  link: https://www.univ-grenoble-alpes.fr
+  title: Teaching Assistant
+  date: September 2022 - ongoing
+  description: |
+    Teaching mathematics and computer science at a Bachelor's level.
+    - Course (16 hours): Fundamental mathematical tools for life sciences, L1, Life Sciences.
+    - Practical class (18 hours): Applied mathematics: image processing, L1, Computer Science.
 - company: L2S
   company_w_location: Laboratory of Signals and Systems (Centralesupelec, CNRS)
   link: https://l2s.centralesupelec.fr/en/
@@ -18,13 +42,13 @@
     ([published report](https://rand-asswad.xyz/WCA1-docs/)).
 
 - company: INRIA
-  company_w_location: INRIA Nancy Grand-Est
+  company_w_location: Inria Nancy Grand-Est
   link: https://www.inria.fr/en/centre/nancy
   title: Research Intern
   date: June - August 2019
   description: |
     Contributed to the [Mind the Gap!](http://www.sciencedirect.com/science/article/pii/S0010448518302215)
-    algorithm developped by [Pixel team](https://pixel.inria.fr) that proposes a robust pipeline
+    algorithm developed by [Pixel team](https://pixel.inria.fr) that proposes a robust pipeline
     for generating hexahedral-dominant meshes from any global parametrization of a tetrahedral mesh.
     
     Proposed and implemented improvements to the pipeline that helped obtain better meshes with
@@ -32,7 +56,7 @@
 
 - company: INSA
   company_w_location: INSA Rouen Normandie
-  link: https://www.insa-rouen.fr/en
+  link: https://www.insa-rouen.fr
   title: Web Development Intern
   date: July - September 2017
   description: |
