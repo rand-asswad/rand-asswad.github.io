@@ -1,0 +1,32 @@
+{
+  "name": "Rand Asswad",
+  "short_name": "Rand Asswad",
+  "start_url": "../",
+  "display": "minimal-ui",
+  "theme_color": "#25274d",
+  "background_color": "#25274d",
+  "icons": [
+      {
+          "src": "/assets/favicons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+      },
+      {
+          "src": "/assets/favicons/icon-512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+      }
+  ],
+  "lang": "en",
+  "dir": "ltr",
+  "shortcuts": [
+    {
+      "name": "English CV",
+      "url": "/rand_asswad_cv_en.pdf"
+    },
+    {
+      "name": "French CV",
+      "url": "/rand_asswad_cv_fr.pdf"
+    }
+  ]
+}

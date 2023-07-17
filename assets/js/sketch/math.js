@@ -1,0 +1,1 @@
+function polarToCartesian(a,t,o){return{x:a.x+t*Math.cos(o),y:a.y+t*Math.sin(o)}}const PI=Math.PI,TAU=2*Math.PI,HALF_PI=Math.PI/2;export{PI,TAU,HALF_PI,polarToCartesian};
