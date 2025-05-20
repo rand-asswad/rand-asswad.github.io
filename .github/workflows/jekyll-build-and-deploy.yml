@@ -15,12 +15,22 @@ jobs:
     - name: cache ruby gems
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7
+        ruby-version: 3.1
         bundler-cache: true
-    - name: build and deploy jekyll
-      uses: jeffreytse/jekyll-deploy-action@v0.3.1
+
+    # use jekyll-action-ts to build
+    # https://github.com/limjh16/jekyll-action-ts
+    - name: Build
+      uses: limjh16/jekyll-action-ts@v2
       with:
-        provider: 'github'
-        token: ${{ secrets.GITHUB_TOKEN }}
+        enable_cache: true
+
+    # use actions-gh-pages to deploy
+    # https://github.com/peaceiris/actions-gh-pages
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        # GITHUB_TOKEN secret is set up automatically
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         cname: 'rand-asswad.xyz'
         pre_build_commands: 'pacman -S --noconfirm nodejs npm'
