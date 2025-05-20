@@ -1,5 +1,8 @@
 name: build and deploy jekyll to pages
 
+# Sample workflow for building and deploying a Jekyll site to GitHub Pages
+# source: https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml
+
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -42,7 +45,6 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-        #pre_build_commands: 'pacman -S --noconfirm nodejs npm'
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
@@ -58,4 +60,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        #cname: 'rand-asswad.xyz'
