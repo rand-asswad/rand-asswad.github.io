@@ -68,8 +68,7 @@ for the following reasons:
 I use [GitHub Actions](https://docs.github.com/en/actions) as a CI tool
 to build and deploy the Jekyll website on every push from my `master` branch.
 
-I used [Jekyll Deploy Action](https://github.com/jeffreytse/jekyll-deploy-action)
-for the Jekyll build/deploy action, check
+I used Jekyll GitHub Action  for the Jekyll build/deploy action, check
 [Jekyll's detailed guide on CI with GitHub Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/)
 for more details or other choices.
 
