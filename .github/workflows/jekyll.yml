@@ -1,3 +1,5 @@
+# Workflow from Jekyll Documentation
+# https://jekyllrb.com/docs/continuous-integration/github-actions
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
@@ -43,6 +45,10 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Install Node.js and NPM
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y nodejs npm
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
